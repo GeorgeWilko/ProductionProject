@@ -10,33 +10,36 @@
 </head>
 
 <body>
-<header>
-    <div class="header">
-        <h1 class="title">Welcome</h1>
-    </div>
-</header>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<section class="Home page">
-    <div class="card-container">
-        <a href="Booking page.html" class="card-link">
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                            <p class="title is-4">Equipment hire</p>
-                            <p class="content">To book equipment please click here</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
+<!-- Navbar -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" aria-current="page" href="Home.html">Home</a>
+      <a class="navbar-item" href="Booking page.html">Book</a>
     </div>
-</section>
+    <div class="navbar-end">
+      <a class="navbar-item" href="/admin/" target="_blank">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Central Hero -->
+<main id="main" tabindex="-1">
+  <section class="hero is-medium has-text-centered">
+    <div class="hero-body">
+      <h1 class="title">Welcome to the accessible booking website</h1>
+      <p class="subtitle">A range of equipment for anyone to borrow and use.</p>
+      <a href="Booking page.html" class="button is-primary" aria-label="Go to booking page">Book Now</a>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
-            Equipment hire
+            Accessible equipment hire
         </p>
     </div>
 </footer>
