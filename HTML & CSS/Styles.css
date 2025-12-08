@@ -4,65 +4,65 @@
 
 
 html, body {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
 }
 
 .footer {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero {
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
 }
 
 .hero .title,
 .hero .subtitle {
-  color: white;
+    color: white;
 }
 
 .navbar {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 .navbar-item {
-  color: white;
+    color: white;
 }
 
 .navbar-item:hover,
 .navbar-item:focus {
-  background-color: transparent;
-  color: white;
+    background-color: transparent;
+    color: white;
 }
 
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background-color: black;
-  color: white;
-  padding: 8px 12px;
-  z-index: 100;
-  font-weight: bold;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    z-index: 100;
+    font-weight: bold;
 }
 
 .skip-link:focus {
-  top: 0;
+    top: 0;
 }
