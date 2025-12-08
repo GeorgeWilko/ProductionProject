@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Equipment hire</title>
 </head>
+
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="Home.html">Home</a>
+            <a class="navbar-item" href="Booking.html">Book</a>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="/admin/" target="_blank">Admin</a>
+        </div>
+    </div>
+</nav>
+
+<main id="main" tabindex="-1">
+    <section class="section">
+        <div class="container">
+            <h2 class="title has-text-centered">Available Equipment</h2>
+
+            <div class="columns is-multiline">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="Images/FlashDrive.jpg"
+                                     alt="Small lightweight USB flash drive available for booking">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-5">USB flash drive</h3>
+                            <p>Lightweight USB flash drive for storing files.</p>
+                            <a href="Booking page.html" class="button is-primary" aria-label="Book USB flash drive">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="Images/Laptop.jpg" alt="Laptop available for booking">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-5">Laptop</h3>
+                            <p>Windows laptop for daily use.</p>
+                            <a href="Booking page.html" class="button is-primary" aria-label="Book laptop">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="Images/Monitor.jpg" alt="24 inch monitor available for booking">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-5">Monitor</h3>
+                            <p>24 inch full HD monitor</p>
+                            <a href="Booking page.html" class="button is-primary" aria-label="Monitor">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>Accessible equipment hire</p>
+    </div>
+</footer>
 
 </body>
 </html>
