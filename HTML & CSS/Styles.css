@@ -27,6 +27,11 @@ main {
     justify-content: center;
 }
 
+.title {
+    color: white;
+}
+
+
 .hero {
     text-align: center;
     color: white;
