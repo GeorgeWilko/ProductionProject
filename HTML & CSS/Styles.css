@@ -76,3 +76,59 @@ main {
   outline: 3px solid #fff;
   outline-offset: 3px;
 }
+
+main {
+  flex: 1;
+  background-color: #000;
+}
+
+main.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  background-color: #000;
+}
+
+.equipment-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.equipment-image img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-content .button {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.usb-card .equipment-image img,
+.usb-card .card-image img {
+  max-height: 100px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
