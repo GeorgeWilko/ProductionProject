@@ -71,3 +71,8 @@ main {
 .skip-link:focus {
     top: 0;
 }
+
+:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
