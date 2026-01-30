@@ -132,3 +132,8 @@ main.centered {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.basket-icon {
+  color: black;
+  font-size: 30px;
+}
