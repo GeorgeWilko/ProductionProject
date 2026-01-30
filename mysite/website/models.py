@@ -24,7 +24,6 @@ class Equipment(models.Model):
     class Status(models.TextChoices):
         AVAILABLE = "available", "Available"
         UNAVAILABLE = "unavailable", "Unavailable"
-        MAINTENANCE = "maintenance", "Maintenance"
 
     name = models.CharField(max_length=255, unique=True)
     status = models.CharField(max_length=20, choices=Status.choices, default=Status.AVAILABLE)
