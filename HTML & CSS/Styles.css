@@ -137,3 +137,11 @@ main.centered {
   color: black;
   font-size: 30px;
 }
+
+.basket-total {
+    margin-top: 16px;
+}
+
+.basket-buttons {
+    margin-top: 24px;
+}
