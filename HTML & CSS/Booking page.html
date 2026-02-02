@@ -4,6 +4,7 @@
 <head>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css">
     <link rel="stylesheet" href="Styles.css">
     <meta charset="UTF-8">
     <title>Booking Equipment</title>
@@ -36,7 +37,8 @@
                                 <div class="card usb-card">
                                     <figure class="equipment-image">
                                         <img src="Images/FlashDrive.jpg"
-                                             alt="lightweight USB flash drive available for booking">
+                                             alt="lightweight USB flash drive available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -54,7 +56,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/Laptop.jpg" alt="Laptop available for booking">
+                                        <img src="Images/Laptop.jpg"
+                                             alt="Laptop available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -71,7 +75,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/Monitor.jpg" alt="24 inch monitor available for booking">
+                                        <img src="Images/Monitor.jpg"
+                                             alt="24 inch monitor available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -88,7 +94,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/Keyboard.jpeg" alt="Windows keyboard available for booking">
+                                        <img src="Images/Keyboard.jpeg"
+                                             alt="Windows keyboard available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -105,7 +113,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/Printer.jpeg" alt="Printer available for booking">
+                                        <img src="Images/Printer.jpeg"
+                                             alt="Printer available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -122,7 +132,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/RaspberryPi.jpeg" alt="Raspberry Pi available for booking">
+                                        <img src="Images/RaspberryPi.jpeg"
+                                             alt="Raspberry Pi available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -141,7 +153,8 @@
                                 <div class="card-image">
                                     <figure class="equipment-image">
                                         <img src="Images/ComputerHeadphones.jpg"
-                                             alt="Computer Headphones available for booking">
+                                             alt="Computer Headphones available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -158,7 +171,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/WirelessMouse.jpeg" alt="Wireless mouse available for booking">
+                                        <img src="Images/WirelessMouse.jpeg"
+                                             alt="Wireless mouse available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -175,7 +190,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="equipment-image">
-                                        <img src="Images/Ipad.jpg" alt="Ipad available for booking">
+                                        <img src="Images/Ipad.jpg"
+                                             alt="Ipad available for booking"
+                                             class="modal-button">
                                     </figure>
                                 </div>
                                 <div class="card-content">
@@ -211,14 +228,19 @@
                 </aside>
             </div>
         </div>
-    </section>
-</main>
 
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p>Accessible equipment hire</p>
-    </div>
-</footer>
+        <div id="imageModal" class="modal modal-fx-3dSlit">
+            <div class="modal-background"></div>
+
+            <div class="modal-content is-image">
+                <img id="imageModalImg" src="" alt="">
+            </div>
+
+            <button class="modal-close is-large"></button>
+        </div>
+    </section>
+    <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+</main>
 
 <script>
     var basket = [];
@@ -239,7 +261,37 @@
         document.getElementById("basketCount").textContent = "0";
         document.getElementById("basketEmpty").style.display = "block";
     }
+
+    function openImage(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("imageModalImg");
+
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+
+        modal.classList.add("is-active");
+    }
+
+    function closeImage() {
+        document.getElementById("imageModal").classList.remove("is-active");
+    }
+
+    document.querySelectorAll(".modal-button").forEach(function (img) {
+        img.addEventListener("click", function () {
+            openImage(img);
+        });
+    });
+
+    document.querySelector("#imageModal .modal-background").addEventListener("click", closeImage);
+    document.querySelector("#imageModal .modal-close").addEventListener("click", closeImage);
+
 </script>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>Accessible equipment hire</p>
+    </div>
+</footer>
 
 </body>
 </html>
