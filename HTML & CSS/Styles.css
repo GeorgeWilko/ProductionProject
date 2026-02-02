@@ -43,7 +43,7 @@ main {
 }
 
 .navbar {
-    background-color: black;
+    background-color: #1f3a5f;
     color: white;
 }
 
@@ -73,69 +73,69 @@ main {
 }
 
 :focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+    outline: 3px solid #fff;
+    outline-offset: 3px;
 }
 
 main {
-  flex: 1;
-  background-color: #000;
+    flex: 1;
+    background-color: #000;
 }
 
 main.centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section {
-  background-color: #000;
+    background-color: #000;
 }
 
 .equipment-image {
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .equipment-image img {
-  max-height: 100%;
-  width: 100%;
-  object-fit: contain;
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .card-content {
-  text-align: center;
+    text-align: center;
 }
 
 .card-content .button {
-  display: inline-flex;
-  justify-content: center;
-  margin-top: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 .usb-card .equipment-image img,
 .usb-card .card-image img {
-  max-height: 100px;
+    max-height: 100px;
 }
 
 .card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .basket-icon {
-  color: black;
-  font-size: 30px;
+    color: black;
+    font-size: 30px;
 }
 
 .basket-total {
@@ -144,4 +144,19 @@ main.centered {
 
 .basket-buttons {
     margin-top: 24px;
+}
+
+.navbar {
+    background-color: #1f3a5f;
+}
+
+.navbar-item,
+.navbar-link {
+    color: white;
+}
+
+.navbar-link:hover,
+.navbar-item:hover {
+    background-color: #1f3a5f;
+    color: white;
 }

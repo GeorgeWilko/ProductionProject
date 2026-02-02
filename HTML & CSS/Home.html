@@ -3,7 +3,7 @@
 
 <head>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="stylesheet" href="Styles.css">
     <meta charset="UTF-8">
     <title>Accessible Equipment Hire | Home</title>
@@ -19,7 +19,19 @@
                 <a class="navbar-item" href="Home.html">Home</a>
                 <a class="navbar-item" href="Booking page.html">Book</a>
             </div>
-            <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <button class="navbar-link" type="button">
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Settings</span>
+                </button>
+                <div class="navbar-dropdown is-right">
+                    <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+                    <hr class="navbar-divider">
+                    <button class="navbar-item">Theme: Default</button>
+                    <button class="navbar-item">Theme: High contrast</button>
+                    <button class="navbar-item">Theme: Low contrast</button>
+                </div>
+            </div>
         </div>
     </nav>
 </header>
