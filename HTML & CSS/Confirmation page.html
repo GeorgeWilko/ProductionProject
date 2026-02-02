@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles.css">
     <meta charset="UTF-8">
     <title>Confirmation page</title>
 </head>
 <body>
+
+<main class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <div class="card has-text-centered">
+                    <header class="card-header is-justify-content-center">
+                        <p class="card-header-title is-centered">
+                            <i class="fa-solid fa-circle-check mr-2"></i>Booking Summary
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p><strong>Selected equipment:</strong></p>
+                            <ol id="confirmationBasket" class="has-text-left">
+                            </ol>
+                            <p class="basket-total">
+                                <strong>Total items:</strong>
+                                <span id="confirmationCount">0</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a href="Booking page.html" class="card">
+                            Back
+                        </a>
+                        <a href="Home.html" class="card">
+                            Confirm Booking
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>Accessible equipment hire</p>
+    </div>
+</footer>
 
 </body>
 </html>
