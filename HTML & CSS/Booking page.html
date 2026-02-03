@@ -21,7 +21,7 @@
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
             <button class="navbar-link" type="button">
-                < class="fa-solid fa-gear" aria-hidden="true"></i>
+                <i class="fa-solid fa-gear" aria-hidden="true"></i>
                 <span>Settings</span>
             </button>
             <div class="navbar-dropdown is-right">
@@ -229,7 +229,7 @@
                             <strong>Total items:</strong> <span id="basketCount">0</span>
                         </p>
 
-                        <div class="basket-date" aria-labelledby="basket-dates-title">
+                        <div class="basket-date" aria-labelledby="date-title">
                             <p id="date-title" class="label"><u>Booking Date</u></p>
                             <div class="date-range">
                                 <label class="date-text" for="startDate">From:</label>
@@ -243,7 +243,7 @@
 
                             <p class="has-text-left">
                                 <strong>Selected:</strong>
-                                <span id="dateSummary">No dates selected.</span>
+                                <span id="dateRange">No dates selected.</span>
                             </p>
                         </div>
 
@@ -313,6 +313,29 @@
 
     document.querySelector("#imageModal .modal-background").addEventListener("click", closeImage);
     document.querySelector("#imageModal .modal-close").addEventListener("click", closeImage);
+
+    const startInput = document.getElementById("startDate");
+    const endInput = document.getElementById("endDate");
+    const dateRange = document.getElementById("dateRange");
+
+    function updateRange() {
+        const start = startInput.value;
+        const end = endInput.value;
+
+        if (!start || !end) {
+            dateRange.textContent = "No dates selected.";
+            return false;
+        }
+        if (end < start) {
+            dateRange.textContent = "Invalid range.";
+            return false;
+        }
+        dateRange.textContent = `${start} to ${end}`;
+        return true;
+    }
+
+    startInput.addEventListener("change", updateRange);
+    endInput.addEventListener("change", updateRange);
 
 </script>
 
