@@ -160,3 +160,16 @@ main.centered {
     background-color: #1f3a5f;
     color: white;
 }
+
+.basket-date {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.date-range {
+    text-align: left;
+}
+
+.date-text {
+    font-size: 15px;
+}
