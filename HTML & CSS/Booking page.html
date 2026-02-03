@@ -21,7 +21,7 @@
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
             <button class="navbar-link" type="button">
-                <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                < class="fa-solid fa-gear" aria-hidden="true"></i>
                 <span>Settings</span>
             </button>
             <div class="navbar-dropdown is-right">
@@ -228,6 +228,25 @@
                         <p class="basket-total">
                             <strong>Total items:</strong> <span id="basketCount">0</span>
                         </p>
+
+                        <div class="basket-date" aria-labelledby="basket-dates-title">
+                            <p id="date-title" class="label"><u>Booking Date</u></p>
+                            <div class="date-range">
+                                <label class="date-text" for="startDate">From:</label>
+                                <input class="input" type="date" id="startDate" name="startDate" required>
+                            </div>
+
+                            <div class="date-range">
+                                <label class="date-text" for="endDate">To:</label>
+                                <input class="input" type="date" id="endDate" name="endDate" required>
+                            </div>
+
+                            <p class="has-text-left">
+                                <strong>Selected:</strong>
+                                <span id="dateSummary">No dates selected.</span>
+                            </p>
+                        </div>
+
                         <div class="basket-buttons">
                             <a href="Confirmation page.html" class="button is-primary">Continue</a>
                             <button type="button" class="button is-light" onclick="clearBasket()">
