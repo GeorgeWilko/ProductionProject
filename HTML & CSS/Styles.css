@@ -174,11 +174,30 @@ main.centered {
     font-size: 15px;
 }
 
-
 .warning.message {
     margin-top: 50px;
     text-align: center;
     color: black;
     background-color: yellow;
     border: 2px solid red;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .label,
+    .box,
+    .basket-total strong,
+    .has-text-left strong,
+    .input,
+    .card {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .card {
+        background-color: white;
+        color: black;
+    }
 }
