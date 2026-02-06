@@ -173,3 +173,12 @@ main.centered {
 .date-text {
     font-size: 15px;
 }
+
+
+.warning.message {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    background-color: yellow;
+    border: 2px solid red;
+}
