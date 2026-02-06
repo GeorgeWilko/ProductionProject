@@ -189,6 +189,8 @@ main.centered {
     .basket-total strong,
     .has-text-left strong,
     .input,
+    .card-header-title,
+    .content strong,
     .card {
         background-color: white;
         color: black;
