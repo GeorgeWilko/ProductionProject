@@ -222,15 +222,18 @@
                         <h2 class="title is-4 has-text-centered">
                             <i class="fa-solid fa-basket-shopping basket-icon"></i>
                         </h2>
+
                         <p id="basketStatus" class="sr-only" aria-live="polite"></p>
                         <p id="basketEmpty">No items selected.</p>
                         <ul id="basketList" aria-label="Selected items"></ul>
+
                         <p class="basket-total">
                             <strong>Total items:</strong> <span id="basketCount">0</span>
                         </p>
 
                         <div class="basket-date" aria-labelledby="date-title">
                             <p id="date-title" class="label"><u>Booking Date</u></p>
+
                             <div class="date-range">
                                 <label class="date-text" for="startDate">From:</label>
                                 <input class="input" type="date" id="startDate" name="startDate" required>
@@ -247,12 +250,14 @@
                             </p>
                         </div>
 
-                        <div class="basket-buttons">
-                            <a href="Confirmation page.html" class="button is-primary">Continue</a>
-                            <button type="button" class="button is-light" onclick="clearBasket()">
-                                Clear
-                            </button>
-                        </div>
+                        <button type="button" class="button is-primary" id="continueButton">
+                            Continue
+                        </button>
+                        <p id="continueError" class="warning message" role="alert" aria-live="polite" hidden></p>
+
+                        <button type="button" class="button is-light" onclick="clearBasket()">
+                            Clear
+                        </button>
                     </div>
                 </aside>
             </div>
@@ -290,6 +295,49 @@
         document.getElementById("basketCount").textContent = "0";
         document.getElementById("basketEmpty").style.display = "block";
     }
+
+    const continueButton = document.getElementById("continueButton")
+    const continueError = document.getElementById("continueError")
+
+    function showContinueError(errorMessage) {
+        continueError.textContent = errorMessage;
+        continueError.hidden = false;
+    }
+
+    function clearContinueError() {
+        continueError.textContent = "";
+        continueError.hidden = true;
+    }
+
+    function Continue() {
+        const basketItems = basket.length > 0;
+        const dates = updateRange()
+
+        if (!basketItems && !dates) {
+            showContinueError("Warning: Add an item and select a date range before continuing.");
+            return false;
+        }
+
+        if (!basketItems) {
+            showContinueError("Warning: No items in basket, please add at least 1 item before continuing.")
+            return false;
+        }
+
+        if (!dates) {
+            showContinueError("Warning: No date range selected, input a date before continuing.")
+            return false;
+        }
+
+        clearContinueError();
+        return true;
+    }
+
+    continueButton.addEventListener("click", () => {
+        if (!Continue())
+            return;
+
+        window.location.href = "Confirmation page.html"
+    })
 
     function openImage(img) {
         var modal = document.getElementById("imageModal");
