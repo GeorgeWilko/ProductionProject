@@ -27,254 +27,266 @@
             <div class="navbar-dropdown is-right">
                 <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
                 <hr class="navbar-divider">
-                <button class="navbar-item">Theme: Default</button>
-                <button class="navbar-item">Theme: High contrast</button>
-                <button class="navbar-item">Theme: Low contrast</button>
+                <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
             </div>
         </div>
     </div>
 </nav>
 
-<main id="main" tabindex="-1">
-    <section class="section">
-        <div class="container">
-            <h1 class="title has-text-centered">Available Equipment</h1>
-            <div class="columns is-desktop">
-                <div class="column is-8-desktop">
-                    <ul class="columns is-multiline" aria-label="Available equipment">
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card usb-card">
-                                    <figure class="equipment-image">
-                                        <img src="Images/FlashDrive.jpg"
-                                             alt="lightweight USB flash drive available for booking"
-                                             class="modal-button">
-                                    </figure>
+<div class="theme default">
+    <main id="main" tabindex="-1">
+        <section class="section">
+            <div class="container">
+                <h1 class="title has-text-centered">Available Equipment</h1>
+                <div class="columns is-desktop">
+                    <div class="column is-8-desktop">
+                        <ul class="columns is-multiline" aria-label="Available equipment">
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card usb-card">
+                                        <figure class="equipment-image">
+                                            <img src="Images/FlashDrive.jpg"
+                                                 alt="lightweight USB flash drive available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">USB flash drive</h2>
+                                        <p>USB flash drive for storing files</p>
+                                        <button type="button" class="button is-primary"
+                                                onclick="addToBasket('USB flash drive')">
+                                            Book USB
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">USB flash drive</h2>
-                                    <p>USB flash drive for storing files</p>
-                                    <button type="button" class="button is-primary"
-                                            onclick="addToBasket('USB flash drive')">
-                                        Book USB
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/Laptop.jpg"
-                                             alt="Laptop available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/Laptop.jpg"
+                                                 alt="Laptop available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Laptop</h2>
+                                        <p>Windows laptop for daily use</p>
+                                        <button type="button" class="button is-primary" onclick="addToBasket('Laptop')">
+                                            Book Laptop
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Laptop</h2>
-                                    <p>Windows laptop for daily use</p>
-                                    <button type="button" class="button is-primary" onclick="addToBasket('Laptop')">
-                                        Book Laptop
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/Monitor.jpg"
-                                             alt="24 inch monitor available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/Monitor.jpg"
+                                                 alt="24 inch monitor available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Monitor</h2>
+                                        <p>24 inch full HD monitor</p>
+                                        <button type="button" class="button is-primary"
+                                                onclick="addToBasket('Monitor')">
+                                            Book Monitor
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Monitor</h2>
-                                    <p>24 inch full HD monitor</p>
-                                    <button type="button" class="button is-primary" onclick="addToBasket('Monitor')">
-                                        Book Monitor
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/Keyboard.jpeg"
-                                             alt="Windows keyboard available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/Keyboard.jpeg"
+                                                 alt="Windows keyboard available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Keyboard</h2>
+                                        <p>Windows computer keyboard</p>
+                                        <button type="button" class="button is-primary"
+                                                onclick="addToBasket('Keyboard')">
+                                            Book Keyboard
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Keyboard</h2>
-                                    <p>Windows computer keyboard</p>
-                                    <button type="button" class="button is-primary" onclick="addToBasket('Keyboard')">
-                                        Book Keyboard
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/Printer.jpeg"
-                                             alt="Printer available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/Printer.jpeg"
+                                                 alt="Printer available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Printer</h2>
+                                        <p>Printer for printing documents</p>
+                                        <button class="button is-primary add-to-basket"
+                                                onclick="addToBasket('Printer')">
+                                            Book Printer
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Printer</h2>
-                                    <p>Printer for printing documents</p>
-                                    <button class="button is-primary add-to-basket" onclick="addToBasket('Printer')">
-                                        Book Printer
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/RaspberryPi.jpeg"
-                                             alt="Raspberry Pi available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/RaspberryPi.jpeg"
+                                                 alt="Raspberry Pi available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Raspberry Pi</h2>
+                                        <p>Raspberry Pi with a linux operating system</p>
+                                        <button class="button is-primary add-to-basket"
+                                                onclick="addToBasket('Raspberry Pi')">
+                                            Book Raspberry Pi
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Raspberry Pi</h2>
-                                    <p>Raspberry Pi with a linux operating system</p>
-                                    <button class="button is-primary add-to-basket"
-                                            onclick="addToBasket('Raspberry Pi')">
-                                        Book Raspberry Pi
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/ComputerHeadphones.jpg"
-                                             alt="Computer Headphones available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/ComputerHeadphones.jpg"
+                                                 alt="Computer Headphones available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Computer Headphones</h2>
+                                        <p>Computer headphones</p>
+                                        <button class="button is-primary add-to-basket"
+                                                onclick="addToBasket('Headphones')">
+                                            Book Headphones
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Computer Headphones</h2>
-                                    <p>Computer headphones</p>
-                                    <button class="button is-primary add-to-basket" onclick="addToBasket('Headphones')">
-                                        Book Headphones
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/WirelessMouse.jpeg"
-                                             alt="Wireless mouse available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/WirelessMouse.jpeg"
+                                                 alt="Wireless mouse available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Wireless mouse</h2>
+                                        <p>Windows wireless mouse</p>
+                                        <button class="button is-primary add-to-basket" onclick="addToBasket('Mouse')">
+                                            Book Mouse
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Wireless mouse</h2>
-                                    <p>Windows wireless mouse</p>
-                                    <button class="button is-primary add-to-basket" onclick="addToBasket('Mouse')">
-                                        Book Mouse
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="column is-one-third">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="equipment-image">
-                                        <img src="Images/Ipad.jpg"
-                                             alt="Ipad available for booking"
-                                             class="modal-button">
-                                    </figure>
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <img src="Images/Ipad.jpg"
+                                                 alt="Ipad available for booking"
+                                                 class="modal-button">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Ipad</h2>
+                                        <p>12 inch full HD ipad</p>
+                                        <button class="button is-primary add-to-basket" onclick="addToBasket('Ipad')">
+                                            Book Ipad
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="title is-5">Ipad</h2>
-                                    <p>12 inch full HD ipad</p>
-                                    <button class="button is-primary add-to-basket" onclick="addToBasket('Ipad')">
-                                        Book Ipad
-                                    </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="column is-4-desktop">
+                        <div class="box" aria-label="Basket">
+                            <h2 class="title is-4 has-text-centered">
+                                <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                            </h2>
+
+                            <p id="basketStatus" class="sr-only" aria-live="polite"></p>
+                            <p id="basketEmpty">No items selected.</p>
+                            <ul id="basketList" aria-label="Selected items"></ul>
+
+                            <p class="basket-total">
+                                <strong>Total items:</strong> <span id="basketCount">0</span>
+                            </p>
+
+                            <div class="basket-date" aria-labelledby="date-title">
+                                <p id="date-title" class="label"><u>Booking Date</u></p>
+
+                                <div class="date-range">
+                                    <label class="date-text" for="startDate">From:</label>
+                                    <input class="input" type="date" id="startDate" name="startDate" required>
                                 </div>
+
+                                <div class="date-range">
+                                    <label class="date-text" for="endDate">To:</label>
+                                    <input class="input" type="date" id="endDate" name="endDate" required>
+                                </div>
+
+                                <p class="has-text-left">
+                                    <strong>Selected:</strong>
+                                    <span id="dateRange">No dates selected.</span>
+                                </p>
                             </div>
-                        </li>
-                    </ul>
+
+                            <button type="button" class="button is-primary" id="continueButton">
+                                Continue
+                            </button>
+                            <p id="continueError" class="warning message" role="alert" aria-live="polite" hidden></p>
+
+                            <button type="button" class="button is-light" onclick="clearBasket()">
+                                Clear
+                            </button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div id="imageModal" class="modal modal-fx-3dSlit">
+                <div class="modal-background"></div>
+
+                <div class="modal-content is-image">
+                    <img id="imageModalImg" src="" alt="">
                 </div>
 
-                <aside class="column is-4-desktop">
-                    <div class="box" aria-label="Basket">
-                        <h2 class="title is-4 has-text-centered">
-                            <i class="fa-solid fa-basket-shopping basket-icon"></i>
-                        </h2>
-
-                        <p id="basketStatus" class="sr-only" aria-live="polite"></p>
-                        <p id="basketEmpty">No items selected.</p>
-                        <ul id="basketList" aria-label="Selected items"></ul>
-
-                        <p class="basket-total">
-                            <strong>Total items:</strong> <span id="basketCount">0</span>
-                        </p>
-
-                        <div class="basket-date" aria-labelledby="date-title">
-                            <p id="date-title" class="label"><u>Booking Date</u></p>
-
-                            <div class="date-range">
-                                <label class="date-text" for="startDate">From:</label>
-                                <input class="input" type="date" id="startDate" name="startDate" required>
-                            </div>
-
-                            <div class="date-range">
-                                <label class="date-text" for="endDate">To:</label>
-                                <input class="input" type="date" id="endDate" name="endDate" required>
-                            </div>
-
-                            <p class="has-text-left">
-                                <strong>Selected:</strong>
-                                <span id="dateRange">No dates selected.</span>
-                            </p>
-                        </div>
-
-                        <button type="button" class="button is-primary" id="continueButton">
-                            Continue
-                        </button>
-                        <p id="continueError" class="warning message" role="alert" aria-live="polite" hidden></p>
-
-                        <button type="button" class="button is-light" onclick="clearBasket()">
-                            Clear
-                        </button>
-                    </div>
-                </aside>
+                <button class="modal-close is-large"></button>
             </div>
-        </div>
+        </section>
+        <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
 
-        <div id="imageModal" class="modal modal-fx-3dSlit">
-            <div class="modal-background"></div>
-
-            <div class="modal-content is-image">
-                <img id="imageModalImg" src="" alt="">
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>Accessible equipment hire</p>
             </div>
-
-            <button class="modal-close is-large"></button>
-        </div>
-    </section>
-    <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
-</main>
+        </footer>
+    </main>
+</div>
 
 <script>
     var basket = [];
@@ -385,13 +397,18 @@
     startInput.addEventListener("change", updateRange);
     endInput.addEventListener("change", updateRange);
 
-</script>
 
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p>Accessible equipment hire</p>
-    </div>
-</footer>
+    const theme = document.querySelector(".theme");
+
+    function setTheme(name) {
+        theme.className = `theme ${name}`;
+        localStorage.setItem("theme", name);
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    setTheme(savedTheme);
+
+</script>
 
 </body>
 </html>
