@@ -117,27 +117,6 @@ body {
 }
 
 
-@media (prefers-color-scheme: dark) {
-    .label,
-    .box,
-    .basket-total strong,
-    .has-text-left strong,
-    .input,
-    .card-header-title,
-    .content strong,
-    .card {
-        background-color: white;
-        color: black;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    .card {
-        background-color: white;
-        color: black;
-    }
-}
-
 .theme {
     flex: 1;
     display: flex;
@@ -175,6 +154,27 @@ body {
     background-color: yellow;
     color: black;
 }
+
+.theme.high .card,
+.theme.high .box {
+    background-color: black;
+    color: white;
+    border: 5px solid red;
+
+}
+
+.theme.high .basket-icon {
+  color: white;
+}
+
+.theme.high #page-title {
+  color: black;
+}
+
+.theme.high .card-content .title {
+  color: white;
+}
+
 
 .theme.high .title,
 .theme.high .subtitle,
