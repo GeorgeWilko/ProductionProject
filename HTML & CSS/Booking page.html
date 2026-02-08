@@ -13,39 +13,40 @@
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="navbar-menu is-active">
-        <div class="navbar-start">
-            <a class="navbar-item" href="Home.html">Home</a>
-            <a class="navbar-item" href="Booking page.html">Equipment</a>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-            <button class="navbar-link" type="button">
-                <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                <span>Settings</span>
-            </button>
-            <div class="navbar-dropdown is-right">
-                <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
-                <hr class="navbar-divider">
-                <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
-                <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
-                <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+<div class="theme default">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-menu is-active">
+            <div class="navbar-start">
+                <a class="navbar-item" href="Home.html">Home</a>
+                <a class="navbar-item" href="Booking page.html">Equipment</a>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <button class="navbar-link" type="button">
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Settings</span>
+                </button>
+                <div class="navbar-dropdown is-right">
+                    <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+                    <hr class="navbar-divider">
+                    <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                    <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                    <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<div class="theme default">
+
     <main id="main" tabindex="-1">
         <section class="section">
             <div class="container">
-                <h1 class="title has-text-centered">Available Equipment</h1>
+                <h1 id="page-title" class="title has-text-centered">Available Equipment</h1>
                 <div class="columns is-desktop">
                     <div class="column is-8-desktop">
                         <ul class="columns is-multiline" aria-label="Available equipment">
                             <li class="column is-one-third">
                                 <div class="card">
-                                    <div class="card usb-card">
+                                    <div class="card-image">
                                         <figure class="equipment-image">
                                             <img src="Images/FlashDrive.jpg"
                                                  alt="lightweight USB flash drive available for booking"
@@ -279,13 +280,13 @@
             </div>
         </section>
         <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
-
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p>Accessible equipment hire</p>
-            </div>
-        </footer>
     </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Accessible equipment hire</p>
+        </div>
+    </footer>
 </div>
 
 <script>
