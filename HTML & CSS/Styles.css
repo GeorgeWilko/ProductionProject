@@ -116,7 +116,6 @@ body {
     border: 2px solid red;
 }
 
-
 .theme {
     flex: 1;
     display: flex;
@@ -137,15 +136,33 @@ body {
     color: white;
 }
 
+.theme.default .card,
+.theme.default .box {
+    background-color: white;
+    color: black;
+}
+
 .theme.default .navbar {
     background-color: #1f3a5f;
 }
 
+.theme.default #page-title,
 .theme.default .title,
 .theme.default .subtitle,
 .theme.default .navbar-item,
 .theme.default .navbar-link {
     color: white;
+}
+
+.theme.default .input {
+    background-color: white;
+    color: black;
+}
+
+.theme.default .card-content .title,
+.theme.default .basket strong,
+.theme.default .basket .label {
+    color: black;
 }
 
 .theme.high main,
@@ -160,21 +177,19 @@ body {
     background-color: black;
     color: white;
     border: 5px solid red;
-
 }
 
 .theme.high .basket-icon {
-  color: white;
+    color: white;
 }
 
 .theme.high #page-title {
-  color: black;
+    color: black;
 }
 
 .theme.high .card-content .title {
-  color: white;
+    color: white;
 }
-
 
 .theme.high .title,
 .theme.high .subtitle,
@@ -186,7 +201,6 @@ body {
 .theme.high .navbar-link {
     color: white;
 }
-
 
 .theme.low {
     background-color: black;
