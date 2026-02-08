@@ -11,50 +11,14 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    color: white;
 }
 
 .footer {
-    background-color: black;
-    color: white;
+    padding: 0;
 }
-
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.title {
-    color: white;
-}
-
 
 .hero {
     text-align: center;
-    color: white;
-}
-
-.hero .title,
-.hero .subtitle {
-    color: white;
-}
-
-.navbar {
-    background-color: #1f3a5f;
-    color: white;
-}
-
-.navbar-item {
-    color: white;
-}
-
-.navbar-item:hover,
-.navbar-item:focus {
-    background-color: transparent;
-    color: white;
 }
 
 .skip-link {
@@ -75,21 +39,6 @@ main {
 :focus-visible {
     outline: 3px solid #fff;
     outline-offset: 3px;
-}
-
-main {
-    flex: 1;
-    background-color: #000;
-}
-
-main.centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section {
-    background-color: #000;
 }
 
 .equipment-image {
@@ -146,21 +95,6 @@ main.centered {
     margin-top: 24px;
 }
 
-.navbar {
-    background-color: #1f3a5f;
-}
-
-.navbar-item,
-.navbar-link {
-    color: white;
-}
-
-.navbar-link:hover,
-.navbar-item:hover {
-    background-color: #1f3a5f;
-    color: white;
-}
-
 .basket-date {
     margin-top: 50px;
     text-align: center;
@@ -202,4 +136,92 @@ main.centered {
         background-color: white;
         color: black;
     }
+}
+
+.theme {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.theme main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme.default main,
+.theme.default .section,
+.theme.default .footer {
+    background-color: black;
+    color: white;
+}
+
+.theme.default .navbar {
+    background-color: #1f3a5f;
+}
+
+.theme.default .title,
+.theme.default .subtitle,
+.theme.default .navbar-item,
+.theme.default .navbar-link {
+    color: white;
+}
+
+.theme.high main,
+.theme.high .section,
+.theme.high .footer {
+    background-color: yellow;
+    color: black;
+}
+
+.theme.high .title,
+.theme.high .subtitle,
+.theme.high .navbar {
+    color: black;
+}
+
+.theme.high .navbar-item,
+.theme.high .navbar-link {
+    color: white;
+}
+
+
+.theme.low {
+    background-color: black;
+    color: white;
+}
+
+.theme.low main,
+.theme.low .section,
+.theme.low .footer {
+    background-color: black;
+    color: white;
+}
+
+.theme.low .navbar {
+    background-color: ;
+}
+
+.theme.low .title,
+.theme.low .subtitle,
+.theme.low .navbar-item,
+.theme.low .navbar-link {
+    color: white;
+}
+
+.theme.default .navbar-item:hover,
+.theme.default .navbar-link:hover {
+    color: white;
+}
+
+.theme.high .navbar-item:hover,
+.theme.high .navbar-link:hover {
+    color: white;
+}
+
+.theme.low .navbar-item:hover,
+.theme.low .navbar-link:hover {
+    color: white;
 }
