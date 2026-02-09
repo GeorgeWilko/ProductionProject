@@ -51,10 +51,11 @@ h2 {
     justify-content: center;
 }
 
-.equipment-image img {
+.equipment-image .image-button {
     max-height: 100%;
     width: 100%;
     object-fit: contain;
+    display: flex;
 }
 
 .card-content {
