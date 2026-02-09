@@ -202,31 +202,70 @@ body {
     color: white;
 }
 
+
 .theme.low {
-    background-color: black;
-    color: white;
+    background-color: #F6F7F9;
+    color: #2B3442;
 }
 
 .theme.low main,
 .theme.low .section,
 .theme.low .footer {
-    background-color: black;
-    color: white;
+    background-color: #F6F7F9;
+    color: #2B3442;
+}
+
+.theme.low .card,
+.theme.low .box {
+    background-color: #FFFFFF;
+    color: #2B3442;
+    border: 1px solid #DBDDE1;
 }
 
 .theme.low .navbar {
-    background-color: ;
+    background-color: #2A3F5F;
+    color: #FFFFFF;
 }
 
 .theme.low .title,
-.theme.low .subtitle,
+.theme.low .subtitle {
+    color: #2B3442;
+}
+
 .theme.low .navbar-item,
 .theme.low .navbar-link {
+    color: #FFFFFF;
+}
+
+.theme.low .input {
+    background-color: #FFFFFF;
+    color: #2A3F5F;
+    border-color: #FFFFFF;
+}
+
+.theme.low .card-content .title,
+.theme.low .basket-icon,
+.theme.low .basket strong,
+.theme.low .basket .label {
+    color: #2A3F5F;
+}
+
+
+.theme.default .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
+.theme.default .navbar-dropdown {
+    background-color: #2A3F5F;
     color: white;
 }
 
 .theme.default .navbar-item:hover,
 .theme.default .navbar-link:hover {
+    color: white;
+    background-color: #344A6A;
+}
+
+.theme.high .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
+.theme.high .navbar-dropdown {
+    background-color: black;
     color: white;
 }
 
@@ -235,7 +274,14 @@ body {
     color: white;
 }
 
+.theme.low .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
+.theme.low .navbar-dropdown {
+    background-color: #2A3F5F;
+    color: white;
+}
+
 .theme.low .navbar-item:hover,
 .theme.low .navbar-link:hover {
     color: white;
+    background-color: #344A6A;
 }
