@@ -9,60 +9,49 @@
 </head>
 <body>
 
-
 <div class="theme default">
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-menu is-active">
-            <div class="navbar-item has-dropdown is-hoverable">
-                <button class="navbar-link" type="button">
-                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                    <span>Settings</span>
-                </button>
-                <div class="navbar-dropdown is-right">
-                    <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
-                    <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
-                    <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <button class="navbar-link" type="button">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Settings</span>
+                    </button>
+                    <div class="navbar-dropdown is-right">
+                        <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                        <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                        <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-
     <main class="section">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-half">
-                    <div class="card has-text-centered">
-                        <header class="card-header is-justify-content-center">
-                            <p class="card-header-title is-centered">
-                                <i class="fa-solid fa-circle-check mr-2"></i>Booking Summary
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                <p><strong>Selected equipment:</strong></p>
-                                <ol id="confirmationBasket" class="has-text-left">
-                                </ol>
-                                <p class="basket-total">
-                                    <strong>Total items:</strong>
-                                    <span id="confirmationCount">0</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="Booking page.html" class="card">
-                                Back
-                            </a>
-                            <a href="Home.html" class="card">
-                                Confirm Booking
-                            </a>
+                    <div class="box basket" aria-label="Booking summary">
+                        <h1 class="title is-4 has-text-centered">
+                            <i class="fa-solid fa-circle-check basket-icon" aria-hidden="true"></i>
+                            Booking Summary
+                        </h1>
+                        <p class="has-text-left"><strong>Selected equipment:</strong></p>
+                        <ol id="confirmationBasket" class="has-text-left"></ol>
+                        <p class="basket-total">
+                            <strong>Total items:</strong>
+                            <span id="confirmationCount">0</span>
+                        </p>
+                        <div class="buttons is-centered">
+                            <a href="Booking page.html" class="button is-light">Back</a>
+                            <a href="Home.html" class="button is-primary">Confirm Booking</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
     <footer class="footer">
         <div class="content has-text-centered">
             <p>Accessible equipment hire</p>
