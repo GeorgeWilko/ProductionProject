@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
@@ -9,46 +9,78 @@
 </head>
 <body>
 
-<main class="section">
-    <div class="container">
-        <div class="columns is-centered">
-            <div class="column is-half">
-                <div class="card has-text-centered">
-                    <header class="card-header is-justify-content-center">
-                        <p class="card-header-title is-centered">
-                            <i class="fa-solid fa-circle-check mr-2"></i>Booking Summary
-                        </p>
-                    </header>
-                    <div class="card-content">
-                        <div class="content">
-                            <p><strong>Selected equipment:</strong></p>
-                            <ol id="confirmationBasket" class="has-text-left">
-                            </ol>
-                            <p class="basket-total">
-                                <strong>Total items:</strong>
-                                <span id="confirmationCount">0</span>
+
+<div class="theme default">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-menu is-active">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <button class="navbar-link" type="button">
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Settings</span>
+                </button>
+                <div class="navbar-dropdown is-right">
+                    <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                    <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                    <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="card has-text-centered">
+                        <header class="card-header is-justify-content-center">
+                            <p class="card-header-title is-centered">
+                                <i class="fa-solid fa-circle-check mr-2"></i>Booking Summary
                             </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <p><strong>Selected equipment:</strong></p>
+                                <ol id="confirmationBasket" class="has-text-left">
+                                </ol>
+                                <p class="basket-total">
+                                    <strong>Total items:</strong>
+                                    <span id="confirmationCount">0</span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <a href="Booking page.html" class="card">
-                            Back
-                        </a>
-                        <a href="Home.html" class="card">
-                            Confirm Booking
-                        </a>
+                        <div class="card">
+                            <a href="Booking page.html" class="card">
+                                Back
+                            </a>
+                            <a href="Home.html" class="card">
+                                Confirm Booking
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p>Accessible equipment hire</p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Accessible equipment hire</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const theme = document.querySelector(".theme");
+
+    function setTheme(name) {
+        theme.className = `theme ${name}`;
+        localStorage.setItem("theme", name);
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    setTheme(savedTheme);
+</script>
 
 </body>
 </html>
