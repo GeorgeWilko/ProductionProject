@@ -178,8 +178,9 @@ input {
     background-color: #1f3a5f;
 }
 
+
+
 .theme.default #page-title,
-.theme.default .title,
 .theme.default .subtitle,
 .theme.default .navbar-item,
 .theme.default .navbar-link {
@@ -191,6 +192,7 @@ input {
     color: black;
 }
 
+.theme.default .basket .title,
 .theme.default .card-content .title,
 .theme.default .basket strong,
 .theme.default .basket .label {
@@ -215,15 +217,13 @@ input {
     color: white;
 }
 
-.theme.high #page-title {
-    color: black;
-}
 
 .theme.high .card-content .title {
     color: white;
 }
 
-.theme.high .title,
+.theme.high #page-title,
+.theme.high .hero .title,
 .theme.high .subtitle,
 .theme.high .navbar {
     color: black;
