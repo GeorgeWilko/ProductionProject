@@ -12,9 +12,9 @@ class EquipmentCategory(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length=255)
-    address = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    country = models.CharField(max_length=255)
+    address = models.CharField(max_length=255, blank=True, default="")
+    city = models.CharField(max_length=255, blank=True, default="")
+    country = models.CharField(max_length=255, blank=True, default="")
 
     def __str__(self):
         return f"{self.name} ({self.city})"
