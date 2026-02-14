@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <title>Confirmation page</title>
+</head>
+<body>
+
+<div class="theme default">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-menu is-active">
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <button class="navbar-link" type="button">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Settings</span>
+                    </button>
+                    <div class="navbar-dropdown is-right">
+                        <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                        <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                        <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box basket" aria-label="Booking summary">
+                        <h1 class="title is-4 has-text-centered">
+                            <i class="fa-solid fa-circle-check basket-icon" aria-hidden="true"></i>
+                            Booking Summary
+                        </h1>
+                        <p class="has-text-left"><strong>Selected equipment:</strong></p>
+                        <ol id="confirmationBasket" class="has-text-left"></ol>
+                        <p class="basket-total">
+                            <strong>Total items:</strong>
+                            <span id="confirmationCount">0</span>
+                        </p>
+                        <div class="buttons is-centered">
+                            <a href="Booking page.html" class="button is-light">Back</a>
+                            <a href="Home.html" class="button is-primary">Confirm Booking</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Accessible equipment hire</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const theme = document.querySelector(".theme");
+
+    function setTheme(name) {
+        theme.className = `theme ${name}`;
+        localStorage.setItem("theme", name);
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    setTheme(savedTheme);
+</script>
+
+</body>
+</html>

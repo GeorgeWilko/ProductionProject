@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css">
+    <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <title>Booking Equipment</title>
+</head>
+
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="theme default">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-menu is-active">
+            <div class="navbar-start">
+                <a class="navbar-item" href="Home.html">Home</a>
+                <a class="navbar-item" href="Booking page.html">Equipment</a>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <button class="navbar-link" type="button">
+                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span>Settings</span>
+                </button>
+                <div class="navbar-dropdown is-right">
+                    <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+                    <hr class="navbar-divider">
+                    <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                    <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                    <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main id="main" tabindex="-1">
+        <section class="section">
+            <div class="container">
+                <h1 id="page-title" class="title has-text-centered">Available Equipment</h1>
+                <div class="columns is-desktop">
+                    <div class="column is-8-desktop">
+                        <ul class="columns is-multiline" aria-label="Available equipment">
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of USB flash drive">
+                                                <img src="Images/FlashDrive.jpg"
+                                                     alt="lightweight USB flash drive available for booking">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">USB flash drive</h2>
+                                        <p>USB flash drive for storing files</p>
+                                        <button type="button" class="button is-primary"
+                                                onclick="addToBasket('USB flash drive')">
+                                            Book USB
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the laptop">
+                                                <img src="Images/Laptop.jpg"
+                                                     alt="Laptop available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Laptop</h2>
+                                        <p>Windows laptop for daily use</p>
+                                        <button type="button" class="button is-primary" onclick="addToBasket('Laptop')">
+                                            Book Laptop
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the monitor">
+                                                <img src="Images/Monitor.jpg"
+                                                     alt="24 inch monitor available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Monitor</h2>
+                                        <p>24 inch full HD monitor</p>
+                                        <button type="button" class="button is-primary"
+                                                onclick="addToBasket('Monitor')">
+                                            Book Monitor
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the keyboard">
+                                                <img src="Images/Keyboard.jpeg"
+                                                     alt="Windows keyboard available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Keyboard</h2>
+                                        <p>Windows computer keyboard</p>
+                                        <button type="button" class="button is-primary"
+                                                onclick="addToBasket('Keyboard')">
+                                            Book Keyboard
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the printer">
+                                                <img src="Images/Printer.jpeg"
+                                                     alt="Printer available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Printer</h2>
+                                        <p>Printer for printing documents</p>
+                                        <button class="button is-primary add-to-basket"
+                                                onclick="addToBasket('Printer')">
+                                            Book Printer
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the raspberry pi">
+                                                <img src="Images/RaspberryPi.jpeg"
+                                                     alt="Raspberry Pi available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Raspberry Pi</h2>
+                                        <p>Raspberry Pi with a linux operating system</p>
+                                        <button class="button is-primary add-to-basket"
+                                                onclick="addToBasket('Raspberry Pi')">
+                                            Book Raspberry Pi
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the computer headphones">
+                                                <img src="Images/ComputerHeadphones.jpg"
+                                                     alt="Computer Headphones available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Computer Headphones</h2>
+                                        <p>Computer headphones</p>
+                                        <button class="button is-primary add-to-basket"
+                                                onclick="addToBasket('Headphones')">
+                                            Book Headphones
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the wireless mouse">
+                                                <img src="Images/WirelessMouse.jpeg"
+                                                     alt="Wireless mouse available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Wireless mouse</h2>
+                                        <p>Windows wireless mouse</p>
+                                        <button class="button is-primary add-to-basket" onclick="addToBasket('Mouse')">
+                                            Book Mouse
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="equipment-image">
+                                            <button type="button"
+                                                    class="image-button modal-button"
+                                                    aria-label="View larger image of the Ipad">
+                                                <img src="Images/Ipad.jpg"
+                                                     alt="Ipad available for booking"
+                                                     class="modal-button">
+                                            </button>
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">Ipad</h2>
+                                        <p>12 inch full HD ipad</p>
+                                        <button class="button is-primary add-to-basket" onclick="addToBasket('Ipad')">
+                                            Book Ipad
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="column is-4-desktop">
+                        <div class="box basket" aria-label="Basket">
+                            <h2 class="title is-4 has-text-centered">
+                                <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                            </h2>
+
+                            <p id="basketStatus" class="sr-only" aria-live="polite"></p>
+                            <p id="basketEmpty">No items selected.</p>
+                            <ul id="basketList" aria-label="Selected items"></ul>
+
+                            <p class="basket-total">
+                                <strong>Total items:</strong> <span id="basketCount">0</span>
+                            </p>
+
+                            <div class="basket-date" aria-labelledby="date-title">
+                                <p id="date-title" class="label"><u>Booking Date</u></p>
+
+                                <div class="date-range">
+                                    <label class="date-text" for="startDate">From:</label>
+                                    <input class="input" type="date" id="startDate" name="startDate" required>
+                                </div>
+
+                                <div class="date-range">
+                                    <label class="date-text" for="endDate">To:</label>
+                                    <input class="input" type="date" id="endDate" name="endDate" required>
+                                </div>
+
+                                <p class="has-text-left">
+                                    <strong>Selected:</strong>
+                                    <span id="dateRange">No dates selected.</span>
+                                </p>
+                            </div>
+
+                            <button type="button" class="button is-primary" id="continueButton">
+                                Continue
+                            </button>
+                            <p id="continueError" class="warning message" role="alert" aria-live="polite" hidden></p>
+
+                            <button type="button" class="button is-light" onclick="clearBasket()">
+                                Clear
+                            </button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div id="imageModal" class="modal modal-fx-3dSlit">
+                <div class="modal-background"></div>
+
+                <div class="modal-content is-image">
+                    <img id="imageModalImg">
+                </div>
+
+                <button class="modal-close is-large"></button>
+            </div>
+        </section>
+        <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Accessible equipment hire</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    var basket = [];
+
+    function addToBasket(item) {
+        basket.push(item);
+
+        document.getElementById("basketList").innerHTML +=
+            "<li>" + item + "</li>";
+
+        document.getElementById("basketCount").textContent = basket.length;
+        document.getElementById("basketEmpty").style.display = "none";
+    }
+
+    function clearBasket() {
+        basket = [];
+        document.getElementById("basketList").innerHTML = "";
+        document.getElementById("basketCount").textContent = "0";
+        document.getElementById("basketEmpty").style.display = "block";
+    }
+
+    const continueButton = document.getElementById("continueButton")
+    const continueError = document.getElementById("continueError")
+
+    function showContinueError(errorMessage) {
+        continueError.textContent = errorMessage;
+        continueError.hidden = false;
+    }
+
+    function clearContinueError() {
+        continueError.textContent = "";
+        continueError.hidden = true;
+    }
+
+    function Continue() {
+        const basketItems = basket.length > 0;
+        const dates = updateRange()
+
+        if (!basketItems && !dates) {
+            showContinueError("Warning: Add an item and select a date range before continuing.");
+            return false;
+        }
+
+        if (!basketItems) {
+            showContinueError("Warning: No items in basket, please add at least 1 item before continuing.")
+            return false;
+        }
+
+        if (!dates) {
+            showContinueError("Warning: No date range selected, input a date before continuing.")
+            return false;
+        }
+
+        clearContinueError();
+        return true;
+    }
+
+    continueButton.addEventListener("click", () => {
+        if (!Continue())
+            return;
+
+        window.location.href = "Confirmation page.html"
+    })
+
+    function openImage(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("imageModalImg");
+
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+
+        modal.classList.add("is-active");
+    }
+
+    function closeImage() {
+        document.getElementById("imageModal").classList.remove("is-active");
+    }
+
+    document.querySelectorAll(".modal-button").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const img = button.querySelector("img");
+            openImage(img);
+        });
+    });
+
+    document.querySelector("#imageModal .modal-background").addEventListener("click", closeImage);
+    document.querySelector("#imageModal .modal-close").addEventListener("click", closeImage);
+
+    const startInput = document.getElementById("startDate");
+    const endInput = document.getElementById("endDate");
+    const dateRange = document.getElementById("dateRange");
+
+    function updateRange() {
+        const start = startInput.value;
+        const end = endInput.value;
+
+        if (!start || !end) {
+            dateRange.textContent = "No dates selected.";
+            return false;
+        }
+        if (end < start) {
+            dateRange.textContent = "Invalid range.";
+            return false;
+        }
+        dateRange.textContent = `${start} to ${end}`;
+        return true;
+    }
+
+    startInput.addEventListener("change", updateRange);
+    endInput.addEventListener("change", updateRange);
+
+
+    const theme = document.querySelector(".theme");
+
+    function setTheme(name) {
+        theme.className = `theme ${name}`;
+        localStorage.setItem("theme", name);
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    setTheme(savedTheme);
+
+</script>
+
+</body>
+</html>

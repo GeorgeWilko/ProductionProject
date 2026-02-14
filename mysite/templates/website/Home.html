@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <title>Accessible Equipment Hire | Home</title>
+</head>
+
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="theme default">
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="Home.html">Home</a>
+                    <a class="navbar-item" href="Booking page.html">Book</a>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <button class="navbar-link" type="button">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Settings</span>
+                    </button>
+                    <div class="navbar-dropdown is-right">
+                        <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+                        <hr class="navbar-divider">
+                        <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                        <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                        <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="centered" tabindex="-1">
+        <section class="hero is-medium has-text-centered">
+            <div class="hero-body">
+                <h1 class="title">Welcome to the accessible booking website</h1>
+                <p class="subtitle">A range of equipment for anyone to borrow and use.</p>
+                <a href="Booking page.html" class="button is-primary" aria-label="Go to booking page">Book Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Accessible equipment hire
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const theme = document.querySelector(".theme");
+
+    function setTheme(name) {
+        theme.className = `theme ${name}`;
+        localStorage.setItem("theme", name);
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    setTheme(savedTheme);
+</script>
+</body>
+</html>
