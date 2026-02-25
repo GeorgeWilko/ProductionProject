@@ -1,0 +1,324 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+.footer {
+    padding: 0;
+}
+
+.hero {
+    text-align: center;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    z-index: 100;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.equipment-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipment-image .image-button {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-content .button {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.usb-card .equipment-image img,
+.usb-card .card-image img {
+    max-height: 100px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.basket-icon {
+    color: black;
+    font-size: 30px;
+}
+
+.basket-total {
+    margin-top: 16px;
+}
+
+.basket-buttons {
+    margin-top: 24px;
+}
+
+.basket-date {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.date-range {
+    text-align: left;
+}
+
+.date-text {
+    font-size: 15px;
+}
+
+.warning.message {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    background-color: yellow;
+    border: 2px solid red;
+}
+
+.theme {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem
+}
+
+.title.is-5 {
+    font-size: 1.25rem;
+}
+
+p,
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.button.is-primary {
+  background-color: #00B39A;
+  color: Black;
+}
+
+.button,
+.navbar-item,
+.navbar-link,
+label,
+input {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.theme main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme.default main,
+.theme.default .section,
+.theme.default .footer {
+    background-color: black;
+    color: white;
+}
+
+.theme.default .card,
+.theme.default .box {
+    background-color: white;
+    color: black;
+}
+
+.theme.default .navbar {
+    background-color: #1f3a5f;
+}
+
+
+
+.theme.default #page-title,
+.theme.default .subtitle,
+.theme.default .navbar-item,
+.theme.default .navbar-link {
+    color: white;
+}
+
+.theme.default .input {
+    background-color: white;
+    color: black;
+}
+
+.theme.default .basket .title,
+.theme.default .card-content .title,
+.theme.default .basket strong,
+.theme.default .basket .label {
+    color: black;
+}
+
+.theme.high main,
+.theme.high .section,
+.theme.high .footer {
+    background-color: yellow;
+    color: black;
+}
+
+.theme.high .card,
+.theme.high .box {
+    background-color: black;
+    color: white;
+    border: 5px solid red;
+}
+
+.theme.high .basket-icon {
+    color: white;
+}
+
+
+.theme.high .card-content .title {
+    color: white;
+}
+
+.theme.high #page-title,
+.theme.high .hero .title,
+.theme.high .subtitle,
+.theme.high .navbar {
+    color: black;
+}
+
+.theme.high .navbar-item,
+.theme.high .navbar-link {
+    color: white;
+}
+
+.theme.high .button.is-primary {
+  background-color: black;
+  color: white;
+  border: 3px solid red;
+}
+
+
+.theme.low {
+    background-color: #F6F7F9;
+    color: #2B3442;
+}
+
+.theme.low main,
+.theme.low .section,
+.theme.low .footer {
+    background-color: #F6F7F9;
+    color: #2B3442;
+}
+
+.theme.low .card,
+.theme.low .box {
+    background-color: #FFFFFF;
+    color: #2B3442;
+    border: 1px solid #DBDDE1;
+}
+
+.theme.low .navbar {
+    background-color: #2A3F5F;
+    color: #FFFFFF;
+}
+
+.theme.low .title,
+.theme.low .subtitle {
+    color: #2B3442;
+}
+
+.theme.low .navbar-item,
+.theme.low .navbar-link {
+    color: #FFFFFF;
+}
+
+.theme.low .input {
+    background-color: #FFFFFF;
+    color: #2A3F5F;
+    border-color: #AEB6C2;
+}
+
+.theme.low .card-content .title,
+.theme.low .basket-icon,
+.theme.low .basket strong,
+.theme.low .basket .label {
+    color: #2A3F5F;
+}
+
+.theme.default .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
+.theme.default .navbar-dropdown {
+    background-color: #2A3F5F;
+    color: white;
+}
+
+.theme.default .navbar-item:hover,
+.theme.default .navbar-link:hover {
+    color: white;
+    background-color: #344A6A;
+}
+
+.theme.high .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
+.theme.high .navbar-dropdown {
+    background-color: black;
+    color: white;
+}
+
+.theme.high .navbar-item:hover,
+.theme.high .navbar-link:hover {
+    color: white;
+}
+
+.theme.low .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
+.theme.low .navbar-dropdown {
+    background-color: #2A3F5F;
+    color: white;
+}
+
+.theme.low .navbar-item:hover,
+.theme.low .navbar-link:hover {
+    color: white;
+    background-color: #344A6A;
+}
