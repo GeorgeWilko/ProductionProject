@@ -17,7 +17,7 @@ def equipment_list(request):
     context = {
         "equipment": equipment,
     }
-    return render(request, 'website/Booking page.html', context)
+    return render(request, 'website/Booking_page.html', context)
 
 def confirm(request):
     equipment_id = request.GET.get("equipment_id")
@@ -29,4 +29,4 @@ def confirm(request):
     context = {
         "selected": selected,
     }
-    return render(request, 'website/Confirmation page.html', context)
+    return render(request, 'website/Confirmation_page.html', context)
