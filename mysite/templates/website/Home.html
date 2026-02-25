@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font_awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
     <meta charset="UTF-8">
     <title>Accessible Equipment Hire | Home</title>
 </head>
@@ -17,8 +18,7 @@
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="Home.html">Home</a>
-                    <a class="navbar-item" href="Booking_page.html">Book</a>
+                    <a class="navbar-item" href="{% url 'booking' %}">Book</a>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <button class="navbar-link" type="button">
@@ -39,9 +39,9 @@
     <main id="main" class="centered" tabindex="-1">
         <section class="hero is-medium has-text-centered">
             <div class="hero-body">
-                <h1 class="title">Welcome to the accessible booking website</h1>
-                <p class="subtitle">A range of equipment for anyone to borrow and use.</p>
-                <a href="Booking_page.html" class="button is-primary" aria-label="Go to booking page">Book Now</a>
+                <h1 class="{{ title }}  %}">Welcome to the accessible booking website</h1>
+                <p class="{{ subtitle }}">A range of equipment for anyone to borrow and use.</p>
+                <a href="{% url 'booking' %}" class="button is-primary" aria-label="Go to booking page">Book Now</a>
             </div>
         </section>
     </main>
