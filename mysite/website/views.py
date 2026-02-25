@@ -11,7 +11,7 @@ def home(request):
     }
     return render(request, 'website/Home.html', context)
 
-def equipment_list(request):
+def booking(request):
     equipment = Equipment.objects.select_related('category', 'location').all()
 
     context = {
@@ -19,7 +19,7 @@ def equipment_list(request):
     }
     return render(request, 'website/Booking_page.html', context)
 
-def confirm(request):
+def confirmation(request):
     equipment_id = request.GET.get("equipment_id")
     selected = None
 

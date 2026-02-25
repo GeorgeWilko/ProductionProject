@@ -6,12 +6,12 @@ urlpatterns = [
          views.home,
          name='home'
          ),
-    path('equipment/',
-         views.equipment_list,
-         name='equipment_list'
+    path('booking/',
+         views.booking,
+         name='booking'
          ),
-    path('confirm/',
-         views.confirm,
-         name='confirm'
+    path('confirmation/',
+         views.confirmation,
+         name='confirmation'
          ),
 ]
