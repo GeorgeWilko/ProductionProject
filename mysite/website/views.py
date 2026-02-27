@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Equipment
+from .models import Equipment, EquipmentCategory
+
 
 def home(request):
     title = "Accessible Equipment Hire"
@@ -12,10 +13,10 @@ def home(request):
     return render(request, 'website/Home.html', context)
 
 def booking(request):
-    equipment = Equipment.objects.select_related('category', 'location').all()
+    categories = EquipmentCategory.objects.all().order_by("name")
 
     context = {
-        "equipment": equipment,
+        "categories": categories,
     }
     return render(request, 'website/Booking_page.html', context)
 
