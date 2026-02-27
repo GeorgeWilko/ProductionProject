@@ -156,3 +156,6 @@ dmypy.json
 cython_debug/
 
 .idea/
+
+# image uploads
+media/
