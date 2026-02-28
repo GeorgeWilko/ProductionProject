@@ -44,28 +44,28 @@
                 <div class="columns is-desktop">
                     <div class="column is-8-desktop">
                         <ul class="columns is-multiline" aria-label="Available equipment">
-                            {% for equipment in categories %}
+                            {% for category in categories %}
                                 <li class="column is-one-third">
                                     <div class="card">
                                         <div class="card-image">
                                             <figure class="equipment-image">
                                                 <button type="button" class="image-button modal-button"
-                                                        aria-label="View larger image of {{ equipment.name }}">
-                                                    {% if equipment.image %}
-                                                        <img src="{{ equipment.image.url }}"
-                                                             alt="{{ equipment.name }} image">
+                                                        aria-label="View larger image of {{ category.name }}">
+                                                    {% if category.image %}
+                                                        <img src="{{ category.image.url }}"
+                                                             alt="{{ category.name }} image">
                                                     {% endif %}
                                                 </button>
                                             </figure>
                                         </div>
                                         <div class="card-content">
-                                            <h2 class="title is-5">{{ equipment.name }}</h2>
-                                            <p>{{ equipment.description }}</p>
+                                            <h2 class="title is-5">{{ category.name }}</h2>
+                                            <p>{{ category.description }}</p>
                                             <button type="button"
                                                     class="button is-primary add-to-basket"
-                                                    data-id="{{ equipment.id }}"
-                                                    data-name="{{ equipment.name }}">
-                                                Book {{ equipment.name }}
+                                                    data-id="{{ category.id }}"
+                                                    data-name="{{ category.name }}">
+                                                Book {{ category.name }}
                                             </button>
                                         </div>
                                     </div>
@@ -74,47 +74,54 @@
                         </ul>
                     </div>
                     <aside class="column is-4-desktop">
-                        <div class="box basket" aria-label="Basket">
-                            <h2 class="title is-4 has-text-centered">
-                                <i class="fa-solid fa-basket-shopping basket-icon"></i>
-                            </h2>
+                        <form method="post" action="{% url 'confirmation' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="category_id" id="categoryIdField">
+                            <input type="hidden" name="start_date" id="startDateField">
+                            <input type="hidden" name="end_date" id="endDateField">
+                            <div class="box basket" aria-label="Basket">
+                                <h2 class="title is-4 has-text-centered">
+                                    <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                                </h2>
 
-                            <p id="basketStatus" class="sr-only" aria-live="polite"></p>
-                            <p id="basketEmpty">No items selected.</p>
-                            <ul id="basketList" aria-label="Selected items"></ul>
+                                <p id="basketStatus" class="sr-only" aria-live="polite"></p>
+                                <p id="basketEmpty">No items selected.</p>
+                                <ul id="basketList" aria-label="Selected items"></ul>
 
-                            <p class="basket-total">
-                                <strong>Total items:</strong> <span id="basketCount">0</span>
-                            </p>
-
-                            <div class="basket-date" aria-labelledby="date-title">
-                                <p id="date-title" class="label"><u>Booking Date</u></p>
-
-                                <div class="date-range">
-                                    <label class="date-text" for="startDate">From:</label>
-                                    <input class="input" type="date" id="startDate" name="startDate" required>
-                                </div>
-
-                                <div class="date-range">
-                                    <label class="date-text" for="endDate">To:</label>
-                                    <input class="input" type="date" id="endDate" name="endDate" required>
-                                </div>
-
-                                <p class="has-text-left">
-                                    <strong>Selected:</strong>
-                                    <span id="dateRange">No dates selected.</span>
+                                <p class="basket-total">
+                                    <strong>Total items:</strong> <span id="basketCount">0</span>
                                 </p>
+
+                                <div class="basket-date" aria-labelledby="date-title">
+                                    <p id="date-title" class="label"><u>Booking Date</u></p>
+
+                                    <div class="date-range">
+                                        <label class="date-text" for="startDate">From:</label>
+                                        <input class="input" type="date" id="startDate" name="startDate" required>
+                                    </div>
+
+                                    <div class="date-range">
+                                        <label class="date-text" for="endDate">To:</label>
+                                        <input class="input" type="date" id="endDate" name="endDate" required>
+                                    </div>
+
+                                    <p class="has-text-left">
+                                        <strong>Selected:</strong>
+                                        <span id="dateRange">No dates selected.</span>
+                                    </p>
+                                </div>
+
+                                <button type="submit" class="button is-primary" id="continueButton">
+                                    Continue
+                                </button>
+                                <p id="continueError" class="warning message" role="alert" aria-live="polite"
+                                   hidden></p>
+
+                                <button type="button" class="button is-light" onclick="clearBasket()">
+                                    Clear
+                                </button>
                             </div>
-
-                            <button type="button" class="button is-primary" id="continueButton">
-                                Continue
-                            </button>
-                            <p id="continueError" class="warning message" role="alert" aria-live="polite" hidden></p>
-
-                            <button type="button" class="button is-light" onclick="clearBasket()">
-                                Clear
-                            </button>
-                        </div>
+                        </form>
                     </aside>
                 </div>
             </div>
@@ -198,11 +205,15 @@
         return true;
     }
 
-    continueButton.addEventListener("click", () => {
-        if (!Continue())
+    continueButton.addEventListener("click", (click) => {
+        if (!Continue()) {
+            click.preventDefault();
             return;
+        }
 
-        window.location.href = "{% url 'confirmation' %}";
+        document.getElementById("categoryIdField").value = basket[0].id;
+        document.getElementById("startDateField").value = startInput.value;
+        document.getElementById("endDateField").value = endInput.value;
     })
 
     function openImage(img) {
