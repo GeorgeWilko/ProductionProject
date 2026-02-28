@@ -64,8 +64,8 @@ class Booking(models.Model):
         related_name="bookings",
     )
 
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    start_date = models.DateField()
+    end_date = models.DateField()
     status = models.CharField(max_length=20, choices=Status.choices, default=Status.PENDING)
     created_at = models.DateTimeField(default=timezone.now)
 
