@@ -1,6 +1,7 @@
 from random import choice
 from django.shortcuts import render
 from .models import Equipment, EquipmentCategory, Booking
+from django.core.mail import send_mail
 
 
 def home(request):
@@ -58,6 +59,22 @@ def confirmation(request):
 
                 unit.status = Equipment.Status.UNAVAILABLE
                 unit.save(update_fields=["status"])
+
+                message = (
+                    f"Booking reference: #{booking.id}\n"
+                    f"Booked equipment: {booking.equipment.name}\n"
+                    f"From: {booking.start_date}\n"
+                    f"To: {booking.end_date}\n"
+                    f"\nThank you."
+                )
+
+                send_mail(
+                    "Confirmation of your booking request",
+                    message,
+                    "g.wilkinson6868@Student.leedsbeckett.ac.uk",
+                    ["g.wilkinson6868@Student.leedsbeckett.ac.uk"],
+                    fail_silently=False,
+                )
 
     else:
         error = "Please book an item from the booking page."
