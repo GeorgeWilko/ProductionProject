@@ -1,4 +1,4 @@
-from random import random
+from random import choice
 from django.shortcuts import render
 from .models import Equipment, EquipmentCategory, Booking
 
@@ -46,7 +46,7 @@ def confirmation(request):
                 error = "No available items remaining."
 
             else:
-                unit = random.choice(list(available))
+                unit = choice(list(available))
 
                 booking = Booking.objects.create(
                     user=request.user,
