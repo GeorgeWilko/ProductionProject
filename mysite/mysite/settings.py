@@ -123,4 +123,4 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 
 # Email settings
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
