@@ -48,9 +48,11 @@
                             <p class="has-text-left"><strong>Equipment name:</strong> {{ booking.equipment.name }}</p>
                             <p class="has-text-left"><strong>From:</strong> {{ booking.start_date }}
                                 To:</strong> {{ booking.end_date }}</p>
-                            <p class=" has-text-centered"> Thank you for booking. </p>
 
-                            <div class="buttons is-centered mt-4">
+                            <p class=" has-text-centered mt-6"> Thank you for booking. A confirmation email has been
+                                sent to you.</p>
+
+                            <div class="buttons is-centered mt-6">
                                 <a href="{% url 'booking' %}" class="button is-light">Return to equipment</a>
                             </div>
                         {% endif %}

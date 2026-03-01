@@ -61,11 +61,15 @@ def confirmation(request):
                 unit.save(update_fields=["status"])
 
                 message = (
-                    f"Booking reference: #{booking.id}\n"
-                    f"Booked equipment: {booking.equipment.name}\n"
-                    f"From: {booking.start_date}\n"
-                    f"To: {booking.end_date}\n"
-                    f"\nThank you."
+                    "================================================\n"
+                    "              SUCCESSFUL BOOKING\n"
+                    "================================================\n\n"
+                    f"Booking reference : #{booking.id}\n"
+                    f"Booked equipment  : {booking.equipment.name}\n"
+                    f"From              : {booking.start_date}\n"
+                    f"To                : {booking.end_date}\n\n"
+                    "Thank you for choosing this service.\n"
+                    "================================================"
                 )
 
                 send_mail(
