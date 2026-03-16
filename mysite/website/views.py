@@ -50,7 +50,6 @@ def confirmation(request):
                 unit = choice(list(available))
 
                 booking = Booking.objects.create(
-                    user=request.user,
                     equipment=unit,
                     start_date=start_date,
                     end_date=end_date,

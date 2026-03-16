@@ -57,6 +57,8 @@ class Booking(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT,
         related_name="bookings",
+        null=True,
+        blank=True,
     )
     equipment = models.ForeignKey(
         Equipment,
