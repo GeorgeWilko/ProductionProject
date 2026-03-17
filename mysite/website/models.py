@@ -30,6 +30,7 @@ class Equipment(models.Model):
     name = models.CharField(max_length=255, unique=True)
     status = models.CharField(max_length=20, choices=Status.choices, default=Status.AVAILABLE)
     description = models.TextField(blank=True)
+    image = models.ImageField(upload_to="equipment_images/", blank=True, null=True)
 
     category = models.ForeignKey(
         EquipmentCategory,
