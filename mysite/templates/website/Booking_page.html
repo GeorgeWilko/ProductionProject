@@ -36,87 +36,96 @@
             </div>
         </div>
     </nav>
-
     <main id="main" tabindex="-1">
         <section class="section">
             <div class="container">
                 <h1 id="page-title" class="title has-text-centered">Available Equipment</h1>
                 <div class="columns is-desktop">
                     <div class="column is-8-desktop">
-                        <ul class="columns is-multiline" aria-label="Available equipment">
-                            {% for category in categories %}
-                                <li class="column is-one-third">
+                        <div class="columns is-multiline">
+                            <div class="column is-one-quarter">
+                                <a href="{% url 'peripherals' %}">
                                     <div class="card">
-                                        <div class="card-image">
-                                            <figure class="equipment-image">
-                                                <button type="button" class="image-button modal-button"
-                                                        aria-label="View larger image of {{ category.name }}">
-                                                    {% if category.image %}
-                                                        <img src="{{ category.image.url }}"
-                                                             alt="{{ category.name }} image">
-                                                    {% endif %}
-                                                </button>
-                                            </figure>
-                                        </div>
-                                        <div class="card-content">
-                                            <h2 class="title is-5">{{ category.name }}</h2>
-                                            <p>{{ category.description }}</p>
-                                            <button type="button"
-                                                    class="button is-primary add-to-basket"
-                                                    data-id="{{ category.id }}"
-                                                    data-name="{{ category.name }}">
-                                                Book {{ category.name }}
-                                            </button>
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-4">Computing Peripherals</h2>
                                         </div>
                                     </div>
-                                </li>
-                            {% endfor %}
-                        </ul>
+                                </a>
+                            </div>
+                            <div class="column is-one-quarter">
+                                <a href="{% url 'computing' %}">
+                                    <div class="card">
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-4">Computing Equipment</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-one-quarter">
+                                <a href="{% url 'display' %}">
+                                    <div class="card">
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-4">Display</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-one-quarter">
+                                <a href="{% url 'accessories' %}">
+                                    <div class="card">
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-4">Accessories</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-one-quarter">
+                                <a href="{% url 'storage' %}">
+                                    <div class="card">
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-4">Storage</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <aside class="column is-4-desktop">
                         <form method="post" action="{% url 'confirmation' %}">
                             {% csrf_token %}
-                            <input type="hidden" name="category_id" id="categoryIdField">
+                            <input type="hidden" name="equipment_name" id="equipmentNameField">
                             <input type="hidden" name="start_date" id="startDateField">
                             <input type="hidden" name="end_date" id="endDateField">
                             <div class="box basket" aria-label="Basket">
                                 <h2 class="title is-4 has-text-centered">
                                     <i class="fa-solid fa-basket-shopping basket-icon"></i>
                                 </h2>
-
                                 <p id="basketStatus" class="sr-only" aria-live="polite"></p>
                                 <p id="basketEmpty">No items selected.</p>
                                 <ul id="basketList" aria-label="Selected items"></ul>
-
                                 <p class="basket-total">
                                     <strong>Total items:</strong> <span id="basketCount">0</span>
                                 </p>
-
                                 <div class="basket-date" aria-labelledby="date-title">
                                     <p id="date-title" class="label"><u>Booking Date</u></p>
-
                                     <div class="date-range">
                                         <label class="date-text" for="startDate">From:</label>
                                         <input class="input" type="date" id="startDate" name="startDate" required>
                                     </div>
-
                                     <div class="date-range">
                                         <label class="date-text" for="endDate">To:</label>
                                         <input class="input" type="date" id="endDate" name="endDate" required>
                                     </div>
-
                                     <p class="has-text-left">
                                         <strong>Selected:</strong>
                                         <span id="dateRange">No dates selected.</span>
                                     </p>
                                 </div>
-
                                 <button type="submit" class="button is-primary" id="continueButton">
                                     Continue
                                 </button>
                                 <p id="continueError" class="warning message" role="alert" aria-live="polite"
                                    hidden></p>
-
                                 <button type="button" class="button is-light" onclick="clearBasket()">
                                     Clear
                                 </button>
@@ -125,36 +134,30 @@
                     </aside>
                 </div>
             </div>
-
             <div id="imageModal" class="modal modal-fx-3dSlit">
                 <div class="modal-background"></div>
-
                 <div class="modal-content is-image">
                     <img id="imageModalImg">
                 </div>
-
                 <button class="modal-close is-large"></button>
             </div>
         </section>
         <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
     </main>
-
     <footer class="footer">
         <div class="content has-text-centered">
             <p>Accessible equipment hire</p>
         </div>
     </footer>
 </div>
-
 <script>
     var basket = [];
 
     document.querySelectorAll(".add-to-basket").forEach(button => {
         button.addEventListener("click", function () {
-            const id = this.dataset.id;
             const name = this.dataset.name;
 
-            basket.push({id, name});
+            basket.push({name});
 
             document.getElementById("basketList").innerHTML += "<li>" + name + "</li>";
             document.getElementById("basketCount").textContent = basket.length;
@@ -211,7 +214,7 @@
             return;
         }
 
-        document.getElementById("categoryIdField").value = basket[0].id;
+        document.getElementById("equipmentNameField").value = basket[0].name;
         document.getElementById("startDateField").value = startInput.value;
         document.getElementById("endDateField").value = endInput.value;
     })
@@ -273,8 +276,6 @@
 
     const savedTheme = localStorage.getItem("theme") || "default";
     setTheme(savedTheme);
-
 </script>
-
 </body>
 </html>
