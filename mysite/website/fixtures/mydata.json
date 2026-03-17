@@ -3689,5 +3689,372 @@
       "location": 1,
       "quantity": 1
     }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 10,
+    "fields": {
+      "name": "Charger",
+      "image": "equipment_images/Charger.jpg",
+      "description": "Chargers for laptops and tablets"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 11,
+    "fields": {
+      "name": "Projector",
+      "image": "equipment_images/Projector.jpg",
+      "description": "Projector for classroom presentations"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 12,
+    "fields": {
+      "name": "Webcam",
+      "image": "equipment_images/Webcam.jpg",
+      "description": "USB webcam for online meetings"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 13,
+    "fields": {
+      "name": "Microphone",
+      "image": "equipment_images/Microphone.jpg",
+      "description": "Microphone for recording and calls"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 14,
+    "fields": {
+      "name": "Calculator",
+      "image": "equipment_images/Calculator.jpg",
+      "description": "Scientific calculator for lessons and exams"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 15,
+    "fields": {
+      "name": "Camera",
+      "image": "equipment_images/Camera.jpg",
+      "description": "Digital camera for photography and media work"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 16,
+    "fields": {
+      "name": "Tripod",
+      "image": "equipment_images/Tripod.jpg",
+      "description": "Tripod for cameras and recording equipment"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 17,
+    "fields": {
+      "name": "HDMI Cable",
+      "image": "equipment_images/HDMICable.jpg",
+      "description": "HDMI cable for connecting devices to displays"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 18,
+    "fields": {
+      "name": "Extension Lead",
+      "image": "equipment_images/ExtensionLead.jpg",
+      "description": "Extension lead for powering equipment"
+    }
+  },
+  {
+    "model": "website.equipmentcategory",
+    "pk": 19,
+    "fields": {
+      "name": "Speaker",
+      "image": "equipment_images/Speaker.jpg",
+      "description": "Portable speaker for presentations and events"
+    }
+  },
+
+  {
+    "model": "website.equipment",
+    "pk": 207,
+    "fields": {
+      "name": "USB-C Charger - Unit 207",
+      "status": "available",
+      "description": "USB-C charger for laptops and tablets",
+      "category": 10,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 208,
+    "fields": {
+      "name": "Laptop Charger - Unit 208",
+      "status": "available",
+      "description": "Laptop charger for Windows devices",
+      "category": 10,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 209,
+    "fields": {
+      "name": "Tablet Charger - Unit 209",
+      "status": "available",
+      "description": "Tablet charger for portable devices",
+      "category": 10,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 210,
+    "fields": {
+      "name": "Projector - Unit 210",
+      "status": "available",
+      "description": "Projector for classroom presentations",
+      "category": 11,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 211,
+    "fields": {
+      "name": "Projector - Unit 211",
+      "status": "unavailable",
+      "description": "Projector for classroom presentations",
+      "category": 11,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 212,
+    "fields": {
+      "name": "Webcam - Unit 212",
+      "status": "available",
+      "description": "HD USB webcam for meetings and online learning",
+      "category": 12,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 213,
+    "fields": {
+      "name": "Webcam - Unit 213",
+      "status": "available",
+      "description": "HD USB webcam for meetings and online learning",
+      "category": 12,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 214,
+    "fields": {
+      "name": "USB Microphone - Unit 214",
+      "status": "available",
+      "description": "USB microphone for recording and video calls",
+      "category": 13,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 215,
+    "fields": {
+      "name": "USB Microphone - Unit 215",
+      "status": "available",
+      "description": "USB microphone for recording and video calls",
+      "category": 13,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 216,
+    "fields": {
+      "name": "Scientific Calculator - Unit 216",
+      "status": "available",
+      "description": "Scientific calculator for school work",
+      "category": 14,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 217,
+    "fields": {
+      "name": "Scientific Calculator - Unit 217",
+      "status": "available",
+      "description": "Scientific calculator for school work",
+      "category": 14,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 218,
+    "fields": {
+      "name": "Scientific Calculator - Unit 218",
+      "status": "unavailable",
+      "description": "Scientific calculator for school work",
+      "category": 14,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 219,
+    "fields": {
+      "name": "Digital Camera - Unit 219",
+      "status": "available",
+      "description": "Digital camera for photography and media studies",
+      "category": 15,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 220,
+    "fields": {
+      "name": "Digital Camera - Unit 220",
+      "status": "available",
+      "description": "Digital camera for photography and media studies",
+      "category": 15,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 221,
+    "fields": {
+      "name": "Tripod - Unit 221",
+      "status": "available",
+      "description": "Adjustable tripod for cameras and recording equipment",
+      "category": 16,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 222,
+    "fields": {
+      "name": "Tripod - Unit 222",
+      "status": "available",
+      "description": "Adjustable tripod for cameras and recording equipment",
+      "category": 16,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 223,
+    "fields": {
+      "name": "HDMI Cable - Unit 223",
+      "status": "available",
+      "description": "HDMI cable for displays and projectors",
+      "category": 17,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 224,
+    "fields": {
+      "name": "HDMI Cable - Unit 224",
+      "status": "available",
+      "description": "HDMI cable for displays and projectors",
+      "category": 17,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 225,
+    "fields": {
+      "name": "HDMI Cable - Unit 225",
+      "status": "available",
+      "description": "HDMI cable for displays and projectors",
+      "category": 17,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 226,
+    "fields": {
+      "name": "Extension Lead - Unit 226",
+      "status": "available",
+      "description": "4-socket extension lead",
+      "category": 18,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 227,
+    "fields": {
+      "name": "Extension Lead - Unit 227",
+      "status": "available",
+      "description": "4-socket extension lead",
+      "category": 18,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 228,
+    "fields": {
+      "name": "Portable Speaker - Unit 228",
+      "status": "available",
+      "description": "Portable speaker for classrooms and events",
+      "category": 19,
+      "location": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "website.equipment",
+    "pk": 229,
+    "fields": {
+      "name": "Portable Speaker - Unit 229",
+      "status": "unavailable",
+      "description": "Portable speaker for classrooms and events",
+      "category": 19,
+      "location": 1,
+      "quantity": 1
+    }
   }
 ]
