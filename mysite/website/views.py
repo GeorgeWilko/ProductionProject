@@ -75,7 +75,7 @@ def equipment_category(request, slug):
         "items": list(grouped_items.values()),
     }
 
-    return render(request, "website/equipment.html", context)
+    return render(request, "website/Equipment.html", context)
 
 def confirmation(request):
     booking = None
