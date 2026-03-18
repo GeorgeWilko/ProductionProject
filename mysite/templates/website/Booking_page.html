@@ -126,23 +126,38 @@
 <script>
     var basket = [];
 
+    try {
+        basket = JSON.parse(localStorage.getItem("equipmentBasket")) || [];
+    } catch (error) {
+        basket = [];
+    }
+
+    function updateBasket() {
+        document.getElementById("basketList").innerHTML = "";
+
+        basket.forEach(item => {
+            document.getElementById("basketList").innerHTML += "<li>" + item.name + "</li>";
+        });
+
+        document.getElementById("basketCount").textContent = basket.length;
+        document.getElementById("basketEmpty").style.display = basket.length ? "none" : "block";
+        localStorage.setItem("equipmentBasket", JSON.stringify(basket));
+    }
+
+    updateBasket();
+
     document.querySelectorAll(".add-to-basket").forEach(button => {
         button.addEventListener("click", function () {
             const name = this.dataset.name;
 
             basket.push({name});
-
-            document.getElementById("basketList").innerHTML += "<li>" + name + "</li>";
-            document.getElementById("basketCount").textContent = basket.length;
-            document.getElementById("basketEmpty").style.display = "none";
+            updateBasket();
         });
     });
 
     function clearBasket() {
         basket = [];
-        document.getElementById("basketList").innerHTML = "";
-        document.getElementById("basketCount").textContent = "0";
-        document.getElementById("basketEmpty").style.display = "block";
+        updateBasket();
     }
 
     const continueButton = document.getElementById("continueButton")
