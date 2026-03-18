@@ -44,14 +44,18 @@
                         </a>
                         <div class="columns is-multiline">
                             {% for item in items %}
-                                <div class="column is-one-third">
+                                <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
                                     <div class="card">
-                                        <div class="card-content">
-                                            <h3 class="title is-5">{{ item.name }}</h3>
-                                            <p>
-                                                <strong>Available:</strong>{{ item.available_count }}
-                                            </p>
-                                            <button class="button is-primary add-to-basket"
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-6">{{ item.name }}</h2>
+                                            <p>Available: {{ item.available_count }}</p>
+
+                                            <button class="button is-primary is-fullwidth add-to-basket"
                                                     data-name="{{ item.name }}">
                                                 Book {{ item.name }}
                                             </button>
