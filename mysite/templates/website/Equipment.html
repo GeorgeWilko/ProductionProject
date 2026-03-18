@@ -35,27 +35,27 @@
                 </div>
             </div>
         </nav>
-        <main id="main" tabindex="-1">
+        <main id="main" tabindex="-1" class="equipment-main">
             <section class="section">
                 <div class="container">
-                    <div class="columns is-desktop">
+                    <div class="columns is-desktop equipment-layout">
                         <div class="column is-8-desktop">
                             <h1 class="title">{{ category.name }}</h1>
                             <a href="{% url 'booking' %}" class="button is-light mb-4">
                                 Return
                             </a>
-                            <div class="columns is-multiline">
+                            <div class="equipment-grid">
                                 {% for item in items %}
-                                <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
-                                    <div class="card">
+                                <div class="equipment-item">
+                                    <div class="card equipment-card">
                                         <div class="card-image">
-                                            <figure class="image is-4by3">
+                                            <figure class="image equipment-card-image">
                                                 {% if item.image %}
                                                 <img src="{{ item.image.url }}" alt="{{ item.name }}">
                                                 {% elif category.image %}
                                                 <img src="{{ category.image.url }}" alt="{{ category.name }}">
                                                 {% else %}
-                                                <p>No image available</p>
+                                                <p class="no-image-placeholder">No image available</p>
                                                 {% endif %}
                                             </figure>
                                         </div>
@@ -73,12 +73,12 @@
                                 {% endfor %}
                             </div>
                         </div>
-                        <aside class="column is-4-desktop">
+                        <aside class="column is-4-desktop equipment-sidebar">
                             <form method="post" action="{% url 'confirmation' %}" id="bookingForm">
                                 {% csrf_token %}
                                 <input type="hidden" name="equipment_name" id="equipmentNameField">
                                 <div class="box basket" aria-label="Basket">
-                                    <h2 class="title is-5 has-text-centered">
+                                    <h2 class="title is-4 has-text-centered">
                                         <i class="fa-solid fa-basket-shopping basket-icon"></i>
                                     </h2>
                                     <p id="basketStatus" class="sr-only" aria-live="polite"></p>
@@ -118,7 +118,15 @@
                         </aside>
                     </div>
                 </div>
+                <div id="imageModal" class="modal modal-fx-3dSlit">
+                    <div class="modal-background"></div>
+                    <div class="modal-content is-image">
+                        <img id="imageModalImg">
+                    </div>
+                    <button class="modal-close is-large"></button>
+                </div>
             </section>
+            <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
         </main>
         <footer class="footer">
             <div class="content has-text-centered">
