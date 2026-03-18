@@ -43,51 +43,24 @@
                 <div class="columns is-desktop">
                     <div class="column is-8-desktop">
                         <div class="columns is-multiline">
-                            <div class="column is-one-quarter">
-                                <a href="{% url 'peripherals' %}">
-                                    <div class="card">
-                                        <div class="card-content has-text-centered">
-                                            <h2 class="title is-4">Computing Peripherals</h2>
+                            {% for category in categories %}
+                                <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+                                    <a href="{% url category.url_name %}">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <figure class="image is-4by3">
+                                                    {% if category.image %}
+                                                        <img src="{{ category.image.url }}" alt="{{ category.name }}">
+                                                    {% endif %}
+                                                </figure>
+                                            </div>
+                                            <div class="card-content has-text-centered">
+                                                <h2 class="title is-5">{{ category.name }}</h2>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="column is-one-quarter">
-                                <a href="{% url 'computing' %}">
-                                    <div class="card">
-                                        <div class="card-content has-text-centered">
-                                            <h2 class="title is-4">Computing Equipment</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="column is-one-quarter">
-                                <a href="{% url 'display' %}">
-                                    <div class="card">
-                                        <div class="card-content has-text-centered">
-                                            <h2 class="title is-4">Display</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="column is-one-quarter">
-                                <a href="{% url 'accessories' %}">
-                                    <div class="card">
-                                        <div class="card-content has-text-centered">
-                                            <h2 class="title is-4">Accessories</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="column is-one-quarter">
-                                <a href="{% url 'storage' %}">
-                                    <div class="card">
-                                        <div class="card-content has-text-centered">
-                                            <h2 class="title is-4">Storage</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <aside class="column is-4-desktop">
