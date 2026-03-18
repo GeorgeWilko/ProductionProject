@@ -5,6 +5,7 @@ from django.utils import timezone
 
 class EquipmentCategory(models.Model):
     name = models.CharField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, blank=True)
     image = models.ImageField(upload_to="equipment_images/", blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, default="")
 
