@@ -67,6 +67,7 @@
                         <form method="post" action="{% url 'confirmation' %}">
                             {% csrf_token %}
                             <input type="hidden" name="equipment_name" id="equipmentNameField">
+                            <input type="hidden" name="equipment_names" id="equipmentNamesField">
                             <input type="hidden" name="start_date" id="startDateField">
                             <input type="hidden" name="end_date" id="endDateField">
                             <div class="box basket" aria-label="Basket">
@@ -203,6 +204,9 @@
         }
 
         document.getElementById("equipmentNameField").value = basket[0].name;
+        document.getElementById("equipmentNamesField").value = JSON.stringify(
+            basket.map(item => item.name)
+        );
         document.getElementById("startDateField").value = startInput.value;
         document.getElementById("endDateField").value = endInput.value;
     })
