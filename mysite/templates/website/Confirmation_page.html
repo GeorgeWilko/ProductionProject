@@ -36,18 +36,29 @@
             <div class="columns is-centered">
                 <div class="column is-half">
                     <div class="box basket" aria-label="Booking summary">
-                        {% if booking %}
+                        {% if bookings %}
                             <h1 class="title is-4 has-text-centered">
                                 <i class="fa-solid fa-circle-check basket-icon" aria-hidden="true"></i>
                                 Booking Confirmed
                             </h1>
 
-                            <p class="has-text-left"><strong>Booking reference:</strong> #{{ booking.id }}</p>
-                            <p class="has-text-left"><strong>Item type:</strong> {{ booking.equipment.category.name }}
-                            </p>
-                            <p class="has-text-left"><strong>Equipment name:</strong> {{ booking.equipment.name }}</p>
-                            <p class="has-text-left"><strong>From:</strong> {{ booking.start_date }}
-                                To:</strong> {{ booking.end_date }}</p>
+                            {% for booking in bookings %}
+                                <div class="mb-4">
+                                    <p class="has-text-left"><strong>Booking reference:</strong> #{{ booking.id }}</p>
+                                    <p class="has-text-left"><strong>Item type:</strong> {{ booking.equipment.category.name }}</p>
+                                    <p class="has-text-left"><strong>Equipment name:</strong> {{ booking.equipment.name }}</p>
+                                    <p class="has-text-left"><strong>From:</strong> {{ booking.start_date }} <strong>To:</strong> {{ booking.end_date }}</p>
+                                </div>
+                            {% endfor %}
+
+                            {% if unavailable_items %}
+                                <p class="has-text-left"><strong>Unavailable items:</strong></p>
+                                <ul>
+                                    {% for item_name in unavailable_items %}
+                                        <li>{{ item_name }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
 
                             <p class=" has-text-centered mt-6"> Thank you for booking. A confirmation email has been
                                 sent to you.</p>

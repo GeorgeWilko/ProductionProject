@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Equipment, EquipmentCategory, Booking
 from django.core.mail import send_mail
 from collections import OrderedDict
+import json
 
 def home(request):
     title = "Accessible Equipment Hire"
@@ -78,52 +79,89 @@ def equipment_category(request, slug):
     return render(request, "website/Equipment.html", context)
 
 def confirmation(request):
-    booking = None
-    error = None
+    bookings = []
+    unavailable_items = []
 
     if request.method != "POST":
         return redirect("booking")
 
     print("POST:", request.POST)
     equipment_name = request.POST.get("equipment_name")
+    equipment_names_raw = request.POST.get("equipment_names", "")
     start_date = request.POST.get("start_date")
     end_date = request.POST.get("end_date")
 
-    if not equipment_name or not start_date or not end_date:
+    equipment_names = []
+
+    if equipment_names_raw:
+        try:
+            parsed_names = json.loads(equipment_names_raw)
+            if isinstance(parsed_names, list):
+                equipment_names = [name for name in parsed_names if isinstance(name, str) and name.strip()]
+        except json.JSONDecodeError:
+            equipment_names = []
+
+    if not equipment_names and equipment_name:
+        equipment_names = [equipment_name]
+
+    if not equipment_names or not start_date or not end_date:
         return redirect("booking")
 
-    available = Equipment.objects.filter(
-        name__startswith=equipment_name,
-        status=Equipment.Status.AVAILABLE,
-        quantity__gt=0,
-    )
+    for name in equipment_names:
+        available = Equipment.objects.filter(
+            name__startswith=name,
+            status=Equipment.Status.AVAILABLE,
+            quantity__gt=0,
+        )
 
-    if not available.exists():
+        if not available.exists():
+            unavailable_items.append(name)
+            continue
+
+        unit = choice(list(available))
+
+        booking = Booking.objects.create(
+            equipment=unit,
+            start_date=start_date,
+            end_date=end_date,
+            status=Booking.Status.CONFIRMED,
+        )
+
+        unit.status = Equipment.Status.UNAVAILABLE
+        unit.save(update_fields=["status"])
+        bookings.append(booking)
+
+    if not bookings:
         return redirect("booking")
 
-    unit = choice(list(available))
+    message_lines = [
+        "================================================",
+        "              SUCCESSFUL BOOKING",
+        "================================================",
+        "",
+    ]
 
-    booking = Booking.objects.create(
-        equipment=unit,
-        start_date=start_date,
-        end_date=end_date,
-        status=Booking.Status.CONFIRMED,
-    )
+    for booking in bookings:
+        message_lines.extend([
+            f"Booking reference : #{booking.id}",
+            f"Booked equipment  : {booking.equipment.name}",
+            f"From              : {booking.start_date}",
+            f"To                : {booking.end_date}",
+            "",
+        ])
 
-    unit.status = Equipment.Status.UNAVAILABLE
-    unit.save(update_fields=["status"])
+    if unavailable_items:
+        message_lines.append("Unavailable items:")
+        for item_name in unavailable_items:
+            message_lines.append(f"- {item_name}")
+        message_lines.append("")
 
-    message = (
-        "================================================\n"
-        "              SUCCESSFUL BOOKING\n"
-        "================================================\n\n"
-        f"Booking reference : #{booking.id}\n"
-        f"Booked equipment  : {booking.equipment.name}\n"
-        f"From              : {booking.start_date}\n"
-        f"To                : {booking.end_date}\n\n"
-        "Thank you for choosing this service.\n"
-        "================================================"
-    )
+    message_lines.extend([
+        "Thank you for choosing this service.",
+        "================================================",
+    ])
+
+    message = "\n".join(message_lines)
 
     send_mail(
         "Confirmation of your booking request",
@@ -133,4 +171,7 @@ def confirmation(request):
         fail_silently=False,
     )
 
-    return render(request, "website/Confirmation_page.html", {"booking": booking})
+    return render(request, "website/Confirmation_page.html", {
+        "bookings": bookings,
+        "unavailable_items": unavailable_items,
+    })
