@@ -58,28 +58,42 @@
                 </div>
                 {% if bookings %}
                     <div class="box">
-                        <ul>
-                            {% for booking in bookings %}
-                                <li class="mb-5">
-                                    <p>
-                                        <strong>Equipment:</strong> {{ booking.equipment.name }}
-                                    </p>
-                                    <p>
-                                        <strong>Status:</strong>
-                                        {% if booking.status == "confirmed" %}
-                                            <span class="tag is-success">{{ booking.get_status_display }}</span>
-                                        {% endif %}
-                                    </p>
-                                    <p><strong>Category:</strong> {{ booking.equipment.category.name }}</p>
-                                    <p><strong>From:</strong> {{ booking.start_date }} <strong>To:</strong> {{ booking.end_date }}</p>
-                                    <p><strong>Booked on:</strong> {{ booking.created_at|date:"Y-m-d H:i" }}</p>
-                                </li>
-                            {% endfor %}
-                        </ul>
+                        <div class="table-container">
+                            <table class="table is-fullwidth is-striped is-hoverable">
+                                <thead>
+                                    <tr>
+                                        <th>#Order</th>
+                                        <th>Equipment</th>
+                                        <th>Category</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Booked on</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for booking in bookings %}
+                                        <tr>
+                                            <td>{{ booking.id }}</td>
+                                            <td>{{ booking.equipment.name }}</td>
+                                            <td>{{ booking.equipment.category.name }}</td>
+                                            <td>{{ booking.start_date }}</td>
+                                            <td>{{ booking.end_date }}</td>
+                                            <td>{{ booking.created_at|date:"Y-m-d H:i" }}</td>
+                                            <td>
+                                                {% if booking.status == "confirmed" %}
+                                                    <span class="tag is-success">{{ booking.get_status_display }}</span>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 {% else %}
                     <div class="box has-text-centered">
-                        <p>You do not have any bookings yet.</p>
+                        <p>No bookings made.</p>
                         <a class="button is-primary mt-4" href="{% url 'booking' %}">
                             Book equipment
                         </a>
