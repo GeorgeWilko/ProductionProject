@@ -20,6 +20,7 @@
             <div class="navbar-start">
                 <a class="navbar-item" href="{% url 'home' %}">Home</a>
                 <a class="navbar-item" href="{% url 'booking' %}">Equipment</a>
+                <a class="navbar-item" href="{% url 'my_orders' %}">My Orders</a>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
                 <button class="navbar-link" type="button">
@@ -36,6 +37,73 @@
             </div>
         </div>
     </nav>
+    <main id="main" tabindex="-1">
+        <section class="section">
+            <div class="container">
+                <h1 class="title has-text-centered">Your Orders</h1>
+                <div class="dropdown is-right is-active">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu6">
+                            Order placed: <span>1 day ago</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu6" role="menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-item"></div>
+                        </div>
+                    </div>
+                </div>
+                {% if bookings %}
+                    <div class="box">
+                        <ul>
+                            {% for booking in bookings %}
+                                <li class="mb-5">
+                                    <p>
+                                        <strong>Equipment:</strong> {{ booking.equipment.name }}
+                                    </p>
+                                    <p>
+                                        <strong>Status:</strong>
+                                        {% if booking.status == "confirmed" %}
+                                            <span class="tag is-success">{{ booking.get_status_display }}</span>
+                                        {% endif %}
+                                    </p>
+                                    <p><strong>Category:</strong> {{ booking.equipment.category.name }}</p>
+                                    <p><strong>From:</strong> {{ booking.start_date }} <strong>To:</strong> {{ booking.end_date }}</p>
+                                    <p><strong>Booked on:</strong> {{ booking.created_at|date:"Y-m-d H:i" }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% else %}
+                    <div class="box has-text-centered">
+                        <p>You do not have any bookings yet.</p>
+                        <a class="button is-primary mt-4" href="{% url 'booking' %}">
+                            Book equipment
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Accessible equipment hire</p>
+        </div>
+    </footer>
 </div>
+<script>
+    const theme = document.querySelector(".theme");
+
+    function setTheme(name) {
+        theme.className = `theme ${name}`;
+        localStorage.setItem("theme", name);
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "default";
+    setTheme(savedTheme);
+</script>
 </body>
 </html>
