@@ -78,6 +78,9 @@ def equipment_category(request, slug):
 
     return render(request, "website/Equipment.html", context)
 
+def my_orders():
+
+
 def confirmation(request):
     bookings = []
     unavailable_items = []

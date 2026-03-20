@@ -16,6 +16,9 @@ urlpatterns = [
          views.equipment_category,
          name="equipment_category"
          ),
+    path('orders/',
+         views.my_orders,
+         name='my_orders'),
     path('confirmation/',
          views.confirmation,
          name='confirmation'
