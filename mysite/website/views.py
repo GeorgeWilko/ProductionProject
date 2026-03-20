@@ -78,7 +78,17 @@ def equipment_category(request, slug):
 
     return render(request, "website/Equipment.html", context)
 
-def my_orders():
+def my_orders(request):
+    bookings = Booking.objects.select_related(
+        "equipment",
+        "equipment__category",
+    ).order_by("-created_at")
+
+    context = {
+        "bookings": bookings,
+    }
+
+    return render(request, "website/My_orders.html", context)
 
 
 def confirmation(request):
@@ -124,6 +134,7 @@ def confirmation(request):
         unit = choice(list(available))
 
         booking = Booking.objects.create(
+            user=request.user if request.user.is_authenticated else None,
             equipment=unit,
             start_date=start_date,
             end_date=end_date,
