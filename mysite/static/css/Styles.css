@@ -318,6 +318,23 @@ input {
   border: 3px solid red;
 }
 
+.theme.high .button.is-light {
+    background-color: black;
+    color: white;
+    border: 3px solid red;
+}
+
+.theme.high .input {
+        background-color: white;
+        color: black;
+        border: 2px solid red;
+}
+
+.theme.high .orders-table .tag.is-success {
+    background-color: white;
+    color: black;
+}
+
 
 .theme.low {
     background-color: #F6F7F9;
@@ -422,6 +439,12 @@ input {
     border: 3px solid red;
 }
 
+
+.theme.low .orders-table {
+   border: 1px solid #DBDDE1; 
+}
+
+
 .theme.high .orders-table tbody td {
     background-color: #101010;
     color: white;
@@ -437,4 +460,12 @@ input {
     background-color: white;
     color: #2B3442;
     border-color: #DBDDE1;
+}
+
+.orders-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
 }

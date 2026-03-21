@@ -63,6 +63,7 @@
                                 <thead>
                                     <tr>
                                         <th>#Order</th>
+                                        <th></th>
                                         <th>Equipment</th>
                                         <th>Category</th>
                                         <th>From</th>
@@ -75,6 +76,15 @@
                                     {% for booking in bookings %}
                                         <tr>
                                             <td>{{ booking.id }}</td>
+                                            <td>
+                                                {% if booking.equipment.image %}
+                                                    <img src="{{ booking.equipment.image.url }}" alt="{{ booking.equipment.name }}" class="orders-image">
+                                                {% elif booking.equipment.category.image %}
+                                                    <img src="{{ booking.equipment.category.image.url }}" alt="{{ booking.equipment.category.name }}" class="orders-image">
+                                                {% else %}
+                                                    <span>No image</span>
+                                                {% endif %}
+                                            </td>
                                             <td>{{ booking.equipment.name }}</td>
                                             <td>{{ booking.equipment.category.name }}</td>
                                             <td>{{ booking.start_date }}</td>
