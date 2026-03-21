@@ -418,6 +418,10 @@ input {
     color: white;
 }
 
+.theme.high .orders-table {
+    border: 3px solid red;
+}
+
 .theme.high .orders-table tbody td {
     background-color: #101010;
     color: white;
