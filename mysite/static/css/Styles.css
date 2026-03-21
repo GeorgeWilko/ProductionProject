@@ -301,6 +301,7 @@ input {
 
 .theme.high #page-title,
 .theme.high .hero .title,
+.theme.high .title,
 .theme.high .subtitle,
 .theme.high .navbar {
     color: black;
@@ -398,4 +399,38 @@ input {
 .theme.low .navbar-link:hover {
     color: white;
     background-color: #344A6A;
+}
+
+.theme.default .orders-table thead th {
+    background-color: #2A3F5F;
+    color: white;
+    border-color: #344A6A;
+}
+
+.theme.default .orders-table tbody td {
+    background-color: white;
+    color: #1f1f1f;
+    border-color: #d1d5db;
+}
+
+.theme.high .orders-table thead th {
+    background-color: black;
+    color: white;
+}
+
+.theme.high .orders-table tbody td {
+    background-color: #101010;
+    color: white;
+}
+
+.theme.low .orders-table thead th {
+    background-color: #dfe5ee;
+    color: #2B3442;
+    border-color: #c8d0dc;
+}
+
+.theme.low .orders-table tbody td {
+    background-color: white;
+    color: #2B3442;
+    border-color: #DBDDE1;
 }
