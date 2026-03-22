@@ -65,6 +65,38 @@
                         </div>
                     </div>
                     <aside class="column is-4-desktop">
+                        <div class="box" aria-label="Equipment Search">
+                            <h2 class="title is-4 has-text-centered">Search Equipment</h2>
+                            <form method="get" action="{% url 'booking' %}">
+                                <div class="field has-addons">
+                                    <div class="control is-expanded has-icons-right">
+                                        <input class="input" type="text" id="search" name="q" placeholder="Enter equipment name" value="{{ search_query }}">
+                                        <span class="icon is-small is-right" aria-hidden="true">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </span>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-primary" type="submit">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                            {% if search_query %}
+                                {% if search_results %}
+                                    <p class="has-text-weight-semibold mt-4 mb-2">Results for "{{ search_query }}":</p>
+                                    <ul>
+                                        {% for result in search_results %}
+                                            <li>
+                                                <strong>{{ result.name }}</strong>
+                                                in
+                                                <a href="{% url 'equipment_category' result.category_slug %}">{{ result.category_name }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    <p class="mt-4">No equipment found for "{{ search_query }}".</p>
+                                {% endif %}
+                            {% endif %}
+                        </div>
                         <form method="post" action="{% url 'confirmation' %}">
                             {% csrf_token %}
                             <input type="hidden" name="equipment_name" id="equipmentNameField">

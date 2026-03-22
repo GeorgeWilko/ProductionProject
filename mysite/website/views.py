@@ -19,6 +19,28 @@ def home(request):
 def booking(request):
     categories = EquipmentCategory.objects.prefetch_related("equipment").order_by("name")
     grouped_categories = []
+    search_query = request.GET.get("q", "").strip()
+    search_results = []
+
+    if search_query:
+        search_matches = Equipment.objects.select_related("category").filter(
+            name__icontains=search_query,
+        ).order_by("category__name", "name")
+
+        grouped_matches = OrderedDict()
+
+        for match in search_matches:
+            base_name = match.name.split(" - Unit ")[0]
+            key = (base_name, match.category.slug)
+
+            if key not in grouped_matches:
+                grouped_matches[key] = {
+                    "name": base_name,
+                    "category_name": match.category.name,
+                    "category_slug": match.category.slug,
+                }
+
+        search_results = list(grouped_matches.values())
 
     for category in categories:
         grouped = OrderedDict()
@@ -46,6 +68,8 @@ def booking(request):
 
     context = {
         "categories": grouped_categories,
+        "search_query": search_query,
+        "search_results": search_results,
     }
 
     return render(request, "website/Booking_page.html", context)

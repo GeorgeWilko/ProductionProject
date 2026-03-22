@@ -383,6 +383,21 @@ input {
     color: #2A3F5F;
 }
 
+.theme.default .box .title,
+.theme.default .box strong {
+    color: black;
+}
+
+.theme.low .box .title,
+.theme.low .box strong {
+    color: #344A6A;
+}
+
+.theme.high .box .title,
+.theme.high .box strong {
+    color: white;
+}
+
 .theme.default .navbar-dropdown .navbar-item:not(.is-active,.is-selected),
 .theme.default .navbar-dropdown {
     background-color: #2A3F5F;
@@ -468,4 +483,19 @@ input {
     object-fit: cover;
     border-radius: 4px;
     display: block;
+}
+
+.theme.default #search::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.theme.high #search::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.theme.low #search::placeholder {
+    color: #2A3F5F;
+    opacity: 1;
 }
