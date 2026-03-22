@@ -46,18 +46,16 @@
                         <div class="columns is-multiline">
                             {% for category in categories %}
                                 <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
-                                    <a href="{% url 'equipment_category' category.slug %}">
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <figure class="image is-4by3">
-                                                    {% if category.image %}
-                                                        <img src="{{ category.image.url }}" alt="{{ category.name }}">
-                                                    {% endif %}
-                                                </figure>
-                                            </div>
-                                            <div class="card-content has-text-centered">
-                                                <h2 class="title is-5">{{ category.name }}</h2>
-                                            </div>
+                                    <a href="{% url 'equipment_category' category.slug %}" class="card" aria-label="Open {{ category.name }} category">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                {% if category.image %}
+                                                    <img src="{{ category.image.url }}" alt="{{ category.name }}">
+                                                {% endif %}
+                                            </figure>
+                                        </div>
+                                        <div class="card-content has-text-centered">
+                                            <h2 class="title is-5">{{ category.name }}</h2>
                                         </div>
                                     </a>
                                 </div>
@@ -70,6 +68,7 @@
                             <form method="get" action="{% url 'booking' %}">
                                 <div class="field has-addons">
                                     <div class="control is-expanded has-icons-right">
+                                        <label class="is-sr-only" for="search">Search equipment name</label>
                                         <input class="input" type="text" id="search" name="q" placeholder="Enter equipment name" value="{{ search_query }}">
                                         <span class="icon is-small is-right" aria-hidden="true">
                                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -106,6 +105,7 @@
                             <div class="box basket" aria-label="Basket">
                                 <h2 class="title is-4 has-text-centered">
                                     <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                                    <span class="is-sr-only">Basket</span>
                                 </h2>
                                 <p id="basketStatus" class="sr-only" aria-live="polite"></p>
                                 <p id="basketEmpty">No items selected.</p>
@@ -114,7 +114,7 @@
                                     <strong>Total items:</strong> <span id="basketCount">0</span>
                                 </p>
                                 <div class="basket-date" aria-labelledby="date-title">
-                                    <p id="date-title" class="label"><u>Booking Date</u></p>
+                                    <p id="date-title" class="label">Booking Date</p>
                                     <div class="date-range">
                                         <label class="date-text" for="startDate">From:</label>
                                         <input class="input" type="date" id="startDate" name="startDate" required>

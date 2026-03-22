@@ -48,7 +48,8 @@
                                 {% for item in items %}
                                 <div class="equipment-item">
                                     <div class="card equipment-card">
-                                        <div class="card-image">
+                                        <button class="card-image modal-button equipment-image-trigger" type="button"
+                                            data-target="imageModal" aria-label="Open image for {{ item.name }}">
                                             <figure class="image equipment-card-image">
                                                 {% if item.image %}
                                                 <img src="{{ item.image.url }}" alt="{{ item.name }}">
@@ -58,7 +59,7 @@
                                                 <p class="no-image-placeholder">No image available</p>
                                                 {% endif %}
                                             </figure>
-                                        </div>
+                                        </button>
                                         <div class="card-content has-text-centered">
                                             <h2 class="title is-6">{{ item.name }}</h2>
                                             <p>Available: {{ item.available_count }}</p>
@@ -88,6 +89,7 @@
                                 <div class="box basket" aria-label="Basket">
                                     <h2 class="title is-4 has-text-centered">
                                         <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                                        <span class="is-sr-only">Basket</span>
                                     </h2>
                                     <p id="basketStatus" class="sr-only" aria-live="polite"></p>
                                     <p id="basketEmpty">No items selected.</p>
@@ -96,7 +98,7 @@
                                         <strong>Total items:</strong> <span id="basketCount">0</span>
                                     </p>
                                     <div class="basket-date" aria-labelledby="date-title">
-                                        <p id="date-title" class="label"><u>Booking Date</u></p>
+                                        <p id="date-title" class="label">Booking Date</p>
 
                                         <div class="date-range">
                                             <label class="date-text" for="startDate">From:</label>
@@ -245,8 +247,12 @@
 
         document.querySelectorAll(".modal-button").forEach(function (button) {
             button.addEventListener("click", function () {
-                const img = button.querySelector("img");
-                openImage(img);
+                const targetModal = this.dataset.target;
+                const img = this.querySelector("img");
+                
+                if (img && targetModal === "imageModal") {
+                    openImage(img);
+                }
             });
         });
 

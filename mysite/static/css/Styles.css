@@ -110,6 +110,15 @@ h2 {
     width: 100%;
 }
 
+.equipment-image-trigger {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: transparent;
+    display: block;
+}
+
 .equipment-card-image {
     height: 190px;
     padding-top: 0;
