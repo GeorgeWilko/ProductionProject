@@ -1,4060 +1,4072 @@
 [
-  {
-    "model": "website.equipmentcategory",
-    "pk": 1,
-    "fields": {
-      "name": "Mouse",
-      "image": "equipment_images/WirelessMouse.jpeg",
-      "description": "Windows wireless mouse"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 2,
-    "fields": {
-      "name": "Keyboard",
-      "image": "equipment_images/Keyboard.jpeg",
-      "description": "Windows computer keyboard"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 3,
-    "fields": {
-      "name": "iPad",
-      "image": "equipment_images/Ipad.jpg",
-      "description": "12 inch full HD iPad"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 4,
-    "fields": {
-      "name": "Laptop",
-      "image": "equipment_images/Laptop.jpg",
-      "description": "Windows laptop for daily use"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 5,
-    "fields": {
-      "name": "Raspberry Pi",
-      "image": "equipment_images/RaspberryPi.jpeg",
-      "description": "Raspberry Pi with a linux operating system"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 6,
-    "fields": {
-      "name": "Monitor",
-      "image": "equipment_images/Monitor.jpg",
-      "description": "24 inch full HD monitor"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 7,
-    "fields": {
-      "name": "Headset",
-      "image": "equipment_images/ComputerHeadphones.jpg",
-      "description": "Computer headphones"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 8,
-    "fields": {
-      "name": "USB",
-      "image": "equipment_images/FlashDrive.jpg",
-      "description": "USB flash drive for storing files"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 9,
-    "fields": {
-      "name": "Printer",
-      "image": "equipment_images/Printer.jpeg",
-      "description": "Printer for printing documents"
-    }
-  },
-  {
-    "model": "website.location",
-    "pk": 1,
-    "fields": {
-      "name": "Headingley",
-      "address": "",
-      "city": "",
-      "country": ""
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 1,
-    "fields": {
-      "name": "Raspberry Pi - Unit 001",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 2,
-    "fields": {
-      "name": "Computer Headphones - Unit 002",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 3,
-    "fields": {
-      "name": "Monitor - Unit 003",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 4,
-    "fields": {
-      "name": "Tablet - Unit 004",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 5,
-    "fields": {
-      "name": "USB Flash Drive - Unit 005",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 6,
-    "fields": {
-      "name": "Tablet - Unit 006",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 7,
-    "fields": {
-      "name": "Printer - Unit 007",
-      "status": "unavailable",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 8,
-    "fields": {
-      "name": "Printer - Unit 008",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 9,
-    "fields": {
-      "name": "USB Flash Drive - Unit 009",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 10,
-    "fields": {
-      "name": "Wireless Mouse - Unit 010",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 11,
-    "fields": {
-      "name": "Monitor - Unit 011",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 12,
-    "fields": {
-      "name": "Raspberry Pi - Unit 012",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 13,
-    "fields": {
-      "name": "Tablet - Unit 013",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 14,
-    "fields": {
-      "name": "Tablet - Unit 014",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 15,
-    "fields": {
-      "name": "Monitor - Unit 015",
-      "status": "unavailable",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 16,
-    "fields": {
-      "name": "Monitor - Unit 016",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 17,
-    "fields": {
-      "name": "Keyboard - Unit 017",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 18,
-    "fields": {
-      "name": "Laptop - Unit 018",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 19,
-    "fields": {
-      "name": "Computer Headphones - Unit 019",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 20,
-    "fields": {
-      "name": "Wireless Mouse - Unit 020",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 21,
-    "fields": {
-      "name": "USB Flash Drive - Unit 021",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 22,
-    "fields": {
-      "name": "Monitor - Unit 022",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 23,
-    "fields": {
-      "name": "Wireless Mouse - Unit 023",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 24,
-    "fields": {
-      "name": "Wireless Mouse - Unit 024",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 25,
-    "fields": {
-      "name": "Monitor - Unit 025",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 26,
-    "fields": {
-      "name": "Keyboard - Unit 026",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 27,
-    "fields": {
-      "name": "Monitor - Unit 027",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 28,
-    "fields": {
-      "name": "Wireless Mouse - Unit 028",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 29,
-    "fields": {
-      "name": "Tablet - Unit 029",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 30,
-    "fields": {
-      "name": "Tablet - Unit 030",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 31,
-    "fields": {
-      "name": "Printer - Unit 031",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 32,
-    "fields": {
-      "name": "Printer - Unit 032",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 33,
-    "fields": {
-      "name": "Monitor - Unit 033",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 34,
-    "fields": {
-      "name": "USB Flash Drive - Unit 034",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 35,
-    "fields": {
-      "name": "Monitor - Unit 035",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 36,
-    "fields": {
-      "name": "Monitor - Unit 036",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 37,
-    "fields": {
-      "name": "Printer - Unit 037",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 38,
-    "fields": {
-      "name": "Laptop - Unit 038",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 39,
-    "fields": {
-      "name": "Wireless Mouse - Unit 039",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 40,
-    "fields": {
-      "name": "USB Flash Drive - Unit 040",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 41,
-    "fields": {
-      "name": "Monitor - Unit 041",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 42,
-    "fields": {
-      "name": "USB Flash Drive - Unit 042",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 43,
-    "fields": {
-      "name": "Printer - Unit 043",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 44,
-    "fields": {
-      "name": "Monitor - Unit 044",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 45,
-    "fields": {
-      "name": "Printer - Unit 045",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 46,
-    "fields": {
-      "name": "Wireless Mouse - Unit 046",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 47,
-    "fields": {
-      "name": "Raspberry Pi - Unit 047",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 48,
-    "fields": {
-      "name": "Keyboard - Unit 048",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 49,
-    "fields": {
-      "name": "USB Flash Drive - Unit 049",
-      "status": "unavailable",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 50,
-    "fields": {
-      "name": "Tablet - Unit 050",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 51,
-    "fields": {
-      "name": "Computer Headphones - Unit 051",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 52,
-    "fields": {
-      "name": "Laptop - Unit 052",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 53,
-    "fields": {
-      "name": "Raspberry Pi - Unit 053",
-      "status": "unavailable",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 54,
-    "fields": {
-      "name": "Wireless Mouse - Unit 054",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 55,
-    "fields": {
-      "name": "Laptop - Unit 055",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 56,
-    "fields": {
-      "name": "Wireless Mouse - Unit 056",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 57,
-    "fields": {
-      "name": "Printer - Unit 057",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 58,
-    "fields": {
-      "name": "Laptop - Unit 058",
-      "status": "unavailable",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 59,
-    "fields": {
-      "name": "Monitor - Unit 059",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 60,
-    "fields": {
-      "name": "Computer Headphones - Unit 060",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 61,
-    "fields": {
-      "name": "Computer Headphones - Unit 061",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 62,
-    "fields": {
-      "name": "Monitor - Unit 062",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 63,
-    "fields": {
-      "name": "Printer - Unit 063",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 64,
-    "fields": {
-      "name": "Printer - Unit 064",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 65,
-    "fields": {
-      "name": "Laptop - Unit 065",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 66,
-    "fields": {
-      "name": "Monitor - Unit 066",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 67,
-    "fields": {
-      "name": "Keyboard - Unit 067",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 68,
-    "fields": {
-      "name": "Monitor - Unit 068",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 69,
-    "fields": {
-      "name": "Wireless Mouse - Unit 069",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 70,
-    "fields": {
-      "name": "Laptop - Unit 070",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 71,
-    "fields": {
-      "name": "Raspberry Pi - Unit 071",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 72,
-    "fields": {
-      "name": "Monitor - Unit 072",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 73,
-    "fields": {
-      "name": "Printer - Unit 073",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 74,
-    "fields": {
-      "name": "Tablet - Unit 074",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 75,
-    "fields": {
-      "name": "Tablet - Unit 075",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 76,
-    "fields": {
-      "name": "Keyboard - Unit 076",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 77,
-    "fields": {
-      "name": "Keyboard - Unit 077",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 78,
-    "fields": {
-      "name": "Printer - Unit 078",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 79,
-    "fields": {
-      "name": "USB Flash Drive - Unit 079",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 80,
-    "fields": {
-      "name": "Printer - Unit 080",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 81,
-    "fields": {
-      "name": "Keyboard - Unit 081",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 82,
-    "fields": {
-      "name": "USB Flash Drive - Unit 082",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 83,
-    "fields": {
-      "name": "USB Flash Drive - Unit 083",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 84,
-    "fields": {
-      "name": "USB Flash Drive - Unit 084",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 85,
-    "fields": {
-      "name": "Tablet - Unit 085",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 86,
-    "fields": {
-      "name": "Keyboard - Unit 086",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 87,
-    "fields": {
-      "name": "Wireless Mouse - Unit 087",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 88,
-    "fields": {
-      "name": "Printer - Unit 088",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 89,
-    "fields": {
-      "name": "Raspberry Pi - Unit 089",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 90,
-    "fields": {
-      "name": "Tablet - Unit 090",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 91,
-    "fields": {
-      "name": "Tablet - Unit 091",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 92,
-    "fields": {
-      "name": "Monitor - Unit 092",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 93,
-    "fields": {
-      "name": "Laptop - Unit 093",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 94,
-    "fields": {
-      "name": "Laptop - Unit 094",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 95,
-    "fields": {
-      "name": "Printer - Unit 095",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 96,
-    "fields": {
-      "name": "Raspberry Pi - Unit 096",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 97,
-    "fields": {
-      "name": "Wireless Mouse - Unit 097",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 98,
-    "fields": {
-      "name": "Wireless Mouse - Unit 098",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 99,
-    "fields": {
-      "name": "Keyboard - Unit 099",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 100,
-    "fields": {
-      "name": "Printer - Unit 100",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 101,
-    "fields": {
-      "name": "Computer Headphones - Unit 101",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 102,
-    "fields": {
-      "name": "Tablet - Unit 102",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 103,
-    "fields": {
-      "name": "Wireless Mouse - Unit 103",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 104,
-    "fields": {
-      "name": "Laptop - Unit 104",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 105,
-    "fields": {
-      "name": "Raspberry Pi - Unit 105",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 106,
-    "fields": {
-      "name": "Raspberry Pi - Unit 106",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 107,
-    "fields": {
-      "name": "Wireless Mouse - Unit 107",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 108,
-    "fields": {
-      "name": "Tablet - Unit 108",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 109,
-    "fields": {
-      "name": "Raspberry Pi - Unit 109",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 110,
-    "fields": {
-      "name": "Laptop - Unit 110",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 111,
-    "fields": {
-      "name": "Printer - Unit 111",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 112,
-    "fields": {
-      "name": "Wireless Mouse - Unit 112",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 113,
-    "fields": {
-      "name": "Computer Headphones - Unit 113",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 114,
-    "fields": {
-      "name": "USB Flash Drive - Unit 114",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 115,
-    "fields": {
-      "name": "USB Flash Drive - Unit 115",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 116,
-    "fields": {
-      "name": "Monitor - Unit 116",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 117,
-    "fields": {
-      "name": "Wireless Mouse - Unit 117",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 118,
-    "fields": {
-      "name": "Monitor - Unit 118",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 119,
-    "fields": {
-      "name": "Keyboard - Unit 119",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 120,
-    "fields": {
-      "name": "Computer Headphones - Unit 120",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 121,
-    "fields": {
-      "name": "Computer Headphones - Unit 121",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 122,
-    "fields": {
-      "name": "Printer - Unit 122",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 123,
-    "fields": {
-      "name": "USB Flash Drive - Unit 123",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 124,
-    "fields": {
-      "name": "Tablet - Unit 124",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 125,
-    "fields": {
-      "name": "Raspberry Pi - Unit 125",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 126,
-    "fields": {
-      "name": "Wireless Mouse - Unit 126",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 127,
-    "fields": {
-      "name": "Keyboard - Unit 127",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 128,
-    "fields": {
-      "name": "Laptop - Unit 128",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 129,
-    "fields": {
-      "name": "Computer Headphones - Unit 129",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 130,
-    "fields": {
-      "name": "Printer - Unit 130",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 131,
-    "fields": {
-      "name": "Printer - Unit 131",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 132,
-    "fields": {
-      "name": "Monitor - Unit 132",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 133,
-    "fields": {
-      "name": "Keyboard - Unit 133",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 134,
-    "fields": {
-      "name": "Tablet - Unit 134",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 135,
-    "fields": {
-      "name": "Laptop - Unit 135",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 136,
-    "fields": {
-      "name": "Monitor - Unit 136",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 137,
-    "fields": {
-      "name": "USB Flash Drive - Unit 137",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 138,
-    "fields": {
-      "name": "Computer Headphones - Unit 138",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 139,
-    "fields": {
-      "name": "USB Flash Drive - Unit 139",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 140,
-    "fields": {
-      "name": "Keyboard - Unit 140",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 141,
-    "fields": {
-      "name": "Tablet - Unit 141",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 142,
-    "fields": {
-      "name": "Wireless Mouse - Unit 142",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 143,
-    "fields": {
-      "name": "Wireless Mouse - Unit 143",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 144,
-    "fields": {
-      "name": "Keyboard - Unit 144",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 145,
-    "fields": {
-      "name": "Tablet - Unit 145",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 146,
-    "fields": {
-      "name": "Keyboard - Unit 146",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 147,
-    "fields": {
-      "name": "Laptop - Unit 147",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 148,
-    "fields": {
-      "name": "Raspberry Pi - Unit 148",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 149,
-    "fields": {
-      "name": "Tablet - Unit 149",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 150,
-    "fields": {
-      "name": "Keyboard - Unit 150",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 151,
-    "fields": {
-      "name": "Keyboard - Unit 151",
-      "status": "unavailable",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 152,
-    "fields": {
-      "name": "Tablet - Unit 152",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 153,
-    "fields": {
-      "name": "Computer Headphones - Unit 153",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 154,
-    "fields": {
-      "name": "Keyboard - Unit 154",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 155,
-    "fields": {
-      "name": "Computer Headphones - Unit 155",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 156,
-    "fields": {
-      "name": "USB Flash Drive - Unit 156",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 157,
-    "fields": {
-      "name": "Tablet - Unit 157",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 158,
-    "fields": {
-      "name": "Computer Headphones - Unit 158",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 159,
-    "fields": {
-      "name": "Raspberry Pi - Unit 159",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 160,
-    "fields": {
-      "name": "Computer Headphones - Unit 160",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 161,
-    "fields": {
-      "name": "Wireless Mouse - Unit 161",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 162,
-    "fields": {
-      "name": "Wireless Mouse - Unit 162",
-      "status": "unavailable",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 163,
-    "fields": {
-      "name": "Laptop - Unit 163",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 164,
-    "fields": {
-      "name": "Wireless Mouse - Unit 164",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 165,
-    "fields": {
-      "name": "USB Flash Drive - Unit 165",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 166,
-    "fields": {
-      "name": "Raspberry Pi - Unit 166",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 167,
-    "fields": {
-      "name": "Monitor - Unit 167",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 168,
-    "fields": {
-      "name": "Raspberry Pi - Unit 168",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 169,
-    "fields": {
-      "name": "USB Flash Drive - Unit 169",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 170,
-    "fields": {
-      "name": "Keyboard - Unit 170",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 171,
-    "fields": {
-      "name": "Laptop - Unit 171",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 172,
-    "fields": {
-      "name": "USB Flash Drive - Unit 172",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 173,
-    "fields": {
-      "name": "Computer Headphones - Unit 173",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 174,
-    "fields": {
-      "name": "USB Flash Drive - Unit 174",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 175,
-    "fields": {
-      "name": "Printer - Unit 175",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 176,
-    "fields": {
-      "name": "Tablet - Unit 176",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 177,
-    "fields": {
-      "name": "USB Flash Drive - Unit 177",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 178,
-    "fields": {
-      "name": "USB Flash Drive - Unit 178",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 179,
-    "fields": {
-      "name": "Laptop - Unit 179",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 180,
-    "fields": {
-      "name": "Keyboard - Unit 180",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 181,
-    "fields": {
-      "name": "Wireless Mouse - Unit 181",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 182,
-    "fields": {
-      "name": "Wireless Mouse - Unit 182",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 183,
-    "fields": {
-      "name": "Keyboard - Unit 183",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 184,
-    "fields": {
-      "name": "Computer Headphones - Unit 184",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 185,
-    "fields": {
-      "name": "USB Flash Drive - Unit 185",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 186,
-    "fields": {
-      "name": "Keyboard - Unit 186",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 187,
-    "fields": {
-      "name": "Keyboard - Unit 187",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 188,
-    "fields": {
-      "name": "USB Flash Drive - Unit 188",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 189,
-    "fields": {
-      "name": "Monitor - Unit 189",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 190,
-    "fields": {
-      "name": "Wireless Mouse - Unit 190",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 191,
-    "fields": {
-      "name": "Tablet - Unit 191",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 192,
-    "fields": {
-      "name": "USB Flash Drive - Unit 192",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 193,
-    "fields": {
-      "name": "Printer - Unit 193",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 194,
-    "fields": {
-      "name": "Raspberry Pi - Unit 194",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 195,
-    "fields": {
-      "name": "Raspberry Pi - Unit 195",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 196,
-    "fields": {
-      "name": "Keyboard - Unit 196",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 197,
-    "fields": {
-      "name": "Laptop - Unit 197",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 198,
-    "fields": {
-      "name": "Wireless Mouse - Unit 198",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 199,
-    "fields": {
-      "name": "Printer - Unit 199",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 200,
-    "fields": {
-      "name": "Wireless Mouse - Unit 200",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 201,
-    "fields": {
-      "name": "Wireless Mouse - Unit 201",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 202,
-    "fields": {
-      "name": "Computer Headphones - Unit 202",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 203,
-    "fields": {
-      "name": "Computer Headphones - Unit 203",
-      "status": "unavailable",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 204,
-    "fields": {
-      "name": "Monitor - Unit 204",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 205,
-    "fields": {
-      "name": "Printer - Unit 205",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 206,
-    "fields": {
-      "name": "Monitor - Unit 206",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 207,
-    "fields": {
-      "name": "Wireless Mouse - Unit 207",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 208,
-    "fields": {
-      "name": "Tablet - Unit 208",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 209,
-    "fields": {
-      "name": "Keyboard - Unit 209",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 210,
-    "fields": {
-      "name": "Computer Headphones - Unit 210",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 211,
-    "fields": {
-      "name": "Raspberry Pi - Unit 211",
-      "status": "unavailable",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 212,
-    "fields": {
-      "name": "Wireless Mouse - Unit 212",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 213,
-    "fields": {
-      "name": "Monitor - Unit 213",
-      "status": "unavailable",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 214,
-    "fields": {
-      "name": "Wireless Mouse - Unit 214",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 215,
-    "fields": {
-      "name": "Tablet - Unit 215",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 216,
-    "fields": {
-      "name": "Printer - Unit 216",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 217,
-    "fields": {
-      "name": "USB Flash Drive - Unit 217",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 218,
-    "fields": {
-      "name": "Printer - Unit 218",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 219,
-    "fields": {
-      "name": "Raspberry Pi - Unit 219",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 220,
-    "fields": {
-      "name": "Monitor - Unit 220",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 221,
-    "fields": {
-      "name": "Monitor - Unit 221",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 222,
-    "fields": {
-      "name": "Computer Headphones - Unit 222",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 223,
-    "fields": {
-      "name": "Wireless Mouse - Unit 223",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 224,
-    "fields": {
-      "name": "Computer Headphones - Unit 224",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 225,
-    "fields": {
-      "name": "Laptop - Unit 225",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 226,
-    "fields": {
-      "name": "USB Flash Drive - Unit 226",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 227,
-    "fields": {
-      "name": "Monitor - Unit 227",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 228,
-    "fields": {
-      "name": "Raspberry Pi - Unit 228",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 229,
-    "fields": {
-      "name": "Laptop - Unit 229",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 230,
-    "fields": {
-      "name": "Tablet - Unit 230",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 231,
-    "fields": {
-      "name": "Wireless Mouse - Unit 231",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 232,
-    "fields": {
-      "name": "Wireless Mouse - Unit 232",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 233,
-    "fields": {
-      "name": "Tablet - Unit 233",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 234,
-    "fields": {
-      "name": "Computer Headphones - Unit 234",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 235,
-    "fields": {
-      "name": "Printer - Unit 235",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 236,
-    "fields": {
-      "name": "Computer Headphones - Unit 236",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 237,
-    "fields": {
-      "name": "Tablet - Unit 237",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 238,
-    "fields": {
-      "name": "Raspberry Pi - Unit 238",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 239,
-    "fields": {
-      "name": "USB Flash Drive - Unit 239",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 240,
-    "fields": {
-      "name": "Printer - Unit 240",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 241,
-    "fields": {
-      "name": "Computer Headphones - Unit 241",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 242,
-    "fields": {
-      "name": "Wireless Mouse - Unit 242",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 243,
-    "fields": {
-      "name": "Raspberry Pi - Unit 243",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 244,
-    "fields": {
-      "name": "USB Flash Drive - Unit 244",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 245,
-    "fields": {
-      "name": "Wireless Mouse - Unit 245",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 246,
-    "fields": {
-      "name": "Keyboard - Unit 246",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 247,
-    "fields": {
-      "name": "Raspberry Pi - Unit 247",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 248,
-    "fields": {
-      "name": "Raspberry Pi - Unit 248",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 249,
-    "fields": {
-      "name": "Keyboard - Unit 249",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 250,
-    "fields": {
-      "name": "Keyboard - Unit 250",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 251,
-    "fields": {
-      "name": "Wireless Mouse - Unit 251",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 252,
-    "fields": {
-      "name": "Laptop - Unit 252",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 253,
-    "fields": {
-      "name": "Raspberry Pi - Unit 253",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 254,
-    "fields": {
-      "name": "Printer - Unit 254",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 255,
-    "fields": {
-      "name": "Monitor - Unit 255",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 256,
-    "fields": {
-      "name": "USB Flash Drive - Unit 256",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 257,
-    "fields": {
-      "name": "USB Flash Drive - Unit 257",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 258,
-    "fields": {
-      "name": "USB Flash Drive - Unit 258",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 259,
-    "fields": {
-      "name": "Tablet - Unit 259",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 260,
-    "fields": {
-      "name": "Laptop - Unit 260",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 261,
-    "fields": {
-      "name": "Printer - Unit 261",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 262,
-    "fields": {
-      "name": "Raspberry Pi - Unit 262",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 263,
-    "fields": {
-      "name": "Laptop - Unit 263",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 264,
-    "fields": {
-      "name": "Laptop - Unit 264",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 265,
-    "fields": {
-      "name": "Wireless Mouse - Unit 265",
-      "status": "available",
-      "description": "Wireless optical mouse",
-      "category": 1,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 266,
-    "fields": {
-      "name": "Tablet - Unit 266",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 267,
-    "fields": {
-      "name": "Computer Headphones - Unit 267",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 268,
-    "fields": {
-      "name": "Keyboard - Unit 268",
-      "status": "available",
-      "description": "Windows computer keyboard",
-      "category": 2,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 269,
-    "fields": {
-      "name": "Tablet - Unit 269",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 270,
-    "fields": {
-      "name": "Printer - Unit 270",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 271,
-    "fields": {
-      "name": "Computer Headphones - Unit 271",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 272,
-    "fields": {
-      "name": "Monitor - Unit 272",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 273,
-    "fields": {
-      "name": "Raspberry Pi - Unit 273",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 274,
-    "fields": {
-      "name": "Computer Headphones - Unit 274",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 275,
-    "fields": {
-      "name": "Laptop - Unit 275",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 276,
-    "fields": {
-      "name": "Printer - Unit 276",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 277,
-    "fields": {
-      "name": "Printer - Unit 277",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 278,
-    "fields": {
-      "name": "Raspberry Pi - Unit 278",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 279,
-    "fields": {
-      "name": "Raspberry Pi - Unit 279",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 280,
-    "fields": {
-      "name": "Raspberry Pi - Unit 280",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 281,
-    "fields": {
-      "name": "Tablet - Unit 281",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 282,
-    "fields": {
-      "name": "Raspberry Pi - Unit 282",
-      "status": "available",
-      "description": "Raspberry Pi with a Linux operating system",
-      "category": 5,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 283,
-    "fields": {
-      "name": "Computer Headphones - Unit 283",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 284,
-    "fields": {
-      "name": "Tablet - Unit 284",
-      "status": "available",
-      "description": "Portable tablet device",
-      "category": 3,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 285,
-    "fields": {
-      "name": "Laptop - Unit 285",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 286,
-    "fields": {
-      "name": "Laptop - Unit 286",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 287,
-    "fields": {
-      "name": "Computer Headphones - Unit 287",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 288,
-    "fields": {
-      "name": "Laptop - Unit 288",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 289,
-    "fields": {
-      "name": "Printer - Unit 289",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 290,
-    "fields": {
-      "name": "USB Flash Drive - Unit 290",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 291,
-    "fields": {
-      "name": "USB Flash Drive - Unit 291",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 292,
-    "fields": {
-      "name": "Laptop - Unit 292",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 293,
-    "fields": {
-      "name": "Printer - Unit 293",
-      "status": "available",
-      "description": "Printer for printing documents",
-      "category": 9,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 294,
-    "fields": {
-      "name": "Computer Headphones - Unit 294",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 295,
-    "fields": {
-      "name": "Monitor - Unit 295",
-      "status": "available",
-      "description": "24 inch full HD monitor",
-      "category": 6,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 296,
-    "fields": {
-      "name": "USB Flash Drive - Unit 296",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 297,
-    "fields": {
-      "name": "Computer Headphones - Unit 297",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 298,
-    "fields": {
-      "name": "Laptop - Unit 298",
-      "status": "available",
-      "description": "Windows laptop for daily use",
-      "category": 4,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 299,
-    "fields": {
-      "name": "USB Flash Drive - Unit 299",
-      "status": "available",
-      "description": "USB flash drive for storing files",
-      "category": 8,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 300,
-    "fields": {
-      "name": "Computer Headphones - Unit 300",
-      "status": "available",
-      "description": "Computer headphones",
-      "category": 7,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 10,
-    "fields": {
-      "name": "Charger",
-      "image": "equipment_images/Charger.jpg",
-      "description": "Chargers for laptops and tablets"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 11,
-    "fields": {
-      "name": "Projector",
-      "image": "equipment_images/Projector.jpg",
-      "description": "Projector for classroom presentations"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 12,
-    "fields": {
-      "name": "Webcam",
-      "image": "equipment_images/Webcam.jpg",
-      "description": "USB webcam for online meetings"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 13,
-    "fields": {
-      "name": "Microphone",
-      "image": "equipment_images/Microphone.jpg",
-      "description": "Microphone for recording and calls"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 14,
-    "fields": {
-      "name": "Calculator",
-      "image": "equipment_images/Calculator.jpg",
-      "description": "Scientific calculator for lessons and exams"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 15,
-    "fields": {
-      "name": "Camera",
-      "image": "equipment_images/Camera.jpg",
-      "description": "Digital camera for photography and media work"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 16,
-    "fields": {
-      "name": "Tripod",
-      "image": "equipment_images/Tripod.jpg",
-      "description": "Tripod for cameras and recording equipment"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 17,
-    "fields": {
-      "name": "HDMI Cable",
-      "image": "equipment_images/HDMICable.jpg",
-      "description": "HDMI cable for connecting devices to displays"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 18,
-    "fields": {
-      "name": "Extension Lead",
-      "image": "equipment_images/ExtensionLead.jpg",
-      "description": "Extension lead for powering equipment"
-    }
-  },
-  {
-    "model": "website.equipmentcategory",
-    "pk": 19,
-    "fields": {
-      "name": "Speaker",
-      "image": "equipment_images/Speaker.jpg",
-      "description": "Portable speaker for presentations and events"
-    }
-  },
-
-  {
-    "model": "website.equipment",
-    "pk": 207,
-    "fields": {
-      "name": "USB-C Charger - Unit 207",
-      "status": "available",
-      "description": "USB-C charger for laptops and tablets",
-      "category": 10,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 208,
-    "fields": {
-      "name": "Laptop Charger - Unit 208",
-      "status": "available",
-      "description": "Laptop charger for Windows devices",
-      "category": 10,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 209,
-    "fields": {
-      "name": "Tablet Charger - Unit 209",
-      "status": "available",
-      "description": "Tablet charger for portable devices",
-      "category": 10,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 210,
-    "fields": {
-      "name": "Projector - Unit 210",
-      "status": "available",
-      "description": "Projector for classroom presentations",
-      "category": 11,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 211,
-    "fields": {
-      "name": "Projector - Unit 211",
-      "status": "unavailable",
-      "description": "Projector for classroom presentations",
-      "category": 11,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 212,
-    "fields": {
-      "name": "Webcam - Unit 212",
-      "status": "available",
-      "description": "HD USB webcam for meetings and online learning",
-      "category": 12,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 213,
-    "fields": {
-      "name": "Webcam - Unit 213",
-      "status": "available",
-      "description": "HD USB webcam for meetings and online learning",
-      "category": 12,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 214,
-    "fields": {
-      "name": "USB Microphone - Unit 214",
-      "status": "available",
-      "description": "USB microphone for recording and video calls",
-      "category": 13,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 215,
-    "fields": {
-      "name": "USB Microphone - Unit 215",
-      "status": "available",
-      "description": "USB microphone for recording and video calls",
-      "category": 13,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 216,
-    "fields": {
-      "name": "Scientific Calculator - Unit 216",
-      "status": "available",
-      "description": "Scientific calculator for school work",
-      "category": 14,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 217,
-    "fields": {
-      "name": "Scientific Calculator - Unit 217",
-      "status": "available",
-      "description": "Scientific calculator for school work",
-      "category": 14,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 218,
-    "fields": {
-      "name": "Scientific Calculator - Unit 218",
-      "status": "unavailable",
-      "description": "Scientific calculator for school work",
-      "category": 14,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 219,
-    "fields": {
-      "name": "Digital Camera - Unit 219",
-      "status": "available",
-      "description": "Digital camera for photography and media studies",
-      "category": 15,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 220,
-    "fields": {
-      "name": "Digital Camera - Unit 220",
-      "status": "available",
-      "description": "Digital camera for photography and media studies",
-      "category": 15,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 221,
-    "fields": {
-      "name": "Tripod - Unit 221",
-      "status": "available",
-      "description": "Adjustable tripod for cameras and recording equipment",
-      "category": 16,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 222,
-    "fields": {
-      "name": "Tripod - Unit 222",
-      "status": "available",
-      "description": "Adjustable tripod for cameras and recording equipment",
-      "category": 16,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 223,
-    "fields": {
-      "name": "HDMI Cable - Unit 223",
-      "status": "available",
-      "description": "HDMI cable for displays and projectors",
-      "category": 17,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 224,
-    "fields": {
-      "name": "HDMI Cable - Unit 224",
-      "status": "available",
-      "description": "HDMI cable for displays and projectors",
-      "category": 17,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 225,
-    "fields": {
-      "name": "HDMI Cable - Unit 225",
-      "status": "available",
-      "description": "HDMI cable for displays and projectors",
-      "category": 17,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 226,
-    "fields": {
-      "name": "Extension Lead - Unit 226",
-      "status": "available",
-      "description": "4-socket extension lead",
-      "category": 18,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 227,
-    "fields": {
-      "name": "Extension Lead - Unit 227",
-      "status": "available",
-      "description": "4-socket extension lead",
-      "category": 18,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 228,
-    "fields": {
-      "name": "Portable Speaker - Unit 228",
-      "status": "available",
-      "description": "Portable speaker for classrooms and events",
-      "category": 19,
-      "location": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "website.equipment",
-    "pk": 229,
-    "fields": {
-      "name": "Portable Speaker - Unit 229",
-      "status": "unavailable",
-      "description": "Portable speaker for classrooms and events",
-      "category": 19,
-      "location": 1,
-      "quantity": 1
-    }
+{
+  "model": "website.equipmentcategory",
+  "pk": 20,
+  "fields": {
+    "name": "Accessories",
+    "slug": "accessories",
+    "image": "equipment_images/accessories.png",
+    "description": ""
   }
+},
+{
+  "model": "website.equipmentcategory",
+  "pk": 21,
+  "fields": {
+    "name": "Storage",
+    "slug": "storage",
+    "image": "equipment_images/Storage.png",
+    "description": ""
+  }
+},
+{
+  "model": "website.equipmentcategory",
+  "pk": 22,
+  "fields": {
+    "name": "Display",
+    "slug": "display",
+    "image": "equipment_images/Display.png",
+    "description": ""
+  }
+},
+{
+  "model": "website.equipmentcategory",
+  "pk": 23,
+  "fields": {
+    "name": "Computing Equipment",
+    "slug": "computing-equipment",
+    "image": "equipment_images/ComputingEquipment.png",
+    "description": ""
+  }
+},
+{
+  "model": "website.equipmentcategory",
+  "pk": 24,
+  "fields": {
+    "name": "Peripherals",
+    "slug": "peripherals",
+    "image": "equipment_images/Peripherals_WtFKTH3.png",
+    "description": ""
+  }
+},
+{
+  "model": "website.location",
+  "pk": 1,
+  "fields": {
+    "name": "Headingley",
+    "address": "",
+    "city": "",
+    "country": ""
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 1,
+  "fields": {
+    "name": "Raspberry Pi - Unit 001",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 2,
+  "fields": {
+    "name": "Computer Headphones - Unit 002",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 3,
+  "fields": {
+    "name": "Monitor - Unit 003",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 4,
+  "fields": {
+    "name": "Tablet - Unit 004",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 5,
+  "fields": {
+    "name": "USB Flash Drive - Unit 005",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 6,
+  "fields": {
+    "name": "Tablet - Unit 006",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 7,
+  "fields": {
+    "name": "Printer - Unit 007",
+    "status": "unavailable",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 8,
+  "fields": {
+    "name": "Printer - Unit 008",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 9,
+  "fields": {
+    "name": "USB Flash Drive - Unit 009",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 10,
+  "fields": {
+    "name": "Wireless Mouse - Unit 010",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 11,
+  "fields": {
+    "name": "Monitor - Unit 011",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 12,
+  "fields": {
+    "name": "Raspberry Pi - Unit 012",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 13,
+  "fields": {
+    "name": "Tablet - Unit 013",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 14,
+  "fields": {
+    "name": "Tablet - Unit 014",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 15,
+  "fields": {
+    "name": "Monitor - Unit 015",
+    "status": "unavailable",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 16,
+  "fields": {
+    "name": "Monitor - Unit 016",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 17,
+  "fields": {
+    "name": "Keyboard - Unit 017",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 18,
+  "fields": {
+    "name": "Laptop - Unit 018",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 19,
+  "fields": {
+    "name": "Computer Headphones - Unit 019",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 20,
+  "fields": {
+    "name": "Wireless Mouse - Unit 020",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 21,
+  "fields": {
+    "name": "USB Flash Drive - Unit 021",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 22,
+  "fields": {
+    "name": "Monitor - Unit 022",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 23,
+  "fields": {
+    "name": "Wireless Mouse - Unit 023",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 24,
+  "fields": {
+    "name": "Wireless Mouse - Unit 024",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 25,
+  "fields": {
+    "name": "Monitor - Unit 025",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 26,
+  "fields": {
+    "name": "Keyboard - Unit 026",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 27,
+  "fields": {
+    "name": "Monitor - Unit 027",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 28,
+  "fields": {
+    "name": "Wireless Mouse - Unit 028",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 29,
+  "fields": {
+    "name": "Tablet - Unit 029",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 30,
+  "fields": {
+    "name": "Tablet - Unit 030",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 31,
+  "fields": {
+    "name": "Printer - Unit 031",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 32,
+  "fields": {
+    "name": "Printer - Unit 032",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 33,
+  "fields": {
+    "name": "Monitor - Unit 033",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 34,
+  "fields": {
+    "name": "USB Flash Drive - Unit 034",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 35,
+  "fields": {
+    "name": "Monitor - Unit 035",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 36,
+  "fields": {
+    "name": "Monitor - Unit 036",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 37,
+  "fields": {
+    "name": "Printer - Unit 037",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 38,
+  "fields": {
+    "name": "Laptop - Unit 038",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 39,
+  "fields": {
+    "name": "Wireless Mouse - Unit 039",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 40,
+  "fields": {
+    "name": "USB Flash Drive - Unit 040",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 41,
+  "fields": {
+    "name": "Monitor - Unit 041",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 42,
+  "fields": {
+    "name": "USB Flash Drive - Unit 042",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 43,
+  "fields": {
+    "name": "Printer - Unit 043",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 44,
+  "fields": {
+    "name": "Monitor - Unit 044",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 45,
+  "fields": {
+    "name": "Printer - Unit 045",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 46,
+  "fields": {
+    "name": "Wireless Mouse - Unit 046",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 47,
+  "fields": {
+    "name": "Raspberry Pi - Unit 047",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 48,
+  "fields": {
+    "name": "Keyboard - Unit 048",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 49,
+  "fields": {
+    "name": "USB Flash Drive - Unit 049",
+    "status": "unavailable",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 50,
+  "fields": {
+    "name": "Tablet - Unit 050",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 51,
+  "fields": {
+    "name": "Computer Headphones - Unit 051",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 52,
+  "fields": {
+    "name": "Laptop - Unit 052",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 53,
+  "fields": {
+    "name": "Raspberry Pi - Unit 053",
+    "status": "unavailable",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 54,
+  "fields": {
+    "name": "Wireless Mouse - Unit 054",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 55,
+  "fields": {
+    "name": "Laptop - Unit 055",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 56,
+  "fields": {
+    "name": "Wireless Mouse - Unit 056",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 57,
+  "fields": {
+    "name": "Printer - Unit 057",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 58,
+  "fields": {
+    "name": "Laptop - Unit 058",
+    "status": "unavailable",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 59,
+  "fields": {
+    "name": "Monitor - Unit 059",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 60,
+  "fields": {
+    "name": "Computer Headphones - Unit 060",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 61,
+  "fields": {
+    "name": "Computer Headphones - Unit 061",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 62,
+  "fields": {
+    "name": "Monitor - Unit 062",
+    "status": "unavailable",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 63,
+  "fields": {
+    "name": "Printer - Unit 063",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 64,
+  "fields": {
+    "name": "Printer - Unit 064",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 65,
+  "fields": {
+    "name": "Laptop - Unit 065",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 66,
+  "fields": {
+    "name": "Monitor - Unit 066",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 67,
+  "fields": {
+    "name": "Keyboard - Unit 067",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 68,
+  "fields": {
+    "name": "Monitor - Unit 068",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 69,
+  "fields": {
+    "name": "Wireless Mouse - Unit 069",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 70,
+  "fields": {
+    "name": "Laptop - Unit 070",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 71,
+  "fields": {
+    "name": "Raspberry Pi - Unit 071",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 72,
+  "fields": {
+    "name": "Monitor - Unit 072",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 73,
+  "fields": {
+    "name": "Printer - Unit 073",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 74,
+  "fields": {
+    "name": "Tablet - Unit 074",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 75,
+  "fields": {
+    "name": "Tablet - Unit 075",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 76,
+  "fields": {
+    "name": "Keyboard - Unit 076",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 77,
+  "fields": {
+    "name": "Keyboard - Unit 077",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 78,
+  "fields": {
+    "name": "Printer - Unit 078",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 79,
+  "fields": {
+    "name": "USB Flash Drive - Unit 079",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 80,
+  "fields": {
+    "name": "Printer - Unit 080",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 81,
+  "fields": {
+    "name": "Keyboard - Unit 081",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 82,
+  "fields": {
+    "name": "USB Flash Drive - Unit 082",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 83,
+  "fields": {
+    "name": "USB Flash Drive - Unit 083",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 84,
+  "fields": {
+    "name": "USB Flash Drive - Unit 084",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 85,
+  "fields": {
+    "name": "Tablet - Unit 085",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 86,
+  "fields": {
+    "name": "Keyboard - Unit 086",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 87,
+  "fields": {
+    "name": "Wireless Mouse - Unit 087",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 88,
+  "fields": {
+    "name": "Printer - Unit 088",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 89,
+  "fields": {
+    "name": "Raspberry Pi - Unit 089",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 90,
+  "fields": {
+    "name": "Tablet - Unit 090",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 91,
+  "fields": {
+    "name": "Tablet - Unit 091",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 92,
+  "fields": {
+    "name": "Monitor - Unit 092",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 93,
+  "fields": {
+    "name": "Laptop - Unit 093",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 94,
+  "fields": {
+    "name": "Laptop - Unit 094",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 95,
+  "fields": {
+    "name": "Printer - Unit 095",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 96,
+  "fields": {
+    "name": "Raspberry Pi - Unit 096",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 97,
+  "fields": {
+    "name": "Wireless Mouse - Unit 097",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 98,
+  "fields": {
+    "name": "Wireless Mouse - Unit 098",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 99,
+  "fields": {
+    "name": "Keyboard - Unit 099",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 100,
+  "fields": {
+    "name": "Printer - Unit 100",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 101,
+  "fields": {
+    "name": "Computer Headphones - Unit 101",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 102,
+  "fields": {
+    "name": "Tablet - Unit 102",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 103,
+  "fields": {
+    "name": "Wireless Mouse - Unit 103",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 104,
+  "fields": {
+    "name": "Laptop - Unit 104",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 105,
+  "fields": {
+    "name": "Raspberry Pi - Unit 105",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 106,
+  "fields": {
+    "name": "Raspberry Pi - Unit 106",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 107,
+  "fields": {
+    "name": "Wireless Mouse - Unit 107",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 108,
+  "fields": {
+    "name": "Tablet - Unit 108",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 109,
+  "fields": {
+    "name": "Raspberry Pi - Unit 109",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 110,
+  "fields": {
+    "name": "Laptop - Unit 110",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 111,
+  "fields": {
+    "name": "Printer - Unit 111",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 112,
+  "fields": {
+    "name": "Wireless Mouse - Unit 112",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 113,
+  "fields": {
+    "name": "Computer Headphones - Unit 113",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 114,
+  "fields": {
+    "name": "USB Flash Drive - Unit 114",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 115,
+  "fields": {
+    "name": "USB Flash Drive - Unit 115",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 116,
+  "fields": {
+    "name": "Monitor - Unit 116",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 117,
+  "fields": {
+    "name": "Wireless Mouse - Unit 117",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 118,
+  "fields": {
+    "name": "Monitor - Unit 118",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 119,
+  "fields": {
+    "name": "Keyboard - Unit 119",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 120,
+  "fields": {
+    "name": "Computer Headphones - Unit 120",
+    "status": "unavailable",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 121,
+  "fields": {
+    "name": "Computer Headphones - Unit 121",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 122,
+  "fields": {
+    "name": "Printer - Unit 122",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 123,
+  "fields": {
+    "name": "USB Flash Drive - Unit 123",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 124,
+  "fields": {
+    "name": "Tablet - Unit 124",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 125,
+  "fields": {
+    "name": "Raspberry Pi - Unit 125",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 126,
+  "fields": {
+    "name": "Wireless Mouse - Unit 126",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 127,
+  "fields": {
+    "name": "Keyboard - Unit 127",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 128,
+  "fields": {
+    "name": "Laptop - Unit 128",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 129,
+  "fields": {
+    "name": "Computer Headphones - Unit 129",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 130,
+  "fields": {
+    "name": "Printer - Unit 130",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 131,
+  "fields": {
+    "name": "Printer - Unit 131",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 132,
+  "fields": {
+    "name": "Monitor - Unit 132",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 133,
+  "fields": {
+    "name": "Keyboard - Unit 133",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 134,
+  "fields": {
+    "name": "Tablet - Unit 134",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 135,
+  "fields": {
+    "name": "Laptop - Unit 135",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 136,
+  "fields": {
+    "name": "Monitor - Unit 136",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 137,
+  "fields": {
+    "name": "USB Flash Drive - Unit 137",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 138,
+  "fields": {
+    "name": "Computer Headphones - Unit 138",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 139,
+  "fields": {
+    "name": "USB Flash Drive - Unit 139",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 140,
+  "fields": {
+    "name": "Keyboard - Unit 140",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 141,
+  "fields": {
+    "name": "Tablet - Unit 141",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 142,
+  "fields": {
+    "name": "Wireless Mouse - Unit 142",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 143,
+  "fields": {
+    "name": "Wireless Mouse - Unit 143",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 144,
+  "fields": {
+    "name": "Keyboard - Unit 144",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 145,
+  "fields": {
+    "name": "Tablet - Unit 145",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 146,
+  "fields": {
+    "name": "Keyboard - Unit 146",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 147,
+  "fields": {
+    "name": "Laptop - Unit 147",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 148,
+  "fields": {
+    "name": "Raspberry Pi - Unit 148",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 149,
+  "fields": {
+    "name": "Tablet - Unit 149",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 150,
+  "fields": {
+    "name": "Keyboard - Unit 150",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 151,
+  "fields": {
+    "name": "Keyboard - Unit 151",
+    "status": "unavailable",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 152,
+  "fields": {
+    "name": "Tablet - Unit 152",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 153,
+  "fields": {
+    "name": "Computer Headphones - Unit 153",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 154,
+  "fields": {
+    "name": "Keyboard - Unit 154",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 155,
+  "fields": {
+    "name": "Computer Headphones - Unit 155",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 156,
+  "fields": {
+    "name": "USB Flash Drive - Unit 156",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 157,
+  "fields": {
+    "name": "Tablet - Unit 157",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 158,
+  "fields": {
+    "name": "Computer Headphones - Unit 158",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 159,
+  "fields": {
+    "name": "Raspberry Pi - Unit 159",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 160,
+  "fields": {
+    "name": "Computer Headphones - Unit 160",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 161,
+  "fields": {
+    "name": "Wireless Mouse - Unit 161",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 162,
+  "fields": {
+    "name": "Wireless Mouse - Unit 162",
+    "status": "unavailable",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 163,
+  "fields": {
+    "name": "Laptop - Unit 163",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 164,
+  "fields": {
+    "name": "Wireless Mouse - Unit 164",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 165,
+  "fields": {
+    "name": "USB Flash Drive - Unit 165",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 166,
+  "fields": {
+    "name": "Raspberry Pi - Unit 166",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 167,
+  "fields": {
+    "name": "Monitor - Unit 167",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 168,
+  "fields": {
+    "name": "Raspberry Pi - Unit 168",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 169,
+  "fields": {
+    "name": "USB Flash Drive - Unit 169",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 170,
+  "fields": {
+    "name": "Keyboard - Unit 170",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 171,
+  "fields": {
+    "name": "Laptop - Unit 171",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 172,
+  "fields": {
+    "name": "USB Flash Drive - Unit 172",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 173,
+  "fields": {
+    "name": "Computer Headphones - Unit 173",
+    "status": "unavailable",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 174,
+  "fields": {
+    "name": "USB Flash Drive - Unit 174",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 175,
+  "fields": {
+    "name": "Printer - Unit 175",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 176,
+  "fields": {
+    "name": "Tablet - Unit 176",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 177,
+  "fields": {
+    "name": "USB Flash Drive - Unit 177",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 178,
+  "fields": {
+    "name": "USB Flash Drive - Unit 178",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 179,
+  "fields": {
+    "name": "Laptop - Unit 179",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 180,
+  "fields": {
+    "name": "Keyboard - Unit 180",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 181,
+  "fields": {
+    "name": "Wireless Mouse - Unit 181",
+    "status": "unavailable",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 182,
+  "fields": {
+    "name": "Wireless Mouse - Unit 182",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 183,
+  "fields": {
+    "name": "Keyboard - Unit 183",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 184,
+  "fields": {
+    "name": "Computer Headphones - Unit 184",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 185,
+  "fields": {
+    "name": "USB Flash Drive - Unit 185",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 186,
+  "fields": {
+    "name": "Keyboard - Unit 186",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 187,
+  "fields": {
+    "name": "Keyboard - Unit 187",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 188,
+  "fields": {
+    "name": "USB Flash Drive - Unit 188",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 189,
+  "fields": {
+    "name": "Monitor - Unit 189",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 190,
+  "fields": {
+    "name": "Wireless Mouse - Unit 190",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 191,
+  "fields": {
+    "name": "Tablet - Unit 191",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 192,
+  "fields": {
+    "name": "USB Flash Drive - Unit 192",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 193,
+  "fields": {
+    "name": "Printer - Unit 193",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 194,
+  "fields": {
+    "name": "Raspberry Pi - Unit 194",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 195,
+  "fields": {
+    "name": "Raspberry Pi - Unit 195",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 196,
+  "fields": {
+    "name": "Keyboard - Unit 196",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 197,
+  "fields": {
+    "name": "Laptop - Unit 197",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 198,
+  "fields": {
+    "name": "Wireless Mouse - Unit 198",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 199,
+  "fields": {
+    "name": "Printer - Unit 199",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 200,
+  "fields": {
+    "name": "Wireless Mouse - Unit 200",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 201,
+  "fields": {
+    "name": "Wireless Mouse - Unit 201",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 202,
+  "fields": {
+    "name": "Computer Headphones - Unit 202",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 203,
+  "fields": {
+    "name": "Computer Headphones - Unit 203",
+    "status": "unavailable",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 204,
+  "fields": {
+    "name": "Monitor - Unit 204",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 205,
+  "fields": {
+    "name": "Printer - Unit 205",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 206,
+  "fields": {
+    "name": "Monitor - Unit 206",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 207,
+  "fields": {
+    "name": "USB-C Charger - Unit 207",
+    "status": "available",
+    "description": "USB-C charger for laptops and tablets",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 208,
+  "fields": {
+    "name": "Laptop Charger - Unit 208",
+    "status": "available",
+    "description": "Laptop charger for Windows devices",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 209,
+  "fields": {
+    "name": "Tablet Charger - Unit 209",
+    "status": "available",
+    "description": "Tablet charger for portable devices",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 210,
+  "fields": {
+    "name": "Projector - Unit 210",
+    "status": "available",
+    "description": "Projector for classroom presentations",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 211,
+  "fields": {
+    "name": "Projector - Unit 211",
+    "status": "unavailable",
+    "description": "Projector for classroom presentations",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 212,
+  "fields": {
+    "name": "Webcam - Unit 212",
+    "status": "available",
+    "description": "HD USB webcam for meetings and online learning",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 213,
+  "fields": {
+    "name": "Webcam - Unit 213",
+    "status": "available",
+    "description": "HD USB webcam for meetings and online learning",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 214,
+  "fields": {
+    "name": "USB Microphone - Unit 214",
+    "status": "available",
+    "description": "USB microphone for recording and video calls",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 215,
+  "fields": {
+    "name": "USB Microphone - Unit 215",
+    "status": "available",
+    "description": "USB microphone for recording and video calls",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 216,
+  "fields": {
+    "name": "Scientific Calculator - Unit 216",
+    "status": "available",
+    "description": "Scientific calculator for school work",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 217,
+  "fields": {
+    "name": "Scientific Calculator - Unit 217",
+    "status": "available",
+    "description": "Scientific calculator for school work",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 218,
+  "fields": {
+    "name": "Scientific Calculator - Unit 218",
+    "status": "unavailable",
+    "description": "Scientific calculator for school work",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 219,
+  "fields": {
+    "name": "Digital Camera - Unit 219",
+    "status": "available",
+    "description": "Digital camera for photography and media studies",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 220,
+  "fields": {
+    "name": "Digital Camera - Unit 220",
+    "status": "available",
+    "description": "Digital camera for photography and media studies",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 221,
+  "fields": {
+    "name": "Tripod - Unit 221",
+    "status": "available",
+    "description": "Adjustable tripod for cameras and recording equipment",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 222,
+  "fields": {
+    "name": "Tripod - Unit 222",
+    "status": "available",
+    "description": "Adjustable tripod for cameras and recording equipment",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 223,
+  "fields": {
+    "name": "HDMI Cable - Unit 223",
+    "status": "available",
+    "description": "HDMI cable for displays and projectors",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 224,
+  "fields": {
+    "name": "HDMI Cable - Unit 224",
+    "status": "available",
+    "description": "HDMI cable for displays and projectors",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 225,
+  "fields": {
+    "name": "HDMI Cable - Unit 225",
+    "status": "available",
+    "description": "HDMI cable for displays and projectors",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 226,
+  "fields": {
+    "name": "Extension Lead - Unit 226",
+    "status": "available",
+    "description": "4-socket extension lead",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 227,
+  "fields": {
+    "name": "Extension Lead - Unit 227",
+    "status": "available",
+    "description": "4-socket extension lead",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 228,
+  "fields": {
+    "name": "Portable Speaker - Unit 228",
+    "status": "unavailable",
+    "description": "Portable speaker for classrooms and events",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 229,
+  "fields": {
+    "name": "Portable Speaker - Unit 229",
+    "status": "unavailable",
+    "description": "Portable speaker for classrooms and events",
+    "image": "",
+    "category": 20,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 230,
+  "fields": {
+    "name": "Tablet - Unit 230",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 231,
+  "fields": {
+    "name": "Wireless Mouse - Unit 231",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 232,
+  "fields": {
+    "name": "Wireless Mouse - Unit 232",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 233,
+  "fields": {
+    "name": "Tablet - Unit 233",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 234,
+  "fields": {
+    "name": "Computer Headphones - Unit 234",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 235,
+  "fields": {
+    "name": "Printer - Unit 235",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 236,
+  "fields": {
+    "name": "Computer Headphones - Unit 236",
+    "status": "unavailable",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 237,
+  "fields": {
+    "name": "Tablet - Unit 237",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 238,
+  "fields": {
+    "name": "Raspberry Pi - Unit 238",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 239,
+  "fields": {
+    "name": "USB Flash Drive - Unit 239",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 240,
+  "fields": {
+    "name": "Printer - Unit 240",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 241,
+  "fields": {
+    "name": "Computer Headphones - Unit 241",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 242,
+  "fields": {
+    "name": "Wireless Mouse - Unit 242",
+    "status": "unavailable",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 243,
+  "fields": {
+    "name": "Raspberry Pi - Unit 243",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 244,
+  "fields": {
+    "name": "USB Flash Drive - Unit 244",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 245,
+  "fields": {
+    "name": "Wireless Mouse - Unit 245",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 246,
+  "fields": {
+    "name": "Keyboard - Unit 246",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 247,
+  "fields": {
+    "name": "Raspberry Pi - Unit 247",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 248,
+  "fields": {
+    "name": "Raspberry Pi - Unit 248",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 249,
+  "fields": {
+    "name": "Keyboard - Unit 249",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 250,
+  "fields": {
+    "name": "Keyboard - Unit 250",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 251,
+  "fields": {
+    "name": "Wireless Mouse - Unit 251",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 252,
+  "fields": {
+    "name": "Laptop - Unit 252",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 253,
+  "fields": {
+    "name": "Raspberry Pi - Unit 253",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 254,
+  "fields": {
+    "name": "Printer - Unit 254",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 255,
+  "fields": {
+    "name": "Monitor - Unit 255",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 256,
+  "fields": {
+    "name": "USB Flash Drive - Unit 256",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 257,
+  "fields": {
+    "name": "USB Flash Drive - Unit 257",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 258,
+  "fields": {
+    "name": "USB Flash Drive - Unit 258",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 259,
+  "fields": {
+    "name": "Tablet - Unit 259",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 260,
+  "fields": {
+    "name": "Laptop - Unit 260",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 261,
+  "fields": {
+    "name": "Printer - Unit 261",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 262,
+  "fields": {
+    "name": "Raspberry Pi - Unit 262",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 263,
+  "fields": {
+    "name": "Laptop - Unit 263",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 264,
+  "fields": {
+    "name": "Laptop - Unit 264",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 265,
+  "fields": {
+    "name": "Wireless Mouse - Unit 265",
+    "status": "available",
+    "description": "Wireless optical mouse",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 266,
+  "fields": {
+    "name": "Tablet - Unit 266",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 267,
+  "fields": {
+    "name": "Computer Headphones - Unit 267",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 268,
+  "fields": {
+    "name": "Keyboard - Unit 268",
+    "status": "available",
+    "description": "Windows computer keyboard",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 269,
+  "fields": {
+    "name": "Tablet - Unit 269",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 270,
+  "fields": {
+    "name": "Printer - Unit 270",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 271,
+  "fields": {
+    "name": "Computer Headphones - Unit 271",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 272,
+  "fields": {
+    "name": "Monitor - Unit 272",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 273,
+  "fields": {
+    "name": "Raspberry Pi - Unit 273",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 274,
+  "fields": {
+    "name": "Computer Headphones - Unit 274",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 275,
+  "fields": {
+    "name": "Laptop - Unit 275",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 276,
+  "fields": {
+    "name": "Printer - Unit 276",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 277,
+  "fields": {
+    "name": "Printer - Unit 277",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 278,
+  "fields": {
+    "name": "Raspberry Pi - Unit 278",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 279,
+  "fields": {
+    "name": "Raspberry Pi - Unit 279",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 280,
+  "fields": {
+    "name": "Raspberry Pi - Unit 280",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 281,
+  "fields": {
+    "name": "Tablet - Unit 281",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 282,
+  "fields": {
+    "name": "Raspberry Pi - Unit 282",
+    "status": "available",
+    "description": "Raspberry Pi with a Linux operating system",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 283,
+  "fields": {
+    "name": "Computer Headphones - Unit 283",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 284,
+  "fields": {
+    "name": "Tablet - Unit 284",
+    "status": "available",
+    "description": "Portable tablet device",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 285,
+  "fields": {
+    "name": "Laptop - Unit 285",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 286,
+  "fields": {
+    "name": "Laptop - Unit 286",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 287,
+  "fields": {
+    "name": "Computer Headphones - Unit 287",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 288,
+  "fields": {
+    "name": "Laptop - Unit 288",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 289,
+  "fields": {
+    "name": "Printer - Unit 289",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 290,
+  "fields": {
+    "name": "USB Flash Drive - Unit 290",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 291,
+  "fields": {
+    "name": "USB Flash Drive - Unit 291",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 292,
+  "fields": {
+    "name": "Laptop - Unit 292",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 293,
+  "fields": {
+    "name": "Printer - Unit 293",
+    "status": "available",
+    "description": "Printer for printing documents",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 294,
+  "fields": {
+    "name": "Computer Headphones - Unit 294",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 295,
+  "fields": {
+    "name": "Monitor - Unit 295",
+    "status": "available",
+    "description": "24 inch full HD monitor",
+    "image": "",
+    "category": 22,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 296,
+  "fields": {
+    "name": "USB Flash Drive - Unit 296",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 297,
+  "fields": {
+    "name": "Computer Headphones - Unit 297",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 298,
+  "fields": {
+    "name": "Laptop - Unit 298",
+    "status": "available",
+    "description": "Windows laptop for daily use",
+    "image": "",
+    "category": 23,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 299,
+  "fields": {
+    "name": "USB Flash Drive - Unit 299",
+    "status": "available",
+    "description": "USB flash drive for storing files",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 300,
+  "fields": {
+    "name": "Computer Headphones - Unit 300",
+    "status": "available",
+    "description": "Computer headphones",
+    "image": "",
+    "category": 24,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 301,
+  "fields": {
+    "name": "Hard Drive - Unit 301",
+    "status": "available",
+    "description": "Hard Drive for storing big data",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 302,
+  "fields": {
+    "name": "Floppy Disk - Unit 302",
+    "status": "unavailable",
+    "description": "Old floppy disk",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "equipment": 62,
+    "start_date": "2026-03-18",
+    "end_date": "2026-03-18",
+    "status": "confirmed",
+    "created_at": "2026-03-18T19:31:18.063Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "equipment": 242,
+    "start_date": "2026-03-18",
+    "end_date": "2026-03-18",
+    "status": "confirmed",
+    "created_at": "2026-03-18T20:00:01.405Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "equipment": 181,
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-20",
+    "status": "confirmed",
+    "created_at": "2026-03-19T18:42:07.094Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 4,
+  "fields": {
+    "user": null,
+    "equipment": 173,
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-20",
+    "status": "confirmed",
+    "created_at": "2026-03-19T18:42:07.102Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "equipment": 228,
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-19",
+    "status": "confirmed",
+    "created_at": "2026-03-19T19:12:14.204Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 6,
+  "fields": {
+    "user": null,
+    "equipment": 120,
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-19",
+    "status": "confirmed",
+    "created_at": "2026-03-19T19:18:34.798Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 7,
+  "fields": {
+    "user": null,
+    "equipment": 236,
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-19",
+    "status": "confirmed",
+    "created_at": "2026-03-19T20:41:31.974Z"
+  }
+}
 ]
