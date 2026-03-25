@@ -23,17 +23,55 @@
                 <a class="navbar-item" href="{% url 'booking' %}">Equipment</a>
                 <a class="navbar-item" href="{% url 'my_orders' %}">My Orders</a>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <button class="navbar-link" type="button">
-                    <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                    <span>Settings</span>
-                </button>
-                <div class="navbar-dropdown is-right">
-                    <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
-                    <hr class="navbar-divider">
-                    <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
-                    <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
-                    <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+            <div class="navbar-end">
+                <div class="navbar-item top-search">
+                    <form method="get" action="{% url 'booking' %}">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <label class="is-sr-only" for="navbar-search">Search equipment name</label>
+                                <input class="input top-search-input" type="text" id="navbar-search" name="q" placeholder="Search equipment..." value="{{ search_query }}" aria-label="Search equipment">
+                            </div>
+                            <div class="control">
+                                <button class="button is-primary" type="submit" aria-label="Submit search">
+                                    <span class="icon is-small">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        {% if search_query %}
+                            <div class="topbar-search-results">
+                                {% if search_results %}
+                                    <p class="topbar-search-results-label">Results for "{{ search_query }}":</p>
+                                    <ul class="topbar-search-results-list">
+                                        {% for result in search_results %}
+                                            <li>
+                                                <strong>{{ result.name }}</strong>
+                                                <span class="topbar-search-result-category">
+                                                    in <a href="{% url 'equipment_category' result.category_slug %}">{{ result.category_name }}</a>
+                                                </span>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    <p class="topbar-search-no-results">No equipment found for "{{ search_query }}".</p>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <button class="navbar-link" type="button">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Settings</span>
+                    </button>
+                    <div class="navbar-dropdown is-right">
+                        <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+                        <hr class="navbar-divider">
+                        <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                        <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                        <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,39 +102,6 @@
                         </div>
                     </div>
                     <aside class="column is-4-desktop">
-                        <div class="box" aria-label="Equipment Search">
-                            <h2 class="title is-4 has-text-centered">Search Equipment</h2>
-                            <form method="get" action="{% url 'booking' %}">
-                                <div class="field has-addons">
-                                    <div class="control is-expanded has-icons-right">
-                                        <label class="is-sr-only" for="search">Search equipment name</label>
-                                        <input class="input" type="text" id="search" name="q" placeholder="Enter equipment name" value="{{ search_query }}">
-                                        <span class="icon is-small is-right" aria-hidden="true">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                        </span>
-                                    </div>
-                                    <div class="control">
-                                        <button class="button is-primary" type="submit">Search</button>
-                                    </div>
-                                </div>
-                            </form>
-                            {% if search_query %}
-                                {% if search_results %}
-                                    <p class="has-text-weight-semibold mt-4 mb-2">Results for "{{ search_query }}":</p>
-                                    <ul>
-                                        {% for result in search_results %}
-                                            <li>
-                                                <strong>{{ result.name }}</strong>
-                                                in
-                                                <a href="{% url 'equipment_category' result.category_slug %}">{{ result.category_name }}</a>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                {% else %}
-                                    <p class="mt-4">No equipment found for "{{ search_query }}".</p>
-                                {% endif %}
-                            {% endif %}
-                        </div>
                         <form method="post" action="{% url 'confirmation' %}">
                             {% csrf_token %}
                             <input type="hidden" name="equipment_name" id="equipmentNameField">

@@ -176,10 +176,43 @@ h2 {
 
 .date-range {
     text-align: left;
+    margin-bottom: 1rem;
 }
 
 .date-text {
     font-size: 15px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.basket-date .button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1215px) {
+    .basket-date {
+        margin-top: 2rem;
+    }
+    
+    .date-range {
+        margin-bottom: 1.5rem;
+    }
+    
+    .columns.is-desktop {
+        flex-direction: column;
+    }
+    
+    .column.is-8-desktop,
+    .column.is-4-desktop {
+        width: 100% !important;
+        flex-basis: 100% !important;
+    }
+    
+    .basket {
+        margin-top: 2rem;
+    }
 }
 
 .warning.message {
@@ -507,4 +540,67 @@ input {
 .theme.low #search::placeholder {
     color: #2A3F5F;
     opacity: 1;
+}
+
+.top-search {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-right: 0.5rem;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+.top-search form {
+    width: 280px;
+}
+
+.top-search .field.has-addons {
+    margin-bottom: 0;
+}
+
+.top-search-input {
+    font-size: 1rem;
+    height: 2.25rem;
+}
+
+.top-search .button {
+    height: 2.25rem;
+}
+
+.topbar-search-results {
+    position: absolute;
+    top: 100%;
+    background: white;
+    border: 2px solid black;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 0.75rem;
+    max-height: 150px;
+    overflow-y: auto;
+    min-width: 280px;
+    line-height: 1.5;
+}
+
+.topbar-search-results-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.topbar-search-result-category,
+.topbar-search-results-list strong {
+    display: block;
+    font-size: 1rem;
+    color: black;
+    margin-top: 0.25rem;
+}
+
+.topbar-search-no-results {
+    padding: 0.5rem;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
 }
