@@ -527,17 +527,14 @@ input {
     display: block;
 }
 
-.theme.default #search::placeholder {
+
+.theme.default .top-search-input::placeholder,
+.theme.high .top-search-input::placeholder {
     color: black;
     opacity: 1;
 }
 
-.theme.high #search::placeholder {
-    color: black;
-    opacity: 1;
-}
-
-.theme.low #search::placeholder {
+.theme.low .top-search-input::placeholder {
     color: #2A3F5F;
     opacity: 1;
 }
