@@ -17,7 +17,7 @@ def home(request):
 
 
 def booking(request):
-    categories = EquipmentCategory.objects.prefetch_related("equipment").order_by("name")
+    categories = EquipmentCategory.objects.order_by("name")
     grouped_categories = []
     search_query = request.GET.get("q", "").strip()
     search_results = []
@@ -101,6 +101,24 @@ def equipment_category(request, slug):
     }
 
     return render(request, "website/Equipment.html", context)
+
+def inventory(request):
+    equipment_names = Equipment.objects.order_by("name").values_list("name", flat=True)
+
+    seen = set()
+    equipment_list = []
+
+    for name in equipment_names:
+        base_name = name.split(" - Unit ")[0].strip()
+        if base_name and base_name not in seen:
+            equipment_list.append(base_name)
+            seen.add(base_name)
+
+    context = {
+        "equipment_list": equipment_list,
+    }
+
+    return render(request, "website/Inventory.html", context)
 
 def my_orders(request):
     bookings = Booking.objects.select_related(

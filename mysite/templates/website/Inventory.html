@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="theme default">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{% url 'home' %}">Home</a>
+                    <a class="navbar-item" href="{% url 'booking' %}">Book Equipment</a>
+                    <a class="navbar-item" href="{% url 'my_orders' %}">My Orders</a>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <button class="navbar-link" type="button">
+                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                        <span>Settings</span>
+                    </button>
+                    <div class="navbar-dropdown is-right">
+                        <a class="navbar-item" href="/admin/" target="_blank">Admin log in</a>
+                        <hr class="navbar-divider">
+                        <button class="navbar-item" onclick="setTheme('default')">Theme: Default</button>
+                        <button class="navbar-item" onclick="setTheme('high')">Theme: High contrast</button>
+                        <button class="navbar-item" onclick="setTheme('low')">Theme: Low contrast</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main id="main" tabindex="-1">
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">Equipment Inventory</h1>
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        {% for item in equipment_list %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>Accessible equipment hire</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const theme = document.querySelector(".theme");
+
+        function setTheme(name) {
+            theme.className = `theme ${name}`;
+            localStorage.setItem("theme", name);
+        }
+
+        const savedTheme = localStorage.getItem("theme") || "default";
+        setTheme(savedTheme);
+    </script>
+</body>
+</html>
