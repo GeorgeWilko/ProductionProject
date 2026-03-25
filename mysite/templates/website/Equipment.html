@@ -19,7 +19,12 @@
             <div class="navbar-menu is-active">
                 <div class="navbar-start">
                     <a class="navbar-item" href="{% url 'home' %}">Home</a>
-                    <a class="navbar-item" href="{% url 'booking' %}">Equipment</a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="{% url 'booking' %}">Equipment</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{% url 'inventory' %}">Inventory</a>
+                        </div>
+                    </div>
                 </div>
                             <div class="navbar-end">
                 <div class="navbar-item top-search">
