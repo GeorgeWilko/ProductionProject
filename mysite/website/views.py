@@ -1,5 +1,6 @@
 from random import choice
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils import timezone
 from .models import Equipment, EquipmentCategory, Booking
 from django.core.mail import send_mail
 from collections import OrderedDict
@@ -121,6 +122,8 @@ def inventory(request):
     return render(request, "website/Inventory.html", context)
 
 def my_orders(request):
+    today = timezone.localdate()
+
     bookings = Booking.objects.select_related(
         "equipment",
         "equipment__category",
@@ -128,10 +131,26 @@ def my_orders(request):
 
     context = {
         "bookings": bookings,
+        "today": today,
     }
 
     return render(request, "website/My_orders.html", context)
 
+def return_booking(request, booking_id):
+    if request.method != "POST":
+        return redirect("my_orders")
+    
+    booking = get_object_or_404(Booking, id=booking_id)
+    
+    if booking.status in [Booking.Status.ACTIVE, Booking.Status.CONFIRMED]:
+        booking.status = "returned"
+        booking.save(update_fields=["status"])
+        
+        equipment = booking.equipment
+        equipment.status = Equipment.Status.AVAILABLE
+        equipment.save(update_fields=["status"])
+    
+    return redirect("my_orders")
 
 def confirmation(request):
     bookings = []
@@ -180,7 +199,7 @@ def confirmation(request):
             equipment=unit,
             start_date=start_date,
             end_date=end_date,
-            status=Booking.Status.CONFIRMED,
+            status=Booking.Status.ACTIVE,
         )
 
         unit.status = Equipment.Status.UNAVAILABLE

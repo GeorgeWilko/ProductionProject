@@ -23,6 +23,9 @@ urlpatterns = [
     path('orders/',
          views.my_orders,
          name='my_orders'),
+    path('orders/<int:booking_id>/return/',
+         views.return_booking,
+         name='return_booking'),
     path('confirmation/',
          views.confirmation,
          name='confirmation'

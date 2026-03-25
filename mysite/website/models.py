@@ -51,9 +51,9 @@ class Equipment(models.Model):
 
 class Booking(models.Model):
     class Status(models.TextChoices):
-        PENDING = "pending", "Pending"
         CONFIRMED = "confirmed", "Confirmed"
-        CANCELLED = "cancelled", "Cancelled"
+        RETURNED = "returned", "Returned"
+        ACTIVE = "active", "Active"
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -70,7 +70,7 @@ class Booking(models.Model):
 
     start_date = models.DateField()
     end_date = models.DateField()
-    status = models.CharField(max_length=20, choices=Status.choices, default=Status.PENDING)
+    status = models.CharField(max_length=20, choices=Status.choices, default=Status.ACTIVE)
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
