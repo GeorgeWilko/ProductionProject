@@ -53,14 +53,14 @@
                             <table class="table is-fullwidth is-hoverable orders-table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#Order</th>
+                                        <th scope="col">Order Number</th>
                                         <th scope="col"><span class="is-sr-only">Image</span></th>
                                         <th scope="col">Equipment</th>
-                                        <th scope="col">Category</th>
+                                        <th scope="col">Booked on</th>
                                         <th scope="col">From</th>
                                         <th scope="col">To</th>
-                                        <th scope="col">Booked on</th>
                                         <th scope="col">Status</th>
+                                        <th scope="col">Process Return</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -77,13 +77,28 @@
                                                 {% endif %}
                                             </td>
                                             <td>{{ booking.equipment.name }}</td>
-                                            <td>{{ booking.equipment.category.name }}</td>
+                                            <td>{{ booking.created_at|date:"Y-m-d H:i" }}</td>
                                             <td>{{ booking.start_date }}</td>
                                             <td>{{ booking.end_date }}</td>
-                                            <td>{{ booking.created_at|date:"Y-m-d H:i" }}</td>
                                             <td>
-                                                {% if booking.status == "confirmed" %}
+                                                {% if booking.status == "returned" %}
+                                                    <span class="tag is-info">{{ booking.get_status_display }}</span>
+                                                {% elif booking.end_date < today %}
+                                                    <span class="tag is-danger">Overdue</span>
+                                                {% elif booking.status == "active" %}
                                                     <span class="tag is-success">{{ booking.get_status_display }}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if booking.status == "active" or booking.status == "confirmed" %}
+                                                    <form method="post" action="{% url 'return_booking' booking.id %}" style="display: inline;">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="button is-small is-info">
+                                                            <span>Return</span>
+                                                        </button>
+                                                    </form>
+                                                {% elif booking.status == "returned" %}
+                                                    <span class="tag is-light">Returned</span>
                                                 {% endif %}
                                             </td>
                                         </tr>

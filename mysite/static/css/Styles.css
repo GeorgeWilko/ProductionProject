@@ -601,3 +601,25 @@ input {
     color: black;
     font-size: 1rem;
 }
+
+.theme.high .button.is-info {
+    border: 3px solid red;
+    background-color: yellow;
+}
+
+.theme.high .orders-table .tag.is-light {
+    background-color: white;
+    color: black;
+}
+
+
+.theme.default .orders-table .tag.is-info,
+.theme.low .orders-table .tag.is-info {
+    background-color: #23d160;
+    color: black;
+}
+
+.theme.high .orders-table .tag.is-info {
+    background-color: white;
+    color: black;
+}
