@@ -585,6 +585,87 @@ input {
     display: block;
 }
 
+.theme .my-orders-main .select select {
+    min-width: 12rem;
+}
+
+.theme.default .my-orders-main .select select {
+    background-color: #2A3F5F;
+    color: white;
+    border-color: #344A6A;
+}
+
+.theme.default .my-orders-main .tag.is-info {
+    background-color: #8FA4BF;
+    color: #102038;
+}
+
+.theme.default .my-orders-main .tag.is-danger {
+    background-color: #D64545;
+    color: white;
+}
+
+.theme.default .my-orders-main .tag.is-light {
+    background-color: #dbe6f5;
+    color: #102038;
+}
+
+.theme.default .my-orders-main .button.is-info {
+    background-color: #2A3F5F;
+    color: white;
+    border-color: #344A6A;
+}
+
+.theme.high .my-orders-main .select select {
+    background-color: black;
+    color: white;
+    border: 3px solid red;
+}
+
+.theme.high .my-orders-main .tag.is-info,
+.theme.high .my-orders-main .tag.is-light {
+    background-color: black;
+    color: white;
+}
+
+.theme.high .my-orders-main .tag.is-danger {
+    background-color: white;
+    color: black;
+}
+
+.theme.high .my-orders-main .button.is-info {
+    background-color: black;
+    color: white;
+    border: 3px solid red;
+}
+
+.theme.low .my-orders-main .select select {
+    background-color: #FFFFFF;
+    color: #2A3F5F;
+    border-color: #AEB6C2;
+}
+
+.theme.low .my-orders-main .tag.is-info {
+    background-color: #E2E8F2;
+    color: #2A3F5F;
+}
+
+.theme.low .my-orders-main .tag.is-danger {
+    background-color: #F9DDDD;
+    color: #7B2D2D;
+}
+
+.theme.low .my-orders-main .tag.is-light {
+    background-color: #EEF3FA;
+    color: #2A3F5F;
+}
+
+.theme.low .my-orders-main .button.is-info {
+    background-color: #2A3F5F;
+    color: white;
+    border-color: #344A6A;
+}
+
 
 .theme.default .top-search-input::placeholder,
 .theme.high .top-search-input::placeholder {

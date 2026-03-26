@@ -123,15 +123,31 @@ def inventory(request):
 
 def my_orders(request):
     today = timezone.localdate()
+    selected_status = request.GET.get("status", "all").strip().lower()
+    valid_status_filters = {"all", "active", "overdue", "returned"}
+
+    if selected_status not in valid_status_filters:
+        selected_status = "all"
 
     bookings = Booking.objects.select_related(
         "equipment",
         "equipment__category",
     ).order_by("-created_at")
 
+    if selected_status == "active":
+        bookings = bookings.filter(
+            status__in=[Booking.Status.ACTIVE, Booking.Status.CONFIRMED],
+            end_date__gte=today,
+        )
+    elif selected_status == "overdue":
+        bookings = bookings.filter(end_date__lt=today).exclude(status=Booking.Status.RETURNED)
+    elif selected_status == "returned":
+        bookings = bookings.filter(status=Booking.Status.RETURNED)
+
     context = {
         "bookings": bookings,
         "today": today,
+        "selected_status": selected_status,
     }
 
     return render(request, "website/My_orders.html", context)

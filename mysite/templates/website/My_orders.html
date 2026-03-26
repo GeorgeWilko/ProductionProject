@@ -47,6 +47,22 @@
         <section class="section">
             <div class="container">
                 <h1 class="title has-text-centered">Your Orders</h1>
+
+                <form method="get" class="mb-4" aria-label="Filter orders by status">
+                    <div class="field is-grouped is-grouped-centered">
+                        <div class="control">
+                            <div class="select">
+                                <select name="status" onchange="this.form.submit()">
+                                    <option value="all" {% if selected_status == "all" %}selected{% endif %}>All orders</option>
+                                    <option value="active" {% if selected_status == "active" %}selected{% endif %}>Active</option>
+                                    <option value="overdue" {% if selected_status == "overdue" %}selected{% endif %}>Overdue</option>
+                                    <option value="returned" {% if selected_status == "returned" %}selected{% endif %}>Returned</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
                 {% if bookings %}
                     <div class="orders-table">
                         <div class="table-container">
@@ -60,7 +76,7 @@
                                         <th scope="col">From</th>
                                         <th scope="col">To</th>
                                         <th scope="col">Status</th>
-                                        <th scope="col">Process Return</th>
+                                        <th scope="col">Return Equipment</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,7 +102,7 @@
                                                 {% elif booking.end_date < today %}
                                                     <span class="tag is-danger">Overdue</span>
                                                 {% elif booking.status == "active" %}
-                                                    <span class="tag is-success">{{ booking.get_status_display }}</span>
+                                                    <span class="tag is-info">{{ booking.get_status_display }}</span>
                                                 {% endif %}
                                             </td>
                                             <td>
@@ -109,7 +125,11 @@
                     </div>
                 {% else %}
                     <div class="box has-text-centered">
-                        <p>No bookings made.</p>
+                        {% if selected_status == "all" %}
+                            <p>No bookings made.</p>
+                        {% else %}
+                            <p>No bookings found.</p>
+                        {% endif %}
                         <a class="button is-primary mt-4" href="{% url 'booking' %}">
                             Book equipment
                         </a>
