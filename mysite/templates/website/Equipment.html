@@ -81,12 +81,16 @@
         <main id="main" tabindex="-1" class="equipment-main">
             <section class="section">
                 <div class="container">
-                    <h1 class="title">{{ category.name }}</h1>
-                    <a href="{% url 'booking' %}" class="button is-light mb-4">
+                    <h1 class="title desktop-only">{{ category.name }}</h1>
+                    <a href="{% url 'booking' %}" class="button is-light mb-4 desktop-only">
                         Return
                     </a>
                     <div class="columns is-desktop equipment-layout">
                         <div class="column is-8-desktop">
+                            <h1 class="title mobile-only">{{ category.name }}</h1>
+                            <a href="{% url 'booking' %}" class="button is-light mb-4 mobile-only-inline">
+                                Return
+                            </a>
                             <div class="equipment-grid">
                                 {% for item in items %}
                                 <div class="equipment-item">

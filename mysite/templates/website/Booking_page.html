@@ -84,13 +84,14 @@
     <main id="main" tabindex="-1">
         <section class="section">
             <div class="container">
-                <h1 id="page-title" class="title has-text-centered">Available Equipment</h1>
-                <div class="columns is-desktop">
+                <h1 id="page-title" class="title has-text-centered desktop-only">Available Equipment</h1>
+                <div class="columns is-desktop booking-layout">
                     <div class="column is-8-desktop">
-                        <div class="columns is-multiline">
+                        <h1 class="title has-text-centered mobile-only">Available Equipment</h1>
+                        <div class="columns is-multiline category-grid">
                             {% for category in categories %}
                                 <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
-                                    <a href="{% url 'equipment_category' category.slug %}" class="card" aria-label="Open {{ category.name }} category">
+                                    <a href="{% url 'equipment_category' category.slug %}" class="card category-card" aria-label="Open {{ category.name }} category">
                                         <div class="card-image">
                                             <figure class="image is-4by3">
                                                 {% if category.image %}
