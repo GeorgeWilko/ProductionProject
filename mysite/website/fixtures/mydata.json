@@ -50,6 +50,36 @@
   }
 },
 {
+  "model": "website.equipmentcategory",
+  "pk": 25,
+  "fields": {
+    "name": "Networking",
+    "slug": "networking",
+    "image": "equipment_images/networking.png",
+    "description": ""
+  }
+},
+{
+  "model": "website.equipmentcategory",
+  "pk": 26,
+  "fields": {
+    "name": "Accessibility Tech",
+    "slug": "accessibility-tech",
+    "image": "equipment_images/at.png",
+    "description": ""
+  }
+},
+{
+  "model": "website.equipmentcategory",
+  "pk": 27,
+  "fields": {
+    "name": "Virtual Reality",
+    "slug": "virtual-reality",
+    "image": "equipment_images/vr.png",
+    "description": ""
+  }
+},
+{
   "model": "website.location",
   "pk": 1,
   "fields": {
@@ -857,7 +887,7 @@
   "pk": 62,
   "fields": {
     "name": "Monitor - Unit 062",
-    "status": "unavailable",
+    "status": "available",
     "description": "24 inch full HD monitor",
     "image": "",
     "category": 22,
@@ -2300,7 +2330,7 @@
   "pk": 173,
   "fields": {
     "name": "Computer Headphones - Unit 173",
-    "status": "unavailable",
+    "status": "available",
     "description": "Computer headphones",
     "image": "",
     "category": 24,
@@ -3119,7 +3149,7 @@
   "pk": 236,
   "fields": {
     "name": "Computer Headphones - Unit 236",
-    "status": "unavailable",
+    "status": "available",
     "description": "Computer headphones",
     "image": "",
     "category": 24,
@@ -3197,7 +3227,7 @@
   "pk": 242,
   "fields": {
     "name": "Wireless Mouse - Unit 242",
-    "status": "unavailable",
+    "status": "available",
     "description": "Wireless optical mouse",
     "image": "",
     "category": 24,
@@ -3717,7 +3747,7 @@
   "pk": 282,
   "fields": {
     "name": "Raspberry Pi - Unit 282",
-    "status": "available",
+    "status": "unavailable",
     "description": "Raspberry Pi with a Linux operating system",
     "image": "",
     "category": 23,
@@ -3986,6 +4016,110 @@
   }
 },
 {
+  "model": "website.equipment",
+  "pk": 303,
+  "fields": {
+    "name": "Router - Unit 303",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 25,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 304,
+  "fields": {
+    "name": "Switch - Unit 304",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 25,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 305,
+  "fields": {
+    "name": "Access Point - Unit 305",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 25,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 306,
+  "fields": {
+    "name": "SD Card - Unit 306",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 21,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 307,
+  "fields": {
+    "name": "Assistive Keyboard - Unit 307",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 26,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 308,
+  "fields": {
+    "name": "Screen Reader - Unit 308",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 26,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 309,
+  "fields": {
+    "name": "Oculus Rift - Unit 309",
+    "status": "available",
+    "description": "",
+    "image": "",
+    "category": 27,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "website.equipment",
+  "pk": 310,
+  "fields": {
+    "name": "AI Glasses",
+    "status": "unavailable",
+    "description": "",
+    "image": "",
+    "category": 27,
+    "location": 1,
+    "quantity": 1
+  }
+},
+{
   "model": "website.booking",
   "pk": 1,
   "fields": {
@@ -3993,7 +4127,7 @@
     "equipment": 62,
     "start_date": "2026-03-18",
     "end_date": "2026-03-18",
-    "status": "confirmed",
+    "status": "returned",
     "created_at": "2026-03-18T19:31:18.063Z"
   }
 },
@@ -4005,7 +4139,7 @@
     "equipment": 242,
     "start_date": "2026-03-18",
     "end_date": "2026-03-18",
-    "status": "confirmed",
+    "status": "returned",
     "created_at": "2026-03-18T20:00:01.405Z"
   }
 },
@@ -4029,7 +4163,7 @@
     "equipment": 173,
     "start_date": "2026-03-19",
     "end_date": "2026-03-20",
-    "status": "confirmed",
+    "status": "returned",
     "created_at": "2026-03-19T18:42:07.102Z"
   }
 },
@@ -4065,8 +4199,68 @@
     "equipment": 236,
     "start_date": "2026-03-19",
     "end_date": "2026-03-19",
-    "status": "confirmed",
+    "status": "returned",
     "created_at": "2026-03-19T20:41:31.974Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "equipment": 97,
+    "start_date": "2026-03-26",
+    "end_date": "2026-03-27",
+    "status": "returned",
+    "created_at": "2026-03-25T16:56:14.001Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "equipment": 208,
+    "start_date": "2026-03-25",
+    "end_date": "2026-03-25",
+    "status": "returned",
+    "created_at": "2026-03-25T17:50:00.258Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "equipment": 225,
+    "start_date": "2026-03-25",
+    "end_date": "2026-03-25",
+    "status": "returned",
+    "created_at": "2026-03-25T19:12:32.305Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 11,
+  "fields": {
+    "user": 1,
+    "equipment": 207,
+    "start_date": "2026-03-26",
+    "end_date": "2026-03-26",
+    "status": "returned",
+    "created_at": "2026-03-26T17:57:17.865Z"
+  }
+},
+{
+  "model": "website.booking",
+  "pk": 12,
+  "fields": {
+    "user": 1,
+    "equipment": 282,
+    "start_date": "2026-03-26",
+    "end_date": "2026-04-05",
+    "status": "active",
+    "created_at": "2026-03-26T19:06:32.549Z"
   }
 }
 ]
