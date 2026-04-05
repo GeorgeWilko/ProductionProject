@@ -159,7 +159,7 @@ def return_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     
     if booking.status in [Booking.Status.ACTIVE, Booking.Status.CONFIRMED]:
-        booking.status = "returned"
+        booking.status = Booking.Status.RETURNED
         booking.save(update_fields=["status"])
         
         equipment = booking.equipment
@@ -175,7 +175,6 @@ def confirmation(request):
     if request.method != "POST":
         return redirect("booking")
 
-    print("POST:", request.POST)
     equipment_name = request.POST.get("equipment_name")
     equipment_names_raw = request.POST.get("equipment_names", "")
     start_date = request.POST.get("start_date")
