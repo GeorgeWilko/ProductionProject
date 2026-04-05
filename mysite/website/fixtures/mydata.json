@@ -4207,7 +4207,7 @@
   "model": "website.booking",
   "pk": 8,
   "fields": {
-    "user": 1,
+    "user": null,
     "equipment": 97,
     "start_date": "2026-03-26",
     "end_date": "2026-03-27",
@@ -4219,7 +4219,7 @@
   "model": "website.booking",
   "pk": 9,
   "fields": {
-    "user": 1,
+    "user": null,
     "equipment": 208,
     "start_date": "2026-03-25",
     "end_date": "2026-03-25",
@@ -4231,7 +4231,7 @@
   "model": "website.booking",
   "pk": 10,
   "fields": {
-    "user": 1,
+    "user": null,
     "equipment": 225,
     "start_date": "2026-03-25",
     "end_date": "2026-03-25",
@@ -4243,7 +4243,7 @@
   "model": "website.booking",
   "pk": 11,
   "fields": {
-    "user": 1,
+    "user": null,
     "equipment": 207,
     "start_date": "2026-03-26",
     "end_date": "2026-03-26",
@@ -4255,7 +4255,7 @@
   "model": "website.booking",
   "pk": 12,
   "fields": {
-    "user": 1,
+    "user": null,
     "equipment": 282,
     "start_date": "2026-03-26",
     "end_date": "2026-04-05",
