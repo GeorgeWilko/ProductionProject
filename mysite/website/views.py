@@ -93,7 +93,6 @@ def equipment_category(request, slug):
                 "image": None,
             }
 
-        # Keep the first available item image for this grouped card.
         if not grouped_items[base_name]["image"] and item.image:
             grouped_items[base_name]["image"] = item.image
 
