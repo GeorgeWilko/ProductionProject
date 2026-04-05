@@ -84,10 +84,8 @@
                                         <tr>
                                             <td>{{ booking.id }}</td>
                                             <td>
-                                                {% if booking.equipment.image %}
-                                                    <img src="{{ booking.equipment.image.url }}" alt="{{ booking.equipment.name }}" class="orders-image">
-                                                {% elif booking.equipment.category.image %}
-                                                    <img src="{{ booking.equipment.category.image.url }}" alt="{{ booking.equipment.category.name }}" class="orders-image">
+                                                {% if booking.display_image %}
+                                                    <img src="{{ booking.display_image.url }}" alt="{{ booking.equipment.name }}" class="orders-image">
                                                 {% else %}
                                                     <span>No image</span>
                                                 {% endif %}

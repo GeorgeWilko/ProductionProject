@@ -90,8 +90,12 @@ def equipment_category(request, slug):
             grouped_items[base_name] = {
                 "name": base_name,
                 "available_count": 0,
-                "image": item.image,
+                "image": None,
             }
+
+        # Keep the first available item image for this grouped card.
+        if not grouped_items[base_name]["image"] and item.image:
+            grouped_items[base_name]["image"] = item.image
 
         if item.status == "available" and item.quantity > 0:
             grouped_items[base_name]["available_count"] += 1
@@ -129,20 +133,38 @@ def my_orders(request):
     if selected_status not in valid_status_filters:
         selected_status = "all"
 
-    bookings = Booking.objects.select_related(
+    bookingslist = Booking.objects.select_related(
         "equipment",
         "equipment__category",
     ).order_by("-created_at")
 
     if selected_status == "active":
-        bookings = bookings.filter(
+        bookingslist = bookingslist.filter(
             status__in=[Booking.Status.ACTIVE, Booking.Status.CONFIRMED],
             end_date__gte=today,
         )
     elif selected_status == "overdue":
-        bookings = bookings.filter(end_date__lt=today).exclude(status=Booking.Status.RETURNED)
+        bookingslist = bookingslist.filter(end_date__lt=today).exclude(status=Booking.Status.RETURNED)
     elif selected_status == "returned":
-        bookings = bookings.filter(status=Booking.Status.RETURNED)
+        bookingslist = bookingslist.filter(status=Booking.Status.RETURNED)
+
+    bookings = list(bookingslist)
+
+    image = {}
+
+    for booking in bookings:
+        unit = booking.equipment
+        base_name = unit.name.split(" - Unit ")[0]
+        key = (unit.category_id, base_name)
+
+        if key not in image:
+            source_image = Equipment.objects.filter(
+                category_id=unit.category_id,
+                name__startswith=base_name,
+            ).exclude(image="").exclude(image__isnull=True).first()
+            image[key] = source_image.image if source_image else None
+
+        booking.display_image = unit.image or image[key] or unit.category.image
 
     context = {
         "bookings": bookings,
