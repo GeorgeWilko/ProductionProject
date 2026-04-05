@@ -75,21 +75,3 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.user} → {self.equipment} ({self.start_date:%Y-%m-%d})"
-
-
-class Notification(models.Model):
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name="notifications",
-    )
-    booking = models.ForeignKey(
-        Booking,
-        on_delete=models.CASCADE,
-        related_name="notifications",
-    )
-    message = models.TextField()
-    created_at = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return f"Notification for {self.user}"

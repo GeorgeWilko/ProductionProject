@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import EquipmentCategory, Location, Equipment, Booking, Notification
+from .models import EquipmentCategory, Location, Equipment, Booking
 
 
 @admin.register(EquipmentCategory)
@@ -36,9 +36,3 @@ class BookingAdmin(admin.ModelAdmin):
     list_display = ("user", "equipment", "status", "start_date", "end_date", "created_at")
     list_filter = ("status", "start_date", "end_date")
     search_fields = ("user__username", "equipment__name")
-
-
-@admin.register(Notification)
-class NotificationAdmin(admin.ModelAdmin):
-    list_display = ("user", "booking", "created_at")
-    search_fields = ("user__username", "booking__equipment__name", "message")
