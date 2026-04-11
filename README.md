@@ -36,8 +36,29 @@ When WAVE is activated on the chosen web page it will show a 'details' panel of 
 3. The page will load and run the WAVE tool.
 
 
-## Current software version
+## Current software versions
 - Django 6.0
 - PyCharm 2025.2.5
 - Font Awesome 7.0.0
 - Bulma 1.0.3
+
+## Branch information
+Use db_v2 when opening a new project as it is the most recent environment.
+
+## Run on a new codespace
+From the terminal window:
+
+1. Move into the Django app:
+	cd mysite
+2. Install dependencies:
+	python -m pip install --upgrade pip
+	python -m pip install -r requirements.txt
+3. Run migrations:
+	python manage.py migrate
+4. Load fixture data:
+	python manage.py loaddata mydata.json
+5. Start the server:
+	python manage.py runserver 
+
+Notes:
+- The fixture file is set up so booking user references are nullable, which avoids foreign key issues on a new database. If it shows user: 1, change to user: null and re-run section 4 onwards. 
