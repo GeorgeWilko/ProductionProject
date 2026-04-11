@@ -376,6 +376,10 @@ input {
     color: black;
 }
 
+.theme.default .tag.is-danger {
+    color: black !important;
+}
+
 .theme.high main,
 .theme.high .section,
 .theme.high .footer {
