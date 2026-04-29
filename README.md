@@ -127,6 +127,6 @@ Notes:
 2. Select your preferred contrast theme from the available options:
    - Normal contrast
    - High contrast
-   - Dark mode
+   - Dark contrast
 3. The theme will apply immediately across all pages
 4. Your preference will be saved for future visits
